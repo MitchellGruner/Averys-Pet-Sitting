@@ -22,6 +22,8 @@ const config: Config = {
         'black': '#000000',
         'gray': '#1E1E1E',
         'teal': '#7EAAAD',
+        'dark-teal': '#609498',
+        'red': '#D9001D',
       },
     },
   },
