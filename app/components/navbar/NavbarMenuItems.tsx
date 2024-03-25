@@ -4,7 +4,7 @@ import Image from "next/image";
 const NavbarMenuItems = () => {
     return (
         <div className="hidden md:flex md:flex-row mx-auto">
-            <Link href="/dog" target="_blank" className="dog outline inline-block transition ease-in-out duration-500 icon-container">
+            <Link href="/dog" className="dog outline inline-block transition ease-in-out duration-500 icon-container">
                 <div className="flex flex-row items-center justify-center relative py-1 cursor-pointer hover:text-dark-teal">
                     <Image
                         src="/dogiconwhite2.png"
@@ -23,7 +23,7 @@ const NavbarMenuItems = () => {
                     <span className="md:pl-2 lg:pl-4 font-bold unskew">Dog</span>
                 </div>
             </Link>&nbsp;
-            <Link href="/contact" target="_blank" className="contact outline inline-block transition ease-in-out duration-500 icon-container">
+            <Link href="/contact" className="contact outline inline-block transition ease-in-out duration-500 icon-container">
                 <div className="flex flex-row items-center justify-center relative py-1 cursor-pointer">
                     <Image
                         src="/mailiconteal.png"
@@ -35,7 +35,7 @@ const NavbarMenuItems = () => {
                     <span className="md:pl-2 lg:pl-4 font-bold unskew">Contact Me</span>
                 </div>
             </Link>&nbsp;
-            <Link href="/cat" target="_blank" className="cat outline inline-block transition ease-in-out duration-500 icon-container">
+            <Link href="/cat" className="cat outline inline-block transition ease-in-out duration-500 icon-container">
                 <div className="flex flex-row items-center justify-center relative py-1 cursor-pointer hover:text-dark-teal">
                     <Image
                         src="/caticonwhite.png"
