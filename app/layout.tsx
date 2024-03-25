@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
 import "./styles/globals.css";
-import "./styles/Navbar.scss";
+import "./styles/navbar/NavbarMenuItems.scss";
+import "./styles/navbar/OpenHamburgerMenu.scss";
 
 import Navbar from "./components/navbar/Navbar";
 
