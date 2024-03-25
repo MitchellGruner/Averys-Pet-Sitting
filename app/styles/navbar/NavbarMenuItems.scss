@@ -1,0 +1,91 @@
+.icon-container {
+	&:hover {
+		.icon-hover {
+			opacity: 1;
+		}
+	}
+	&:nth-child(1) {
+		.icon-hover {
+			right: 3em;
+		}
+	}
+	&:nth-child(2) {
+		.icon-hover {
+			right: 6.7em;
+		}
+	}
+	&:nth-child(3) {
+		.icon-hover {
+			right: 2.72em;
+		}
+	}
+}
+
+$radius1: 25px;
+$radius2: $radius1 * 2;
+ 
+$prefix: "-webkit", "-moz", "-o", "-ms";
+@mixin skew($angle) {
+	@each $vendor in $prefix {
+		#{$vendor}-transform: skew($angle);
+	}
+	transform: skew($angle);
+}
+.dog {
+	border-top-left-radius: $radius1;
+	border-bottom-left-radius: $radius2;
+	padding: 8px 20px 8px 30px;
+}
+.contact,
+.cat {
+	padding: 8px 30px 8px 20px;
+}
+.cat {
+	border-bottom-right-radius: $radius1;
+	border-top-right-radius: $radius2;
+}
+@media (min-width: 768px) {
+	.outline {
+		padding: 0.45em 1.8em 0.45em 2em;
+	}
+	.outline span.unskew {
+		font-size: 0.9em;
+	}
+}
+@media (min-width: 992px) {
+	.outline {
+		padding: 0.5em 2em 0.5em 2.2em;
+	}
+	.outline span.unskew {
+		font-size: 1em;
+	}
+}
+.outline {
+	color: #fff;
+	background-color: transparent;
+	transition: 0.5s ease-in-out;
+	@include skew(-15deg);
+	white-space: nowrap;
+  
+ 	.unskew {
+		@include skew(15deg);
+		display: inline-block;
+	}
+}
+.outline:hover {
+	background-color: #fff;
+	color: #fff;
+}
+.outline span,
+.outline:hover span {
+	transition: 0.5s ease-in-out;
+}
+.outline:hover span {
+	color: #609498;
+}
+.contact {
+	background-color: #fff;
+}
+.contact span {
+	color: #609498;
+}
