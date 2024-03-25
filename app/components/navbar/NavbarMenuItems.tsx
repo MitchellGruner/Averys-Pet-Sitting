@@ -3,7 +3,7 @@ import Image from "next/image";
 const NavbarMenuItems = () => {
     return (
         <div className="flex flex-row justify-between rounded-full bg-white shadow-2xl border px-4 py-1">
-            <div className="flex flex-row justify-center px-4 py-2 cursor-pointer hover:text-teal transition ease-in-out duration-500 icon-container">
+            <div className="flex flex-row justify-center relative px-4 py-2 cursor-pointer hover:text-teal transition ease-in-out duration-500 icon-container">
                 <Image
                     src="/dogicon1.png"
                     width={24}
@@ -15,7 +15,7 @@ const NavbarMenuItems = () => {
                     width={24}
                     height={24}
                     alt="Dog Icon"
-                    className="icon-hover"
+                    className="icon-hover absolute object-contain opacity-0 transition ease-in-out duration-500"
                 />
                 <span className="pl-2">Dog</span>
             </div>
@@ -33,11 +33,11 @@ const NavbarMenuItems = () => {
                     width={24}
                     height={24}
                     alt="Mail Icon"
-                    className="icon-hover"
+                    className="icon-hover absolute object-contain opacity-0 transition ease-in-out duration-500"
                 />
                 <span className="pl-2">Mail</span>
             </div>
-            <div className="flex flex-row justify-center px-4 py-2 cursor-pointer hover:text-teal transition ease-in-out duration-500 icon-container">
+            <div className="flex flex-row justify-center relative px-4 py-2 cursor-pointer hover:text-teal transition ease-in-out duration-500 icon-container">
                 <Image
                     src="/caticon.png"
                     width={24}
@@ -49,7 +49,7 @@ const NavbarMenuItems = () => {
                     width={24}
                     height={24}
                     alt="Mail Icon"
-                    className="icon-hover"
+                    className="icon-hover absolute object-contain opacity-0 transition ease-in-out duration-500"
                 />
                 <span className="pl-2">Cat</span>
             </div>
