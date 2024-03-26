@@ -1,59 +1,81 @@
 import Link from "next/link";
 import Image from "next/image";
 
+function NavbarMenuItemsLink({
+    href,
+    linkClassName,
+    divClassName,
+    firstImageSrc,
+    firstImageAlt,
+    secondImageSrc,
+    secondImageAlt,
+    title,
+}: {
+    href: string;
+    linkClassName: string;
+    divClassName?: string;
+    firstImageSrc: string;
+    firstImageAlt: string;
+    secondImageSrc?: string;
+    secondImageAlt?: string;
+    title: string;
+}) {
+    return (
+        <Link href={href} className={`${linkClassName} outline inline-block transition ease-in-out duration-500 icon-container`}>
+            <div className={`flex flex-row items-center justify-center relative py-1 cursor-pointer ${divClassName}`}>
+                <Image
+                    src={firstImageSrc}
+                    width={24}
+                    height={24}
+                    alt={firstImageAlt}
+                    className="unskew"
+                />
+                {secondImageSrc && secondImageAlt && (
+                    <Image
+                        src={secondImageSrc}
+                        width={24}
+                        height={24}
+                        alt={secondImageAlt}
+                        className="icon-hover unskew absolute object-contain opacity-0 transition ease-in-out duration-500"
+                    />
+                )}
+                <span className="md:pl-2 lg:pl-4 font-bold unskew">{title}</span>
+            </div>
+        </Link>
+    )
+}
+
 const NavbarMenuItems = () => {
     return (
         <div className="hidden md:flex md:flex-row mx-auto">
-            <Link href="/dog" className="dog outline inline-block transition ease-in-out duration-500 icon-container">
-                <div className="flex flex-row items-center justify-center relative py-1 cursor-pointer hover:text-dark-teal">
-                    <Image
-                        src="/dogiconwhite2.png"
-                        width={24}
-                        height={24}
-                        alt="Dog Icon"
-                        className="unskew"
-                    />
-                    <Image
-                        src="/dogiconteal1.png"
-                        width={24}
-                        height={24}
-                        alt="Dog Icon"
-                        className="icon-hover icon-hover-first unskew absolute object-contain opacity-0 transition ease-in-out duration-500"
-                    />
-                    <span className="md:pl-2 lg:pl-4 font-bold unskew">Dog</span>
-                </div>
-            </Link>&nbsp;
-            <Link href="/contact" className="contact outline inline-block transition ease-in-out duration-500 icon-container">
-                <div className="flex flex-row items-center justify-center relative py-1 cursor-pointer">
-                    <Image
-                        src="/mailiconteal.png"
-                        width={24}
-                        height={24}
-                        alt="Mail Icon"
-                        className="unskew"
-                    />
-                    <span className="md:pl-2 lg:pl-4 font-bold unskew">Contact Me</span>
-                </div>
-            </Link>&nbsp;
-            <Link href="/cat" className="cat outline inline-block transition ease-in-out duration-500 icon-container">
-                <div className="flex flex-row items-center justify-center relative py-1 cursor-pointer hover:text-dark-teal">
-                    <Image
-                        src="/caticonwhite.png"
-                        width={24}
-                        height={24}
-                        alt="Cat Icon"
-                        className="unskew"
-                    />
-                    <Image
-                        src="/caticonteal.png"
-                        width={24}
-                        height={24}
-                        alt="Cat Icon"
-                        className="icon-hover icon-hover-third unskew absolute object-contain opacity-0 transition ease-in-out duration-500"
-                    />
-                    <span className="md:pl-2 lg:pl-4 font-bold unskew">Cat</span>
-                </div>
-            </Link>
+            <NavbarMenuItemsLink
+                href="/dog"
+                linkClassName="dog"
+                divClassName="hover:text-dark-teal"
+                firstImageSrc="/dogiconwhite2.png"
+                firstImageAlt="White Dog Icon"
+                secondImageSrc="/dogiconteal1.png"
+                secondImageAlt="Teal Dog Icon"
+                title="Dog"
+            />
+            &nbsp;
+            <NavbarMenuItemsLink
+                href="/contact"
+                linkClassName="contact"
+                firstImageSrc="/mailiconteal.png"
+                firstImageAlt="Teal Mail Icon"
+                title="Mail"
+            />&nbsp;
+            <NavbarMenuItemsLink
+                href="/cat"
+                linkClassName="cat"
+                divClassName="hover:text-dark-teal"
+                firstImageSrc="/caticonwhite.png"
+                firstImageAlt="White Cat Icon"
+                secondImageSrc="/caticonteal.png"
+                secondImageAlt="Teal Cat Icon"
+                title="Cat"
+            />
         </div>
     )
 }
