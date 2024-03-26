@@ -1,0 +1,11 @@
+#openHamburgerMenu {
+    h1 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        background-size: 100% 15%;
+        background-repeat: repeat-x;
+        background-position: left 0% bottom 0%;
+        background-image: linear-gradient(179deg, #609498 0%, #609498 50%, transparent 54%, transparent 100%);
+    }
+}
