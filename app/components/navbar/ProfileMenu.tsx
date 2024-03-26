@@ -12,7 +12,7 @@ const ProfileMenu = () => {
                     width={80}
                     height={0}
                     alt="Hamburger Menu Icon"
-                    className="rounded-full p-2"
+                    className="rounded-full p-2 hover:shadow-lg transition ease-in-out duration-500"
                 />
             </Link>
 
