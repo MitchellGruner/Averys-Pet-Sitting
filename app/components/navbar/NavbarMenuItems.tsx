@@ -64,7 +64,7 @@ const NavbarMenuItems = () => {
                 linkClassName="contact"
                 firstImageSrc="/mailiconteal.png"
                 firstImageAlt="Teal Mail Icon"
-                title="Mail"
+                title="Contact Me"
             />&nbsp;
             <NavbarMenuItemsLink
                 href="/cat"
