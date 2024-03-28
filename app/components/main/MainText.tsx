@@ -1,8 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import "../../styles/main/MainText.scss";
-
 const MainText = () => {
     return (
         <div id="mainText" className="relative">
