@@ -11,7 +11,7 @@ const ProfileMenu = () => {
                     src="/defaultprofilepicture.jpg"
                     width={80}
                     height={0}
-                    alt="Hamburger Menu Icon"
+                    alt="Profile Icon"
                     className="rounded-full p-2 hover:shadow-lg transition ease-in-out duration-500"
                 />
             </Link>

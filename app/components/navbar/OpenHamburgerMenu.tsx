@@ -12,7 +12,7 @@ const OpenHamburgerMenu = () => {
                         src="/defaultprofilepicture.jpg"
                         width={65}
                         height={0}
-                        alt="Hamburger Menu Icon"
+                        alt="Profile Icon"
                         className="rounded-full p-2"
                     />
                 </div>
@@ -28,7 +28,7 @@ const OpenHamburgerMenu = () => {
                             src="/averysprofessionalphoto.jpg"
                             width={50}
                             height={50}
-                            alt="Hamburger Menu Icon"
+                            alt="Avery's Headshot"
                             className="rounded-full p-2"
                         />
                     </Link>
