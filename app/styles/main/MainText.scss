@@ -1,0 +1,189 @@
+.main-container {
+    .fixed {
+        right: 0;
+
+        @media (min-width: 2400px) {
+            padding-right: 5em;
+
+            .rounded-l-2xl {
+                border-radius: 1em;
+            }
+        }
+
+        @media (min-width: 2600px) {
+            padding-right: 7.5em;
+        }
+
+        @media (min-width: 2800px) {
+            padding-right: 10em;
+        }
+
+        @media (min-width: 3000px) {
+            padding-right: 15em;
+        }
+        
+        @media (min-width: 3200px) {
+            padding-right: 20em;
+        }
+
+        @media (min-width: 3400px) {
+            padding-right: 25em;
+        }
+
+        @media (min-width: 3600px) {
+            padding-right: 30em;
+        }
+
+        @media (min-width: 4000px) {
+            padding-right: 35em;
+        }
+    }
+
+    #mainText {
+        .main-header {
+            transform: rotate(-16deg);
+            margin-left: 0.2em;
+            font-size: 2.2em;
+        }
+        .main-header-secondary {
+            transform: rotate(-20deg);
+        }
+        .main-text-container {
+            z-index: 1;
+            top: 8em;
+            padding: 0.8em 1em 0.1em 1.4em;
+            margin-left: 1em;
+            width: 14em;
+
+            h1 {
+                line-height: 1.1em !important;
+            }
+        }
+        .main-text-container-secondary {
+            z-index: 0;
+            top: 9em;
+            margin-left: 0.5em;
+            padding: 22.7em 11em 0.37em 2.3em;
+        }
+        img.inline {
+            max-width: 15%;
+        }
+        @media (min-width: 400px) {
+            img.inline {
+                max-width: 25%;
+            }
+            .main-header {
+                margin-left: 0.9em;
+                font-size: 2.4em;
+            }
+            .main-text-container {
+                top: 9em;
+                padding: 2em 0.73em 0.37em 2.3em;
+                margin-left: 5.7em;
+                width: 18em;
+            }
+            .main-text-container-secondary {
+                top: 12.6em;
+                margin-left: 5.2em;
+                padding: 20em 15em 0.41em 2.5em;
+            }
+        }
+        @media (min-width: 576px) {
+            img.inline {
+                max-width: 100%;
+            }
+            .main-header {
+                margin-left: 1em;
+                font-size: 3.3em;
+            }
+            .main-text-container {
+                top: 15em;
+                width: 20em;
+            }
+            .main-text-container-secondary {
+                top: 16em;
+                padding: 22.2em 17em 0.41em 2.5em;
+            }
+        }
+        @media (min-width: 768px) {
+            .main-header {
+                margin-left: 2.7em;
+                font-size: 3.6em;
+            }
+            .main-text-container {
+                top: 15em;
+                width: 23em;
+            }
+            .main-text-container-secondary {
+                top: 16em;
+                padding: 22em 20em 0.41em 2.5em;
+            }
+        }
+        @media (min-width: 992px) {
+            .main-header {
+                margin-left: 3.6em;
+                font-size: 4em;
+            }
+            .main-text-container {
+                top: 15em;
+                padding: 2.2em 0.81em 0.41em 2.5em;
+                margin-left: 6.3em;
+                width: 30em;
+            }
+            .main-text-container-secondary {
+                top: 15.8em;
+                margin-left: 5.6em;
+                padding: 19em 27em 0.45em 2.7em;
+            }
+        }
+        @media (min-width: 1200px) {
+            .main-header {
+                margin-left: 4em;
+                font-size: 4.4em;
+            }
+            .main-text-container {
+                padding: 2.4em 0.9em 0.45em 2.7em;
+                margin-left: 7em;
+                width: 30em;
+            }
+            .main-text-container-secondary {
+                top: 17em;
+                margin-left: 6.2em;
+                padding: 24.7em 27em 0.5em 3em;
+            }
+        }
+        @media (min-width: 1400px) {
+            .main-header {
+                margin-left: 4.4em;
+                font-size: 4.8em;
+            }
+            .main-text-container {
+                padding: 2.6em 1em 0.5em 3em;
+            }
+        }
+        @media (min-width: 1600px) {
+            .main-header {
+                margin-left: 4.8em;
+                font-size: 5.3em;
+            }
+            .main-text-container {
+                margin-left: 16em;
+                top: 17em;
+                width: 34em;
+            }
+            .main-text-container-secondary {
+                margin-left: 15em;
+                top: 20em;
+                padding: 22em 31em 0.5em 3em;
+            }
+        }
+        @media (min-width: 1800px) {
+            .main-text-container {
+                margin-left: 9em;
+            }
+            .main-text-container-secondary {
+                margin-left: 8.1em;
+            }
+        }
+    }
+}
