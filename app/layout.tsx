@@ -4,6 +4,7 @@ import { Raleway, Mr_Dafoe } from "next/font/google";
 import "./styles/globals.css";
 import "./styles/navbar/NavbarMenuItems.scss";
 import "./styles/navbar/OpenHamburgerMenu.scss";
+import "./styles/main/MainText.scss";
 
 import Navbar from "./components/navbar/Navbar";
 
@@ -34,7 +35,7 @@ export default function RootLayout({
       <body className={`${raleway.variable} ${mr_dafoe.variable}`}>
         <Navbar />
         
-        <div className="pt-28 bg-teal">
+        <div className="pt-28 bg-darkened-teal">
           {children}
         </div>
       </body>
