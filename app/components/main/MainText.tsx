@@ -11,7 +11,7 @@ const MainText = () => {
                     src="/dogpaw.png"
                     width={60}
                     height={60}
-                    alt="Dog Paw"
+                    alt="Dog Paw Icon"
                     className="inline ml-4 md:ml-6"
                 />
             </span>
