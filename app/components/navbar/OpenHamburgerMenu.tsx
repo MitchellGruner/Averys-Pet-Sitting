@@ -11,7 +11,7 @@ const OpenHamburgerMenu = () => {
                     <Image
                         src="/defaultprofilepicture.jpg"
                         width={65}
-                    height={0}
+                        height={0}
                         alt="Hamburger Menu Icon"
                         className="rounded-full p-2"
                     />
@@ -25,7 +25,7 @@ const OpenHamburgerMenu = () => {
                         <span className="pr-4">Contact Avery</span>
 
                         <Image
-                            src="/professionalheadshot.jpg"
+                            src="/averysprofessionalphoto.jpg"
                             width={50}
                             height={50}
                             alt="Hamburger Menu Icon"
