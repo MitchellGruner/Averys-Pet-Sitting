@@ -34,7 +34,7 @@ const OpenHamburgerMenu = () => {
                     </Link>
                     <Link href="/dog" className="flex flex-row md:hidden pt-4 text-left text-md font-medium hover:text-navy transition ease-in-out duration-500">
                         <Image
-                            src="/dogiconteal1.png"
+                            src="/dogiconnavy.png"
                             width={24}
                             height={24}
                             alt="Dog Icon"
@@ -43,7 +43,7 @@ const OpenHamburgerMenu = () => {
                     </Link>
                     <Link href="/cat" className="flex flex-row md:hidden pt-4 text-left text-md font-medium hover:text-navy transition ease-in-out duration-500">
                         <Image
-                            src="/caticonteal.png"
+                            src="/caticonnavy.png"
                             width={24}
                             height={24}
                             alt="Cat Icon"

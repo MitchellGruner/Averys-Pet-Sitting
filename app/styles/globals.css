@@ -6,6 +6,11 @@
     font-family: var(--font-raleway);
 }
 
-#mainText .main-header {
+img {
+    max-width: auto;
+}
+
+#mainText .main-header,
+#testimonials h1 {
     font-family: var(--font-mr-dafoe);
 }

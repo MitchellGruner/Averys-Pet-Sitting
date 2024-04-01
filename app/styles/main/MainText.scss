@@ -1,9 +1,11 @@
 .main-container {
-    .fixed {
+    #mainBackground {
+        position: fixed;
+        top: 208px;
         right: 0;
 
         @media (min-width: 2400px) {
-            padding-right: 5em;
+            margin-right: 5em;
 
             .rounded-l-2xl {
                 border-radius: 1em;
@@ -11,31 +13,31 @@
         }
 
         @media (min-width: 2600px) {
-            padding-right: 7.5em;
+            margin-right: 7.5em;
         }
 
         @media (min-width: 2800px) {
-            padding-right: 10em;
+            margin-right: 10em;
         }
 
         @media (min-width: 3000px) {
-            padding-right: 15em;
+            margin-right: 15em;
         }
         
         @media (min-width: 3200px) {
-            padding-right: 20em;
+            margin-right: 20em;
         }
 
         @media (min-width: 3400px) {
-            padding-right: 25em;
+            margin-right: 25em;
         }
 
         @media (min-width: 3600px) {
-            padding-right: 30em;
+            margin-right: 30em;
         }
 
         @media (min-width: 4000px) {
-            padding-right: 35em;
+            margin-right: 35em;
         }
     }
 
@@ -49,7 +51,7 @@
             transform: rotate(-20deg);
         }
         .main-text-container {
-            z-index: 1;
+            z-index: 2;
             top: 8em;
             padding: 0.8em 1em 0.1em 1.4em;
             margin-left: 1em;
@@ -60,10 +62,11 @@
             }
         }
         .main-text-container-secondary {
-            z-index: 0;
+            z-index: 1;
             top: 9em;
             margin-left: 0.5em;
             padding: 22.7em 11em 0.37em 2.3em;
+            border: 1px solid #000;
         }
         img.inline {
             max-width: 15%;
@@ -183,6 +186,50 @@
             }
             .main-text-container-secondary {
                 margin-left: 8.1em;
+            }
+        }
+        @media (min-width: 2000px) {
+            .main-text-container {
+                margin-left: 15em;
+            }
+            .main-text-container-secondary {
+                margin-left: 14em;
+            }
+            .main-header {
+                margin-left: 7em;
+            }
+        }
+        @media (min-width: 2400px) {
+            .main-text-container {
+                margin-left: 20em;
+            }
+            .main-text-container-secondary {
+                margin-left: 19em;
+            }
+            .main-header {
+                margin-left: 7em;
+            }
+        }
+        @media (min-width: 2600px) {
+            .main-text-container {
+                margin-left: 24em;
+            }
+            .main-text-container-secondary {
+                margin-left: 23em;
+            }
+            .main-header {
+                margin-left: 9em !important;
+            }
+        }
+        @media (min-width: 3000px) {
+            .main-text-container {
+                margin-left: 40em;
+            }
+            .main-text-container-secondary {
+                margin-left: 39em;
+            }
+            .main-header {
+                margin-left: 12em !important;
             }
         }
     }
