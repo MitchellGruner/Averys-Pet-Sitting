@@ -5,6 +5,7 @@ import "./styles/globals.css";
 import "./styles/navbar/NavbarMenuItems.scss";
 import "./styles/navbar/OpenHamburgerMenu.scss";
 import "./styles/main/MainText.scss";
+import "./styles/testimonials/Testimonials.scss";
 
 import Navbar from "./components/navbar/Navbar";
 
@@ -31,11 +32,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={true}>
       <body className={`${raleway.variable} ${mr_dafoe.variable}`}>
         <Navbar />
         
-        <div className="pt-28 bg-light-navy">
+        <div className="pt-24 bg-light-navy">
           {children}
         </div>
       </body>
