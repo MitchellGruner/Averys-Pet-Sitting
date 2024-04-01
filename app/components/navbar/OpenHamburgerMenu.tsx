@@ -20,8 +20,8 @@ const OpenHamburgerMenu = () => {
                 <hr className="w-[95%] mx-auto mt-1" />
 
                 <div className="px-4 mt-4 space-y-0">
-                    <Link href="/profile" className="inline-block text-left text-md font-medium hover:text-teal transition ease-in-out duration-500">View Profile</Link>
-                    <Link href="/contact" className="flex flex-row items-center text-left text-md font-medium hover:text-teal transition ease-in-out duration-500">
+                    <Link href="/profile" className="inline-block text-left text-md font-medium hover:text-navy transition ease-in-out duration-500">View Profile</Link>
+                    <Link href="/contact" className="flex flex-row items-center text-left text-md font-medium hover:text-navy transition ease-in-out duration-500">
                         <span className="pr-4">Contact Avery</span>
 
                         <Image
@@ -32,7 +32,7 @@ const OpenHamburgerMenu = () => {
                             className="rounded-full p-2"
                         />
                     </Link>
-                    <Link href="/dog" className="flex flex-row md:hidden pt-4 text-left text-md font-medium hover:text-teal transition ease-in-out duration-500">
+                    <Link href="/dog" className="flex flex-row md:hidden pt-4 text-left text-md font-medium hover:text-navy transition ease-in-out duration-500">
                         <Image
                             src="/dogiconteal1.png"
                             width={24}
@@ -41,7 +41,7 @@ const OpenHamburgerMenu = () => {
                         />
                         <span className="pl-2">Dog Sitting</span>
                     </Link>
-                    <Link href="/cat" className="flex flex-row md:hidden pt-4 text-left text-md font-medium hover:text-teal transition ease-in-out duration-500">
+                    <Link href="/cat" className="flex flex-row md:hidden pt-4 text-left text-md font-medium hover:text-navy transition ease-in-out duration-500">
                         <Image
                             src="/caticonteal.png"
                             width={24}
