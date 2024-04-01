@@ -51,11 +51,11 @@ const NavbarMenuItems = () => {
             <NavbarMenuItemsLink
                 href="/dog"
                 linkClassName="dog"
-                divClassName="hover:text-teal"
+                divClassName="hover:text-navy"
                 firstImageSrc="/dogiconwhite2.png"
                 firstImageAlt="White Dog Icon"
-                secondImageSrc="/dogiconteal1.png"
-                secondImageAlt="Teal Dog Icon"
+                secondImageSrc="/dogiconnavy.png"
+                secondImageAlt="Navy Dog Icon"
                 title="Dog"
             />
             &nbsp;
@@ -69,11 +69,11 @@ const NavbarMenuItems = () => {
             <NavbarMenuItemsLink
                 href="/cat"
                 linkClassName="cat"
-                divClassName="hover:text-teal"
+                divClassName="hover:text-navy"
                 firstImageSrc="/caticonwhite.png"
                 firstImageAlt="White Cat Icon"
-                secondImageSrc="/caticonteal.png"
-                secondImageAlt="Teal Cat Icon"
+                secondImageSrc="/caticonnavy.png"
+                secondImageAlt="Navy Cat Icon"
                 title="Cat"
             />
         </div>

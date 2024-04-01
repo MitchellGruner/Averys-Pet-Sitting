@@ -6,17 +6,24 @@
 	}
 	&:nth-child(1) {
 		.icon-hover {
-			right: 3em;
-		}
-	}
-	&:nth-child(2) {
-		.icon-hover {
-			right: 6.7em;
+			right: 1.85em;
 		}
 	}
 	&:nth-child(3) {
 		.icon-hover {
-			right: 2.72em;
+			right: 1.61em;
+		}
+	}
+	@media (min-width: 992px) {
+		&:nth-child(1) {
+			.icon-hover {
+				right: 2.95em;
+			}
+		}
+		&:nth-child(3) {
+			.icon-hover {
+				right: 2.6em;
+			}
 		}
 	}
 }
@@ -81,11 +88,11 @@ $prefix: "-webkit", "-moz", "-o", "-ms";
 	transition: 0.5s ease-in-out;
 }
 .outline:hover span {
-	color: #609498;
+	color: #1c2e4a;
 }
 .contact {
 	background-color: #fff;
 }
 .contact span {
-	color: #609498;
+	color: #1c2e4a;
 }

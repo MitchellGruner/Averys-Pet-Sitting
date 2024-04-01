@@ -16,16 +16,16 @@ const MainText = () => {
                 />
             </span>
 
-            <div className="main-text-container bg-brown absolute rounded-2xl shadow-2xl">
-                <h1 className="2xs:text-lg xs:text-xl sm:text-2xl xl:text-3xl font-semibold pb-2"><span className="text-white">Take the Quiz!</span> Discover Your Money Magnetism Archetype</h1>
+            <div className="main-text-container bg-navy absolute rounded-2xl shadow-2xl">
+                <h1 className="2xs:text-lg xs:text-xl sm:text-2xl xl:text-3xl font-semibold pb-2 text-white">Take the Quiz! Discover Your Money Magnetism Archetype</h1>
 
-                <hr className="py-3" />
+                <hr className="py-3 text-white" />
                 
-                <p className="2xs:text-sm sm:text-md xl:text-lg leading-6">
+                <p className="2xs:text-sm sm:text-md xl:text-lg leading-6 text-white">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                 </p>
 
-                <Link href="/contact" className="inline-block mb-6 2xs:py-1 xs:py-2 sm:py-2 md:py-3 lg:py-2 2xs:px-4 sm:px-6 md:px-10 lg:px-14 2xs:mt-4 md:mt-6 lg:mt-10 text-center text-black text-md font-bold bg-white shadow-2xl uppercase hover:bg-teal transition ease-in-out duration-500">
+                <Link href="/contact" className="inline-block mb-6 2xs:py-1 xs:py-2 sm:py-2 md:py-3 lg:py-2 2xs:px-4 sm:px-6 md:px-10 lg:px-14 2xs:mt-4 md:mt-6 lg:mt-10 text-center text-black text-md font-bold bg-white shadow-2xl uppercase hover:bg-light-brown transition ease-in-out duration-500">
                     <div className="flex flex-row">
                         <span className="2xs:contents xs:block pr-10 2xs:text-xs xs:text-sm lg:text-md 2xl:text-lg">Contact Now</span>
                         <svg fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
