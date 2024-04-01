@@ -35,7 +35,7 @@ export default function RootLayout({
       <body className={`${raleway.variable} ${mr_dafoe.variable}`}>
         <Navbar />
         
-        <div className="pt-28 bg-darkened-teal">
+        <div className="pt-28 bg-light-navy">
           {children}
         </div>
       </body>
