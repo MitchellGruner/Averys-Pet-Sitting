@@ -1,0 +1,146 @@
+#about {
+    margin: auto;
+
+    img {
+        outline: 0.3vw solid #fff;
+        outline-offset: 15px;
+    }
+
+    h1 {
+        font-size: 2em;
+        text-align: center;
+
+        span {
+            background-size: 100% 15%;
+            background-repeat: repeat-x;
+            background-position: left 0% bottom 10%;
+            background-image: linear-gradient(179deg,#fff 0%, #fff 50%, transparent 54%, transparent 100%);
+        }
+    }
+
+    @media (min-width: 576px) {
+        margin: 72em auto 2.3em;
+
+        h1 {
+            font-size: 1.7em;
+        }
+
+        h3 {
+            font-size: 2.1em;
+        }
+
+        img {
+            max-width: 60%;
+        }
+
+        p {
+            font-size: 0.9em;
+        }
+
+        a {
+            max-width: 70%;
+        }
+
+        .flex-col {
+            padding-right: 2em;
+        }
+    }
+
+    @media (min-width: 768px) {
+        margin: 72em auto 2.3em;
+
+        h1 {
+            font-size: 1.7em;
+        }
+
+        h3 {
+            font-size: 2.1em;
+        }
+
+        img {
+            max-width: 60%;
+        }
+
+        a {
+            max-width: 70%;
+        }
+
+        .flex-col {
+            padding-right: 2em;
+        }
+    }
+
+    @media (min-width: 992px) {
+        margin: 72em auto 2.5em;
+
+        h3 {
+            font-size: 2.2em;
+        }
+
+        p {
+            font-size: 1em;
+        }
+
+        a {
+            max-width: 70%;
+        }
+
+        .flex-col {
+            padding-right: 4em;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        margin: 72em auto 2.7em;
+
+        h1 {
+            font-size: 1.8em;
+        }
+
+        h3 {
+            font-size: 2.4em;
+        }
+
+        a {
+            max-width: 60%;
+        }
+
+        .flex-col {
+            padding-right: 8em;
+        }
+    }
+
+    @media (min-width: 1400px) {
+        margin: 74em auto 3em;
+
+        h1 {
+            font-size: 2em;
+        }
+
+        h3 {
+            font-size: 2.6em;
+        }
+
+        p {
+            font-size: 1.1em;
+        }
+
+        a {
+            max-width: 70%;
+        }
+
+        .flex-col {
+            padding-right: 16em;
+        }
+    }
+
+    @media (min-width: 1600px) {
+        h1 {
+            font-size: 2.2em;
+        }
+
+        h3 {
+            font-size: 2.8em;
+        }
+    }
+}
