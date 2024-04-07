@@ -33,6 +33,7 @@ const config: Config = {
         'red': '#D9001D',
         'navy': '#1c2e4a',
         'light-navy': '#2A456F',
+        'yellow': '#EBB007',
       },
     },
   },
