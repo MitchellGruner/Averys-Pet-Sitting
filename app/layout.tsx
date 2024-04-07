@@ -5,6 +5,7 @@ import "./styles/globals.css";
 import "./styles/navbar/NavbarMenuItems.scss";
 import "./styles/navbar/OpenHamburgerMenu.scss";
 import "./styles/main/MainText.scss";
+import "./styles/about/About.scss";
 import "./styles/testimonials/Testimonials.scss";
 
 import Navbar from "./components/navbar/Navbar";
