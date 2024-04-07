@@ -18,12 +18,16 @@ const MainText = () => {
             </span>
 
             <div className="main-text-container bg-navy absolute rounded-2xl shadow-2xl">
-                <h1 className="2xs:text-lg xs:text-xl sm:text-2xl xl:text-3xl font-semibold pb-2 text-white">Take the Quiz! Discover Your Money Magnetism Archetype</h1>
+                <h1 className="2xs:text-lg xs:text-xl sm:text-2xl xl:text-3xl font-semibold pb-2 text-white"><span className="italic text-yellow pr-1">Pawsitively</span> the best care for your pet!</h1>
 
                 <hr className="py-3 text-white" />
                 
                 <p className="2xs:text-sm sm:text-md xl:text-lg leading-6 text-white">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    I offer a wide variety of pet services such as in-home/overnight sitting for both cats and dogs as well as drop-in visits for walks, playtime, feeding, medication administration, and more. I’m always happy to send photos and updates of all the fun we have, too. 
+                </p>
+
+                <p className="2xs:text-sm sm:text-md xl:text-lg 2xs:mt-2 xl:mt-4 leading-6 text-white">
+                    I provide care for all furry friends - big and small - throughout the greater Franklin/Nashville area.
                 </p>
 
                 <ContactButton text={"Contact Now"} />

@@ -22,10 +22,11 @@ const About = () => {
                     <hr className="text-white w-1/2 mx-auto my-4" />
 
                     <p className="text-white text-left 2xs:mb-2 sm:mb-3 xl:mb-4">
-                        With years of experience and a genuine love for dogs, I understand the importance of trust and reliability when it comes to entrusting your beloved pets into someone else's care.
+                        I can’t remember a time when I wasn’t covered in pet fur. From working at an animal hospital to manufacturing pet food - <span className="italic text-yellow font-bold">I’ve always dedicated my life to pets</span>. I have years of experience working in kennels and as a veterinary technician assistant. I know first-hand how important it is to know your pet is getting the best care while you’re away from your fur babies.
                     </p>
                     
-                    <p className="text-white text-left">Whether it's a leisurely stroll in the park, interactive playtime, or simply cuddling up for some quality one-on-one attention, I strive to create a safe and nurturing environment where your dogs feel comfortable and happy.
+                    <p className="text-white text-left">
+                        In 2023, I received a B.S. in Food Science from Penn State University. Combining my love for food science with my passion for animals, I accepted my dream job working for Mars Petcare in Franklin, Tennessee where I work full-time as a Product Developer. Without a pet of my own (yet!), I get my animal fix by pet-sitting for coworkers, neighbors, family, and friends.
                     </p>
 
                     <ContactButton text={"Contact Me"} />
