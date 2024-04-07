@@ -54,7 +54,7 @@
             z-index: 2;
             top: 8em;
             padding: 0.8em 1em 0.1em 1.4em;
-            margin-left: 1em;
+            margin-left: 0.9em;
             width: 14em;
 
             h1 {
@@ -65,7 +65,7 @@
             z-index: 1;
             top: 9em;
             margin-left: 0.5em;
-            padding: 22.7em 11em 0.37em 2.3em;
+            padding: 27em 11em 0.37em 2.3em;
             border: 1px solid #000;
         }
         img.inline {
@@ -86,9 +86,9 @@
                 width: 18em;
             }
             .main-text-container-secondary {
-                top: 12.6em;
+                top: 9.6em;
                 margin-left: 5.2em;
-                padding: 20em 15em 0.41em 2.5em;
+                padding: 25.8em 15em 0.41em 2.5em;
             }
         }
         @media (min-width: 576px) {
@@ -105,7 +105,7 @@
             }
             .main-text-container-secondary {
                 top: 16em;
-                padding: 22.2em 17em 0.41em 2.5em;
+                padding: 24.8em 17em 0.41em 2.5em;
             }
         }
         @media (min-width: 768px) {
@@ -119,7 +119,7 @@
             }
             .main-text-container-secondary {
                 top: 16em;
-                padding: 22em 20em 0.41em 2.5em;
+                padding: 23.4em 20em 0.41em 2.5em;
             }
         }
         @media (min-width: 992px) {
@@ -136,7 +136,7 @@
             .main-text-container-secondary {
                 top: 15.8em;
                 margin-left: 5.6em;
-                padding: 19em 27em 0.45em 2.7em;
+                padding: 20.3em 27em 0.45em 2.7em;
             }
         }
         @media (min-width: 1200px) {
@@ -152,7 +152,7 @@
             .main-text-container-secondary {
                 top: 17em;
                 margin-left: 6.2em;
-                padding: 24.7em 27em 0.5em 3em;
+                padding: 28.9em 27em 0.5em 3em;
             }
         }
         @media (min-width: 1400px) {
@@ -162,6 +162,9 @@
             }
             .main-text-container {
                 padding: 2.6em 1em 0.5em 3em;
+            }
+            .main-text-container-secondary {
+                padding: 29.3em 27em 0.5em 3em;
             }
         }
         @media (min-width: 1600px) {
@@ -177,7 +180,7 @@
             .main-text-container-secondary {
                 margin-left: 15em;
                 top: 20em;
-                padding: 22em 31em 0.5em 3em;
+                padding: 26.9em 31em 0.5em 3em;
             }
         }
         @media (min-width: 1800px) {
