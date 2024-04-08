@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import $ from 'jquery';
 
 import Image from "next/image";
+import Header from '../Header';
 
 const Testimonials = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -58,7 +59,7 @@ const Testimonials = () => {
     return (
         <div id="testimonials" className="relative bg-white block w-full mx-auto">
             <div className="max-w-[1600px] testimonials-container mx-auto pt-20 sm:pt-36 md:pt-24 lg:pt-28 pb-28 sm:pb-40 md:pb-32">
-                <h1 className="block text-navy text-center"><span>Testimonials</span></h1>
+                <Header title={"Testimonials"} color={"text-navy"} />
                 <div className="testimonials-flex flex flex-wrap justify-center sm:mt-2 md:mt-10 mx-10 sm:mx-28 lg:mx-10 xl:mx-28">
                     <TestimonialCard
                         imageSrc="/dogblue.png"
