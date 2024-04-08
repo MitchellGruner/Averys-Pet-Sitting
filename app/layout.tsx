@@ -7,6 +7,7 @@ import "./styles/navbar/OpenHamburgerMenu.scss";
 import "./styles/main/MainText.scss";
 import "./styles/about/About.scss";
 import "./styles/testimonials/Testimonials.scss";
+import "./styles/Header.scss";
 
 import Navbar from "./components/navbar/Navbar";
 
