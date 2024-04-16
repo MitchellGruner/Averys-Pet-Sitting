@@ -12,6 +12,7 @@ img {
 
 #mainText .main-header,
 #testimonials h1 span,
-#about h1 span {
+#about h1 span,
+#services h1 span {
     font-family: var(--font-mr-dafoe);
 }
