@@ -35,7 +35,7 @@ export const MuiAccordion = () => {
                             alt="Dog Bone Icon"
                             className="mr-3 lg:mr-4 xl:mr-4"
                         />
-                        <h1 className="flex items-center pl-0 lg:pl-1 xl:pl-2 text-xs xs:text-sm sm:text-lg md:text-sm lg:text-lg"><span>Spending quality time</span></h1>
+                        <span className="flex items-center pl-0 lg:pl-1 xl:pl-2 text-xs xs:text-sm sm:text-lg md:text-sm lg:text-lg">Spending quality time</span>
                     </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
@@ -63,7 +63,7 @@ export const MuiAccordion = () => {
                             alt="Home Icon"
                             className="mr-3 lg:mr-4 xl:mr-4"
                         />
-                        <h1 className="flex items-center pl-0 lg:pl-1 xl:pl-2 text-xs xs:text-sm sm:text-lg md:text-sm lg:text-lg"><span>Drop-in visits</span></h1>
+                        <span className="flex items-center pl-0 lg:pl-1 xl:pl-2 text-xs xs:text-sm sm:text-lg md:text-sm lg:text-lg">Drop-in visits</span>
                     </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
@@ -91,7 +91,7 @@ export const MuiAccordion = () => {
                             alt="Pillow Icon"
                             className="mr-3 lg:mr-4 xl:mr-4"
                         />
-                        <h1 className="flex items-center pl-0 lg:pl-1 xl:pl-2 text-xs xs:text-sm sm:text-lg md:text-sm lg:text-lg"><span>Overnight stays</span></h1>
+                        <span className="flex items-center pl-0 lg:pl-1 xl:pl-2 text-xs xs:text-sm sm:text-lg md:text-sm lg:text-lg">Overnight stays</span>
                     </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
@@ -119,7 +119,7 @@ export const MuiAccordion = () => {
                             alt="Weights Icon"
                             className="mr-3 lg:mr-4 xl:mr-4"
                         />
-                        <h1 className="flex items-center pl-0 lg:pl-1 xl:pl-2 text-xs xs:text-sm sm:text-lg md:text-sm lg:text-lg"><span>Exercise and play sessions</span></h1>
+                        <span className="flex items-center pl-0 lg:pl-1 xl:pl-2 text-xs xs:text-sm sm:text-lg md:text-sm lg:text-lg">Exercise and play sessions</span>
                     </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
@@ -147,7 +147,7 @@ export const MuiAccordion = () => {
                             alt="Weights Icon"
                             className="mr-3 lg:mr-4 xl:mr-4"
                         />
-                        <h1 className="flex items-center pl-0 lg:pl-1 xl:pl-2 text-xs xs:text-sm sm:text-lg md:text-sm lg:text-lg"><span>Pet transportation services</span></h1>
+                        <span className="flex items-center pl-0 lg:pl-1 xl:pl-2 text-xs xs:text-sm sm:text-lg md:text-sm lg:text-lg">Pet transportation services</span>
                     </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
