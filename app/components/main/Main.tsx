@@ -8,9 +8,9 @@ const Main = () => {
             <div className="main-container">
                 <Image
                     id="mainBackground"
-                    src="/avery.flowers.image.jpg"
+                    src="/parkbackground.jpg"
                     width={1000}
-                    height={400}
+                    height={1000}
                     alt="Dog Park Background"
                     className="rounded-l-2xl shadow-2xl max-w-full"
                 />
