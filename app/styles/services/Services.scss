@@ -24,18 +24,6 @@
     .css-i4bv87-MuiSvgIcon-root {
         fill: #fff !important;
     }
-    #muiAccordion {
-        h1 {
-            span {
-                background-size: 100% 15%;
-                background-repeat: repeat-x;
-                background-position: left 0% bottom 10%;
-                background-image: linear-gradient(179deg,#fff 0%, #fff 50%, transparent 54%, transparent 100%);
-                padding-bottom: 0.4em;
-                font-family: var(--font-raleway);
-            }
-        }
-    }
 
     @media (min-width: 400px) {
         .accordion-div-first,
