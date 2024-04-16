@@ -39,7 +39,7 @@ export const MuiAccordion = () => {
                     </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                    <Typography className="text-xs xs:text-sm sm:text-md md:text-sm lg:text-md py-2 sm:py-3 md:py-2 lg:py-3 xl:py-4 px-1">
+                    <Typography className="text-xs xs:text-sm sm:text-md md:text-sm lg:text-md 2xl:text-lg py-2 sm:py-3 md:py-2 lg:py-3 xl:py-4 px-1">
                         Whether it's cuddling up on the couch, playing fetch in the backyard, or going for a walk around the neighborhood - I'm here to make sure your pets are happy and healthy while you're away.
                     </Typography>
                 </AccordionDetails>
@@ -67,7 +67,7 @@ export const MuiAccordion = () => {
                     </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                    <Typography className="text-xs xs:text-sm sm:text-md md:text-sm lg:text-md py-2 sm:py-3 md:py-2 lg:py-3 xl:py-4 px-1">
+                    <Typography className="text-xs xs:text-sm sm:text-md md:text-sm lg:text-md 2xl:text-lg py-2 sm:py-3 md:py-2 lg:py-3 xl:py-4 px-1">
                         I provide personalized drop-in visits for your furry companions, ensuring they receive the love, attention, and care they need while you're away. From feeding and playtime to cuddles and companionship, I'll make sure your pets feel safe and happy until your return.
                     </Typography>
                 </AccordionDetails>
@@ -95,7 +95,7 @@ export const MuiAccordion = () => {
                     </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                    <Typography className="text-xs xs:text-sm sm:text-md md:text-sm lg:text-md py-2 sm:py-3 md:py-2 lg:py-3 xl:py-4 px-1">
+                    <Typography className="text-xs xs:text-sm sm:text-md md:text-sm lg:text-md 2xl:text-lg py-2 sm:py-3 md:py-2 lg:py-3 xl:py-4 px-1">
                         Overnight stays as part of my dog sitting service provide your furry companions with the comfort of familiar surroundings and consistent care throughout the night, ensuring they feel secure and loved even when you're away.
                     </Typography>
                 </AccordionDetails>
@@ -123,7 +123,7 @@ export const MuiAccordion = () => {
                     </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                    <Typography className="text-xs xs:text-sm sm:text-md md:text-sm lg:text-md py-2 sm:py-3 md:py-2 lg:py-3 xl:py-4 px-1">
+                    <Typography className="text-xs xs:text-sm sm:text-md md:text-sm lg:text-md 2xl:text-lg py-2 sm:py-3 md:py-2 lg:py-3 xl:py-4 px-1">
                         I prioritize regular exercise and play sessions tailored to your dog's needs, fostering physical health, mental stimulation, and a strong bond between us, ensuring they stay happy and healthy in your absence.
                     </Typography>
                 </AccordionDetails>
@@ -151,7 +151,7 @@ export const MuiAccordion = () => {
                     </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                    <Typography className="text-xs xs:text-sm sm:text-md md:text-sm lg:text-md py-2 sm:py-3 md:py-2 lg:py-3 xl:py-4 px-1">
+                    <Typography className="text-xs xs:text-sm sm:text-md md:text-sm lg:text-md 2xl:text-lg py-2 sm:py-3 md:py-2 lg:py-3 xl:py-4 px-1">
                     I'll take the stress out of vet and grooming trips for your beloved pet with my personalized transportation service, ensuring they arrive safely and comfortably every time.
                     </Typography>
                 </AccordionDetails>
