@@ -3,6 +3,7 @@ import About from "./components/about/About";
 import Testimonials from "./components/testimonials/Testimonials";
 import Services from "./components/services/Services";
 import Contact from "./components/contact/Contact";
+import CalendlyForm from "./components/contact/CalendlyForm";
 
 export default function Home() {
   return (
@@ -12,6 +13,8 @@ export default function Home() {
       <Testimonials />
       <Services />
       <Contact />
+      <CalendlyForm />
+      <div id="__next"></div>
     </main>
   );
 }
