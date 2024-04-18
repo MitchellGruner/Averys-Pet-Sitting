@@ -25,12 +25,6 @@ const CalendlyForm = () => {
           rootElement={rootElement!}
           text="Schedule Appointment"
         />
-        <Image
-            src="/calendar.icon.png"
-            width={50}
-            height={50}
-            alt="Calendar Icon"
-        />
       </div>
       {/* <div className="button-div-absolute bg-white rounded-full absolute bottom-[-0.2em] right-1 py-3 px-28"></div> */}
     </div>
