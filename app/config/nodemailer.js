@@ -1,7 +1,7 @@
 import nodemailer from "nodemailer";
 
-const email = "mit.gruner@gmail.com";
-const pass = "Bwilson382814";
+const email = process.env.email;
+const pass = process.env.password;
 
 console.log("Transport called");
 
