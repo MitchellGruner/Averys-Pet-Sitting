@@ -1,3 +1,6 @@
+import {ChakraProvider} from "@chakra-ui/react";
+import AppContainer from "./components/AppContainer";
+
 import Main from "./components/main/Main";
 import About from "./components/about/About";
 import Testimonials from "./components/testimonials/Testimonials";
@@ -12,7 +15,11 @@ export default function Home() {
       <About />
       <Testimonials />
       <Services />
-      <Contact />
+      <ChakraProvider>
+        <AppContainer>
+          <Contact />
+        </AppContainer>
+      </ChakraProvider>
       <CalendlyForm />
       <div id="__next"></div>
     </main>
