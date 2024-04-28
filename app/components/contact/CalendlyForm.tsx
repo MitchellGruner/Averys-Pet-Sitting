@@ -17,7 +17,7 @@ const CalendlyForm = () => {
       <div className="sticky button-div">
         <PopupButton
           className="py-2 px-6 xl:py-3 xl:px-8 font-semibold rounded-full italic text-md xl:text-lg shadow-2xl text-white ease-in-out duration-500 hover:bg-black"
-          url="https://calendly.com/mit-gruner"
+          url="https://calendly.com/ajgeiger311"
           rootElement={rootElement!}
           text="Schedule Appointment"
         />
