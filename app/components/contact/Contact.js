@@ -1,104 +1,30 @@
 "use client";
 
-import {
-    FormControl,
-    FormErrorMessage,
-    FormLabel,
-    Input,
-    Text,
-    Textarea,
-    useToast,
-} from "@chakra-ui/react";
-import {useState} from "react";
-import {sendContactForm} from "../../lib/api";
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 import Header from "../Header";
 
 import Image from "next/image";
 
-const initValues = {
-    subject: "",
-    name: "",
-    email: "",
-    organization: "",
-    message: ""
-  };
-  
-  const initState = {
-    error: "",
-    values: initValues
-  };
-
 const Contact = () => {
-    const toast = useToast();
-    const [state, setState] = useState(initState);
-    const [touched, setTouched] = useState({});
+    const form = useRef();
 
-    const {
-        values,
-        error
-    } = state;
+    const sendEmail = (e) => {
+        e.preventDefault();
 
-    const onBlur = (event) =>
-        setTouched((prev) => ({ ...prev, [event.target.name]: true }));
-
-    const handleChange = ({ target }) =>
-        setState((prev) => ({
-            ...prev,
-            values: {
-                ...prev.values,
-                [target.name]: target.value,
+        emailjs
+        .sendForm('service_51z9btj', 'template_n1e643b', form.current, {
+            publicKey: '_HGc4bvBHLirjPTOo',
+        })
+        .then(
+            () => {
+            console.log('SUCCESS!');
             },
-        }));
-
-    const onSubmit = async () => {
-        var fullNameValue = document.getElementById("full-name-value")?.value;
-        var fullNameRegex = /^([\w]{2,})+\s+([\w\s]{2,})+$/i;
-        var fullNameResult = fullNameRegex.test(fullNameValue);
-
-        var emailValue = document.getElementById("email-value")?.value;
-        var emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        var emailResult = emailRegex.test(emailValue);
-
-        setState((prev) => ({
-            ...prev,
-        }));
-    
-        if (fullNameResult && emailResult) {
-            try {
-                await sendContactForm(values);
-                setTouched({});
-                setState(initState);
-                toast({
-                    title: "Message Sent!",
-                    status: "success",
-                    duration: 2000,
-                    position: "top",
-                });
-                } catch (error) {
-                    setState((prev) => ({
-                        ...prev,
-                        error: error.message,
-                    }));
-                }
-        } else {
-            if (!fullNameResult && emailResult) {
-                setState((prev) => ({
-                    ...prev,
-                    error: "Please make sure the full name field is correct",
-                }));
-            } else if (fullNameResult && !emailResult) {
-                setState((prev) => ({
-                    ...prev,
-                    error: "Please make sure the email field is correct",
-                }));
-            } else {
-                setState((prev) => ({
-                    ...prev,
-                    error: "Please make sure the full name and email fields are correct",
-                }));
-            }
-        }
+            (error) => {
+            console.log('FAILED...', error.text);
+            },
+        );
     };
 
     return (
@@ -126,103 +52,19 @@ const Contact = () => {
                 </div>
             </div>
 
-            <div className="contact-form-container">
-                {error && (
-                    <Text my={4} fontSize="xl">
-                        {error}
-                    </Text>
-                )}
-                <FormControl
-                    mb={5}
-                    isRequired
-                    isInvalid={touched.subject && !values.subject}
-                >
-                    <FormLabel className="text-white">Subject</FormLabel>
-                        <Input
-                            type="text"
-                            name="subject"
-                            className="contact-form-input"
-                            errorBorderColor=""
-                            value={values.subject}
-                            onChange={handleChange}
-                            onBlur={onBlur}
-                        />
-                    <FormErrorMessage>Required</FormErrorMessage>
-                </FormControl>
-        
-                <FormControl isRequired isInvalid={touched.name && !values.name} mb={5}>
-                    <FormLabel className="text-white">Full Name</FormLabel>
-                        <Input
-                            id="full-name-value"
-                            type="text"
-                            name="name"
-                            className="contact-form-input"
-                            errorBorderColor=""
-                            value={values.name}
-                            onChange={handleChange}
-                            onBlur={onBlur}
-                        />
-                    <FormErrorMessage>Required</FormErrorMessage>
-                </FormControl>
-        
-                <FormControl isRequired isInvalid={touched.email && !values.email} mb={5}>
-                    <FormLabel className="text-white">Email</FormLabel>
-                        <Input
-                            id="email-value"
-                            type="email"
-                            name="email"
-                            className="contact-form-input"
-                            errorBorderColor=""
-                            value={values.email}
-                            onChange={handleChange}
-                            onBlur={onBlur}
-                        />
-                    <FormErrorMessage>Required</FormErrorMessage>
-                </FormControl>
-
-                <FormControl isRequired isInvalid={touched.organization && !values.organization} mb={5}>
-                    <FormLabel className="text-white">Organization</FormLabel>
-                        <Input
-                            type="text"
-                            name="organization"
-                            className="contact-form-input"
-                            errorBorderColor=""
-                            value={values.organization}
-                            onChange={handleChange}
-                            onBlur={onBlur}
-                        />
-                    <FormErrorMessage>Required</FormErrorMessage>
-                </FormControl>
-        
-                <FormControl
-                    isRequired
-                    isInvalid={touched.message && !values.message}
-                    mb={5}
-                    >
-                    <FormLabel className="text-white">Message</FormLabel>
-                        <Textarea
-                            type="text"
-                            name="message"
-                            className="contact-form-input"
-                            rows={4}
-                            errorBorderColor=""
-                            value={values.message}
-                            onChange={handleChange}
-                            onBlur={onBlur}
-                        />
-                    <FormErrorMessage>Required</FormErrorMessage>
-                </FormControl>
-        
-                <a
-                className="contact-form-submit flex justify-center items-center text-white font-bold bg-black rounded-full w-20 sm:w-24 p-3 mr-3 sm:mr-4 text-sm sm:text-md 2xl:text-lg"
-                disabled={
-                    !values.subject || !values.name || !values.email || !values.organization || !values.message
-                }
-                onClick={onSubmit}
-                >
-                    Submit!
-                </a>
-            </div>
+            <form ref={form} onSubmit={sendEmail}>
+                <label>Name</label>
+                <input type="text" name="user_name" />
+                <label>Email</label>
+                <input type="radio" id="dog" name="user_radio" value="dog" />
+                <label for="dog">Dog</label>
+                <input type="radio" id="cat" name="user_radio" value="cat" />
+                <label for="cat">Cat</label>
+                <input type="email" name="user_email" />
+                <label>Message</label>
+                <textarea name="message" />
+                <input type="submit" value="Send" />
+            </form>
         </div>
     )
 }
