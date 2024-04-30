@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import axios from 'axios';
 
 import Header from "../Header";
 
@@ -10,19 +11,36 @@ import Image from "next/image";
 const Contact = () => {
     const form = useRef();
 
-    const sendEmail = (e) => {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+    const [sendButton, setSendButton] = useState("Submit!");
+
+    const sendEmail = async (e) => {
         e.preventDefault();
 
+        const serviceId = "service_51z9btj";
+        const templateId = "template_n1e643b";
+        const publicKey = "_HGc4bvBHLirjPTOo";
+
         emailjs
-        .sendForm('service_51z9btj', 'template_n1e643b', form.current, {
-            publicKey: '_HGc4bvBHLirjPTOo',
-        })
+            .sendForm(serviceId, templateId, form.current, {
+                publicKey: publicKey,
+            })
         .then(
             () => {
-            console.log('SUCCESS!');
+                console.log('SUCCESS!');
+                setName("");
+                setEmail("");
+                setMessage("");
+                setSendButton("Sent!");
+
+                setTimeout(() => {
+                    setSendButton("Submit!");
+                }, 3000);
             },
             (error) => {
-            console.log('FAILED...', error.text);
+                console.log('FAILED...', error.text);
             },
         );
     };
@@ -52,18 +70,37 @@ const Contact = () => {
                 </div>
             </div>
 
-            <form ref={form} onSubmit={sendEmail}>
-                <label>Name</label>
-                <input type="text" name="user_name" />
-                <label>Email</label>
-                <input type="radio" id="dog" name="user_radio" value="dog" />
-                <label for="dog">Dog</label>
-                <input type="radio" id="cat" name="user_radio" value="cat" />
-                <label for="cat">Cat</label>
-                <input type="email" name="user_email" />
-                <label>Message</label>
-                <textarea name="message" />
-                <input type="submit" value="Send" />
+            <form ref={form} onSubmit={sendEmail} className="mt-20">
+                <label className="text-xl mb-2">Full Name</label>
+                <input
+                    type="text"
+                    placeholder="John Doe"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    name="user_name"
+                    className="bg-transparent py-2 px-4 text-sm"
+                />
+
+                <label className="text-xl mb-2">Email</label>
+                <input
+                    type="email"
+                    placeholder="john.doe@gmail.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    name="user_email"
+                    className="bg-transparent py-2 px-4 text-sm"
+                />
+
+                <label className="text-xl mb-2">Message</label>
+                <textarea
+                    placeholder="Your message here..."
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    name="message"
+                    className="bg-transparent text-sm"
+                />
+
+                <input type="submit" value={sendButton} className="border border-white bg-navy text-white cursor-pointer text-md py-2 mt-8 hover:bg-white hover:text-navy hover:border-navy transition ease-in-out duration-500" />
             </form>
         </div>
     )
