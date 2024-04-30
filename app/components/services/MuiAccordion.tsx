@@ -6,6 +6,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Image from "next/image";
 
 import { useState } from "react";
+import React from "react";
 
 export const MuiAccordion = () => {
     const [expanded, setExpanded] = useState<string | false>(false);
