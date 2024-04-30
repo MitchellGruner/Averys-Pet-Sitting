@@ -2,7 +2,6 @@
 
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import axios from 'axios';
 
 import Header from "../Header";
 
@@ -14,7 +13,8 @@ const Contact = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
-    const [sendButton, setSendButton] = useState("Submit!");
+    const [sendButton, setSendButton] = useState("Submit");
+    const [sendButtonColor, setSendButtonColor] = useState("bg-navy");
 
     const sendEmail = async (e) => {
         e.preventDefault();
@@ -23,26 +23,46 @@ const Contact = () => {
         const templateId = "template_n1e643b";
         const publicKey = "_HGc4bvBHLirjPTOo";
 
-        emailjs
-            .sendForm(serviceId, templateId, form.current, {
-                publicKey: publicKey,
-            })
-        .then(
-            () => {
-                console.log('SUCCESS!');
-                setName("");
-                setEmail("");
-                setMessage("");
-                setSendButton("Sent!");
+        var fullNameValue = document.getElementById("full-name-value").value;
+        var fullNameRegex = /^([\w]{2,})+\s+([\w\s]{2,})+$/i;
+        var fullNameResult = fullNameRegex.test(fullNameValue);
+    
+        var emailValue = document.getElementById("email-value").value;
+        var emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        var emailResult = emailRegex.test(emailValue);
 
-                setTimeout(() => {
-                    setSendButton("Submit!");
-                }, 3000);
-            },
-            (error) => {
-                console.log('FAILED...', error.text);
-            },
-        );
+        if (fullNameResult && emailResult) {
+            emailjs
+                .sendForm(serviceId, templateId, form.current, {
+                    publicKey: publicKey,
+                })
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                    setName("");
+                    setEmail("");
+                    setMessage("");
+                    setSendButton("Sent!");
+                    setSendButtonColor("bg-green-500");
+
+                    setTimeout(() => {
+                        setSendButton("Submit");
+                        setSendButtonColor("bg-navy");
+                    }, 3000);
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                },
+            );
+        } else {
+            if (!fullNameResult && emailResult) {
+                alert("Please make sure the full name field is correct");
+            } else if (fullNameResult && !emailResult) {
+                alert("Please make sure the email field is correct");
+            } else {
+                alert("Please make sure the full name and email fields are correct");
+            }
+        }
     };
 
     return (
@@ -71,36 +91,38 @@ const Contact = () => {
             </div>
 
             <form ref={form} onSubmit={sendEmail} className="mt-20">
-                <label className="text-xl mb-2">Full Name</label>
+                <label className="text-white text-xl mb-2">Full Name*</label>
                 <input
+                    id="full-name-value"
                     type="text"
                     placeholder="John Doe"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     name="user_name"
-                    className="bg-transparent py-2 px-4 text-sm"
+                    className="text-white bg-transparent py-2 px-4 text-sm"
                 />
 
-                <label className="text-xl mb-2">Email</label>
+                <label className="text-white text-xl mb-2">Email*</label>
                 <input
+                    id="email-value"
                     type="email"
                     placeholder="john.doe@gmail.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     name="user_email"
-                    className="bg-transparent py-2 px-4 text-sm"
+                    className="text-white bg-transparent py-2 px-4 text-sm"
                 />
 
-                <label className="text-xl mb-2">Message</label>
+                <label className="text-white text-xl mb-2">Message</label>
                 <textarea
                     placeholder="Your message here..."
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     name="message"
-                    className="bg-transparent text-sm"
+                    className="text-white bg-transparent text-sm"
                 />
 
-                <input type="submit" value={sendButton} className="border border-white bg-navy text-white cursor-pointer text-md py-2 mt-8 hover:bg-white hover:text-navy hover:border-navy transition ease-in-out duration-500" />
+                <input type="submit" value={sendButton} className={`border border-white ${sendButtonColor} text-white cursor-pointer text-md py-2 mt-8 hover:bg-white hover:text-navy hover:border-navy transition ease-in-out duration-500`} />
             </form>
         </div>
     )
