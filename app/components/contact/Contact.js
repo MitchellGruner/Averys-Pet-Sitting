@@ -1,5 +1,9 @@
 "use client";
 
+import {
+    useToast,
+} from "@chakra-ui/react";
+
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
@@ -10,6 +14,7 @@ import Image from "next/image";
 const Contact = () => {
     const form = useRef();
 
+    const toast = useToast();
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
@@ -39,6 +44,13 @@ const Contact = () => {
             .then(
                 () => {
                     console.log('SUCCESS!');
+                    toast({
+                        title: "Message Sent!",
+                        status: "success",
+                        duration: 2000,
+                        position: "top",
+                    });
+
                     setName("");
                     setEmail("");
                     setMessage("");
@@ -56,11 +68,26 @@ const Contact = () => {
             );
         } else {
             if (!fullNameResult && emailResult) {
-                alert("Please make sure the full name field is correct");
+                toast({
+                    title: "Please make sure the full name field is correct",
+                    status: "warning",
+                    duration: 5000,
+                    position: "top",
+                });
             } else if (fullNameResult && !emailResult) {
-                alert("Please make sure the email field is correct");
+                toast({
+                    title: "Please make sure the email field is correct",
+                    status: "warning",
+                    duration: 5000,
+                    position: "top",
+                });
             } else {
-                alert("Please make sure the full name and email fields are correct");
+                toast({
+                    title: "Please make sure the full name and email fields are correct",
+                    status: "warning",
+                    duration: 5000,
+                    position: "top",
+                });
             }
         }
     };
