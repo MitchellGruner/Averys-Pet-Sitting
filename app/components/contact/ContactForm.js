@@ -94,6 +94,8 @@ const ContactForm = () => {
                 <div className="wave absolute mx-auto"></div>
             </div>
 
+            <div id="contactForm"></div>
+
             <form ref={form} onSubmit={sendEmail} className="relative flex flex-col items-start w-full xs:w-4/5 sm:w-9/12 md:w-2/3 lg:w-3/4 xl:w-1/2 2xl:w-2/5 mt-8 xs:mt-12 sm:mt-16 md:mt-32 mx-auto">
                 <label className="text-white text-lg xs:text-xl lg:text-2xl mb-2">Full Name*</label>
                 <input
