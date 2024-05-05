@@ -90,12 +90,12 @@ const ContactForm = () => {
 
     return (
         <>
-            <div className="wrapper">
-                <div className="wave"></div>
+            <div className="wrapper absolute w-full rounded">
+                <div className="wave absolute mx-auto"></div>
             </div>
 
-            <form ref={form} onSubmit={sendEmail} className="mt-56 mx-auto">
-                <label className="text-white text-2xl mb-2">Full Name*</label>
+            <form ref={form} onSubmit={sendEmail} className="relative flex flex-col items-start w-full xs:w-4/5 sm:w-9/12 md:w-2/3 lg:w-3/4 xl:w-1/2 2xl:w-2/5 mt-8 xs:mt-12 sm:mt-16 md:mt-32 mx-auto">
+                <label className="text-white text-lg xs:text-xl lg:text-2xl mb-2">Full Name*</label>
                 <input
                     id="full-name-value"
                     type="text"
@@ -103,10 +103,10 @@ const ContactForm = () => {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     name="user_name"
-                    className="text-white bg-transparent py-4 px-4 mb-2 shadow-2xl"
+                    className="w-full outline-none text-white bg-transparent py-4 px-4 mb-2 shadow-2xl"
                 />
 
-                <label className="text-white text-2xl mb-2">Email*</label>
+                <label className="text-white text-lg xs:text-xl lg:text-2xl mb-2">Email*</label>
                 <input
                     id="email-value"
                     type="email"
@@ -114,30 +114,36 @@ const ContactForm = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     name="user_email"
-                    className="text-white bg-transparent py-4 px-4 mb-2 shadow-2xl"
+                    className="w-full outline-none text-white bg-transparent py-4 px-4 mb-2 shadow-2xl"
                 />
 
-                <div className="flex items-center justify-between py-2 mt-4">
-                    <input type="radio" id="dog" name="user_radio" value="Dog" />
-                    <label for="huey" className="text-white text-md pl-3 pr-8">Dog</label>
+                <div className="flex flex-col xs:flex-row items-baseline xs:items-center justify-between py-2 mt-4">
+                    <div className="flex py-1">
+                        <input type="radio" id="dog" name="user_radio" value="Dog" />
+                        <label for="huey" className="text-white text-base xs:text-lg lg:text-xl pl-3 pr-8">Dog</label>
+                    </div>
 
-                    <input type="radio" id="cat" name="user_radio" value="Cat" />
-                    <label for="huey" className="text-white text-md pl-3 pr-8">Cat</label>
+                    <div className="flex py-1">
+                        <input type="radio" id="cat" name="user_radio" value="Cat" />
+                        <label for="huey" className="text-white text-base xs:text-lg lg:text-xl pl-3 pr-8">Cat</label>
+                    </div>
 
-                    <input type="radio" id="both" name="user_radio" value="Dog and Cat" />
-                    <label for="huey" className="text-white text-md pl-3 pr-8">Both</label>
+                    <div className="flex py-1">
+                        <input type="radio" id="both" name="user_radio" value="Dog and Cat" />
+                        <label for="huey" className="text-white text-base xs:text-lg lg:text-xl pl-3 pr-8">Both</label>
+                    </div>
                 </div>
 
-                <label className="text-white text-2xl mb-2">Message</label>
+                <label className="text-white text-lg xs:text-xl lg:text-2xl mb-2">Message</label>
                 <textarea
                     placeholder="Your message here..."
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     name="message"
-                    className="text-white bg-transparent py-4 px-4 mb-2 shadow-2xl"
+                    className="text-white outline-none bg-transparent py-4 px-4 mb-2 shadow-2xl rounded"
                 />
 
-                <input type="submit" value={sendButton} className={`border border-white ${sendButtonColor} text-white cursor-pointer py-2 mt-8 hover:bg-white hover:text-navy hover:border-navy transition ease-in-out duration-500 shadow-2xl`} />
+                <input type="submit" value={sendButton} className={`w-full outline-none border border-white ${sendButtonColor} text-white cursor-pointer py-2 mt-8 hover:bg-white hover:text-navy hover:border-navy transition ease-in-out duration-500 shadow-2xl`} />
             </form>
         </>
     )
