@@ -21,7 +21,6 @@ const CalendlyForm = () => {
           rootElement={rootElement!}
           text="Schedule Appointment"
         />
-        {/* <div className="button-div-absolute bg-white rounded-full absolute bottom-[-0.2em] right-1 py-3 px-28"></div> */}
       </div>
     </div>
   );
