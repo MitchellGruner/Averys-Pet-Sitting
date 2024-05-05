@@ -117,6 +117,17 @@ const ContactForm = () => {
                     className="text-white bg-transparent py-4 px-4 mb-2 shadow-2xl"
                 />
 
+                <div className="flex items-center justify-between py-2 mt-4">
+                    <input type="radio" id="dog" name="user_radio" value="Dog" />
+                    <label for="huey" className="text-white text-md pl-3 pr-8">Dog</label>
+
+                    <input type="radio" id="cat" name="user_radio" value="Cat" />
+                    <label for="huey" className="text-white text-md pl-3 pr-8">Cat</label>
+
+                    <input type="radio" id="both" name="user_radio" value="Dog and Cat" />
+                    <label for="huey" className="text-white text-md pl-3 pr-8">Both</label>
+                </div>
+
                 <label className="text-white text-2xl mb-2">Message</label>
                 <textarea
                     placeholder="Your message here..."
