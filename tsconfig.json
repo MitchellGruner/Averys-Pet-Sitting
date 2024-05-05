@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/contact/CalendlyForm.tsx", "app/components/contact/Contact.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/contact/CalendlyForm.tsx", "app/components/contact/Contact.tsx"],
   "exclude": ["node_modules"]
 }
