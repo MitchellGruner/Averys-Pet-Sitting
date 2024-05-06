@@ -20,10 +20,10 @@ const OpenHamburgerMenu = () => {
                 <hr className="w-[95%] mx-auto mt-1" />
 
                 <div className="px-4 mt-4 space-y-0">
-                    <a href="/profile" className="inline-block text-left text-md font-medium hover:text-navy transition ease-in-out duration-500">View Profile</a>
+                    <a href="/profile" className="inline-block text-left text-lg text-navy hover:text-black transition ease-in-out duration-500">View Profile</a>
 
                     <Link to="contactForm" spy={true} smooth={true} duration={500} className="flex flex-row items-center text-left text-md font-medium hover:text-navy transition ease-in-out duration-500">
-                        <span className="pr-4">Contact Avery</span>
+                        <span className="pr-4 cursor-pointer text-lg text-navy hover:text-black transition ease-in-out duration-500">Contact Avery</span>
 
                         <Image
                             src="/averysprofessionalphoto.jpg"
@@ -52,7 +52,7 @@ const OpenHamburgerMenu = () => {
                         <span className="pl-2">Cat Sitting</span>
                     </a>
 
-                    <a href="/logout" className="inline-block pt-10 pb-2 text-left text-md text-red font-medium hover:text-black transition ease-in-out duration-500">Log out</a>
+                    <a href="/logout" className="inline-block pt-10 pb-2 text-left text-lg text-red font-medium hover:text-black transition ease-in-out duration-500">Log out</a>
                 </div>
             </div>
         </div>
