@@ -1,5 +1,7 @@
-import Link from "next/link";
+"use client";
+
 import Image from "next/image";
+import {Link} from "react-scroll";
 
 function NavbarMenuItemsLink({
     href,
@@ -21,7 +23,7 @@ function NavbarMenuItemsLink({
     title: string;
 }) {
     return (
-        <Link href={href} className={`${linkClassName} outline inline-block transition ease-in-out duration-500 icon-container`}>
+        <Link to={href} spy={true} smooth={true} duration={500} className={`${linkClassName} outline inline-block transition ease-in-out duration-500 icon-container`}>
             <div className={`flex flex-row items-center justify-center relative py-1 cursor-pointer ${divClassName}`}>
                 <Image
                     src={firstImageSrc}
@@ -60,7 +62,7 @@ const NavbarMenuItems = () => {
             />
             &nbsp;
             <NavbarMenuItemsLink
-                href="/contact"
+                href="contactForm"
                 linkClassName="contact"
                 firstImageSrc="/mailiconnavy.png"
                 firstImageAlt="Navy Mail Icon"

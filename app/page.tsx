@@ -1,7 +1,12 @@
+import {ChakraProvider} from "@chakra-ui/react";
+import AppContainer from "./components/AppContainer";
+
 import Main from "./components/main/Main";
 import About from "./components/about/About";
 import Testimonials from "./components/testimonials/Testimonials";
 import Services from "./components/services/Services";
+import Contact from "./components/contact/Contact";
+import CalendlyForm from "./components/contact/CalendlyForm";
 
 export default function Home() {
   return (
@@ -10,6 +15,13 @@ export default function Home() {
       <About />
       <Testimonials />
       <Services />
+      <ChakraProvider>
+        <AppContainer>
+          <Contact />
+        </AppContainer>
+      </ChakraProvider>
+      <CalendlyForm />
+      <div id="__next"></div>
     </main>
   );
 }

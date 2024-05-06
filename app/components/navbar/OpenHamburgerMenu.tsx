@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import { Link } from "react-scroll";
 
 const OpenHamburgerMenu = () => {
     return (
@@ -20,9 +20,10 @@ const OpenHamburgerMenu = () => {
                 <hr className="w-[95%] mx-auto mt-1" />
 
                 <div className="px-4 mt-4 space-y-0">
-                    <Link href="/profile" className="inline-block text-left text-md font-medium hover:text-navy transition ease-in-out duration-500">View Profile</Link>
-                    <Link href="/contact" className="flex flex-row items-center text-left text-md font-medium hover:text-navy transition ease-in-out duration-500">
-                        <span className="pr-4">Contact Avery</span>
+                    <a href="/profile" className="inline-block text-left text-lg text-navy hover:text-black transition ease-in-out duration-500">View Profile</a>
+
+                    <Link to="contactForm" spy={true} smooth={true} duration={500} className="flex flex-row items-center text-left text-md font-medium hover:text-navy transition ease-in-out duration-500">
+                        <span className="pr-4 cursor-pointer text-lg text-navy hover:text-black transition ease-in-out duration-500">Contact Avery</span>
 
                         <Image
                             src="/averysprofessionalphoto.jpg"
@@ -32,7 +33,7 @@ const OpenHamburgerMenu = () => {
                             className="rounded-full p-2"
                         />
                     </Link>
-                    <Link href="/dog" className="flex flex-row md:hidden pt-4 text-left text-md font-medium hover:text-navy transition ease-in-out duration-500">
+                    <a href="/dog" className="flex flex-row md:hidden pt-4 text-left text-md font-medium hover:text-navy transition ease-in-out duration-500">
                         <Image
                             src="/dogiconnavy.png"
                             width={24}
@@ -40,8 +41,8 @@ const OpenHamburgerMenu = () => {
                             alt="Dog Icon"
                         />
                         <span className="pl-2">Dog Sitting</span>
-                    </Link>
-                    <Link href="/cat" className="flex flex-row md:hidden pt-4 text-left text-md font-medium hover:text-navy transition ease-in-out duration-500">
+                    </a>
+                    <a href="/cat" className="flex flex-row md:hidden pt-4 text-left text-md font-medium hover:text-navy transition ease-in-out duration-500">
                         <Image
                             src="/caticonnavy.png"
                             width={24}
@@ -49,9 +50,9 @@ const OpenHamburgerMenu = () => {
                             alt="Cat Icon"
                         />
                         <span className="pl-2">Cat Sitting</span>
-                    </Link>
+                    </a>
 
-                    <Link href="/logout" className="inline-block pt-10 pb-2 text-left text-md text-red font-medium hover:text-black transition ease-in-out duration-500">Log out</Link>
+                    <a href="/logout" className="inline-block pt-10 pb-2 text-left text-lg text-red font-medium hover:text-black transition ease-in-out duration-500">Log out</a>
                 </div>
             </div>
         </div>
