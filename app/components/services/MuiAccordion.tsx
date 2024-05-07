@@ -41,7 +41,7 @@ export const MuiAccordion = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography className="text-xs xs:text-sm sm:text-md md:text-sm lg:text-md 2xl:text-lg py-2 sm:py-3 md:py-2 lg:py-3 xl:py-4 px-1">
-                        Whether it's cuddling up on the couch, playing fetch in the backyard, or going for a walk around the neighborhood - I'm here to make sure your pets are happy and healthy while you're away.
+                        Quality time is one of my love languages! Whether it’s belly rubs for your pup or just cuddling on the couch with your kitty, I’ll spend time bonding and providing love and companionship for your pets while you travel.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
@@ -69,7 +69,7 @@ export const MuiAccordion = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography className="text-xs xs:text-sm sm:text-md md:text-sm lg:text-md 2xl:text-lg py-2 sm:py-3 md:py-2 lg:py-3 xl:py-4 px-1">
-                        I provide personalized drop-in visits for your furry companions, ensuring they receive the love, attention, and care they need while you're away. From feeding and playtime to cuddles and companionship, I'll make sure your pets feel safe and happy until your return.
+                        I provide personalized drop-in visits at your home to take care of your fur babies. Whether it’s a quick check-in or a full afternoon of fun, I can stop by your home multiple times per day to ensure your pet is fed, let-out, played with, and given the love and attention they deserve at home while you’re away.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
@@ -97,7 +97,7 @@ export const MuiAccordion = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography className="text-xs xs:text-sm sm:text-md md:text-sm lg:text-md 2xl:text-lg py-2 sm:py-3 md:py-2 lg:py-3 xl:py-4 px-1">
-                        Overnight stays as part of my dog sitting service provide your furry companions with the comfort of familiar surroundings and consistent care throughout the night, ensuring they feel secure and loved even when you're away.
+                        New and foreign places can be stressful for your furry friends. Instead, keep them relaxed and comfortable in their own home with my overnight pet sitting!  I’m happy to stay at your home and care for your pets overnight to ensure they are cared for and loved around-the-clock.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
@@ -125,7 +125,7 @@ export const MuiAccordion = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography className="text-xs xs:text-sm sm:text-md md:text-sm lg:text-md 2xl:text-lg py-2 sm:py-3 md:py-2 lg:py-3 xl:py-4 px-1">
-                        I prioritize regular exercise and play sessions tailored to your dog's needs, fostering physical health, mental stimulation, and a strong bond between us, ensuring they stay happy and healthy in your absence.
+                        Instead of being cooped up in a kennel all day, I’m here to make sure your pet is staying active and mentally stimulated while you’re gone. From playing fetch to long walks around the neighborhood, I’ll ensure that your pets stay happy and healthy with tailored exercise and play sessions.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
@@ -148,12 +148,12 @@ export const MuiAccordion = () => {
                             alt="Weights Icon"
                             className="mr-3 lg:mr-4 xl:mr-4"
                         />
-                        <span className="flex items-center pl-0 lg:pl-1 xl:pl-2 text-xs xs:text-sm sm:text-lg md:text-sm lg:text-lg">Pet transportation services</span>
+                        <span className="flex items-center pl-0 lg:pl-1 xl:pl-2 text-xs xs:text-sm sm:text-lg md:text-sm lg:text-lg">Medication administration</span>
                     </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography className="text-xs xs:text-sm sm:text-md md:text-sm lg:text-md 2xl:text-lg py-2 sm:py-3 md:py-2 lg:py-3 xl:py-4 px-1">
-                    I'll take the stress out of vet and grooming trips for your beloved pet with my personalized transportation service, ensuring they arrive safely and comfortably every time.
+                        With my years of experience as a vet tech assistant, I’m very familiar with administering various types of medication to pets of all shapes and sizes. No matter how fussy your pet is, I’ll always make sure they receive the care and medication they need while you’re away.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
