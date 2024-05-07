@@ -41,7 +41,7 @@ export const MuiAccordion = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography className="text-xs xs:text-sm sm:text-md md:text-sm lg:text-md 2xl:text-lg py-2 sm:py-3 md:py-2 lg:py-3 xl:py-4 px-1">
-                        Quality time is one of my love languages! Whether it’s belly rubs for your pup or just cuddling on the couch with your kitty, I’ll spend time bonding and providing love and companionship for your pets while you travel.
+                    <span className="text-navy italic font-bold">Quality time is one of my love languages!</span> Whether it’s belly rubs for your pup or just cuddling on the couch with your kitty, I’ll spend time bonding and providing love and companionship for your pets while you travel.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
@@ -69,7 +69,7 @@ export const MuiAccordion = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography className="text-xs xs:text-sm sm:text-md md:text-sm lg:text-md 2xl:text-lg py-2 sm:py-3 md:py-2 lg:py-3 xl:py-4 px-1">
-                        I provide personalized drop-in visits at your home to take care of your fur babies. Whether it’s a quick check-in or a full afternoon of fun, I can stop by your home multiple times per day to ensure your pet is fed, let-out, played with, and given the love and attention they deserve at home while you’re away.
+                        I provide personalized drop-in visits at your home to take care of your fur babies. Whether it’s a quick check-in or a full afternoon of fun, I can stop by your home multiple times per day to ensure your pet is fed, let-out, played with, and <span className="text-navy italic font-bold">given the love and attention they deserve</span> at home while you’re away.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
@@ -97,7 +97,7 @@ export const MuiAccordion = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography className="text-xs xs:text-sm sm:text-md md:text-sm lg:text-md 2xl:text-lg py-2 sm:py-3 md:py-2 lg:py-3 xl:py-4 px-1">
-                        New and foreign places can be stressful for your furry friends. Instead, keep them relaxed and comfortable in their own home with my overnight pet sitting!  I’m happy to stay at your home and care for your pets overnight to ensure they are cared for and loved around-the-clock.
+                        New and foreign places can be stressful for your furry friends. Instead, keep them relaxed and comfortable in their own home with my overnight pet sitting!  I’m happy to stay at your home and care for your pets overnight to ensure they are cared for and loved <span className="text-navy italic font-bold">around-the-clock</span>.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
@@ -125,7 +125,7 @@ export const MuiAccordion = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography className="text-xs xs:text-sm sm:text-md md:text-sm lg:text-md 2xl:text-lg py-2 sm:py-3 md:py-2 lg:py-3 xl:py-4 px-1">
-                        Instead of being cooped up in a kennel all day, I’m here to make sure your pet is staying active and mentally stimulated while you’re gone. From playing fetch to long walks around the neighborhood, I’ll ensure that your pets stay happy and healthy with tailored exercise and play sessions.
+                        Instead of being cooped up in a kennel all day, I’m here to make sure your pet is staying active and mentally stimulated while you’re gone. <span className="text-navy italic font-bold">From playing fetch to long walks around the neighborhood</span>, I’ll ensure that your pets stay happy and healthy with tailored exercise and play sessions.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
@@ -153,7 +153,7 @@ export const MuiAccordion = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography className="text-xs xs:text-sm sm:text-md md:text-sm lg:text-md 2xl:text-lg py-2 sm:py-3 md:py-2 lg:py-3 xl:py-4 px-1">
-                        With my years of experience as a vet tech assistant, I’m very familiar with administering various types of medication to pets of all shapes and sizes. No matter how fussy your pet is, I’ll always make sure they receive the care and medication they need while you’re away.
+                        <span className="text-navy italic font-bold">With my years of experience as a vet tech assistant</span>, I’m very familiar with administering various types of medication to pets of all shapes and sizes. No matter how fussy your pet is, I’ll always make sure they receive the care and medication they need while you’re away.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
