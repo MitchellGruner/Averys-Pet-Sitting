@@ -142,10 +142,10 @@ export const MuiAccordion = () => {
                 >
                     <Typography className="flex flex-row text-white font-bold">
                         <Image
-                            src="/services.car.icon.png"
+                            src="/services.pill.icon.png"
                             width={25}
                             height={25}
-                            alt="Weights Icon"
+                            alt="Pill Icon"
                             className="mr-3 lg:mr-4 xl:mr-4"
                         />
                         <span className="flex items-center pl-0 lg:pl-1 xl:pl-2 text-xs xs:text-sm sm:text-lg md:text-sm lg:text-lg">Medication administration</span>
