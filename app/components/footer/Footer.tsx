@@ -74,7 +74,7 @@ function SocialLinks({
 
 const Footer = () => {
     return (
-        <div className="bg-slate w-full md:mt-40 lg:mt-48 xl:mt-52 py-4 border-t border-white z-10">
+        <div className="bg-slate w-full py-4 border-t border-white z-10">
             <div className="max-w-[1600px] mx-auto flex flex-row justify-between">
                 <div className="flex flex-row justify-evenly basis-full md:basis-2/3">
                     <div className="hidden md:flex md:flex-row w-full justify-evenly">

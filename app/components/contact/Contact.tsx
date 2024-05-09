@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Contact = () => {
     return (
-        <div id="contact" className="relative block w-full mx-auto mt-2 sm:mt-4 lg:mt-6 2xl:mt-8">
+        <div id="contact" className="relative block w-full mx-auto mt-2 sm:mt-4 lg:mt-6 2xl:mt-8 mb-16 md:mb-40 lg:mb-48 xl:mb-52">
             <div className="max-w-[1200px] testimonials-container mx-auto pt-0 xs:pt-4 md:pt-6 xl:pt-10 xl:pb-4">
                 <Header title={"Contact"} color={"text-white"} />
                 <div className="flex flex-col md:flex-row items-center justify-center mt-6 xs:mt-8 sm:mt-12 md:mt-20">
