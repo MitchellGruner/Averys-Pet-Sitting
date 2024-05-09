@@ -53,10 +53,12 @@ function FooterLink({
 function SocialLinks({
     link,
     image,
+    className,
     alt,
 }: {
     link: string;
     image: string;
+    className: string;
     alt: string;
 }) {
     return (
@@ -66,7 +68,7 @@ function SocialLinks({
                 width={35}
                 height={35}
                 alt={alt}
-                className="max-w-6 lg:max-w-8 xl:max-w-full"
+                className={`${className}`}
             />
         </a>
     );
@@ -152,20 +154,41 @@ const Footer = () => {
 
             <hr className="max-w-[1600px] border-white mt-4 sm:mt-6 lg:mt-8 lg:mb-2 w-11/12 lg:w-5/6 mx-auto" />
 
-            <div className="max-w-[1600px] w-5/6 mx-auto block xs:flex xs:flex-row justify-between pb-2 lg:pb-6 mt-6">
-                <div className="flex flex-row">
-                    <p className="flex items-center text-white text-base xl:text-lg">© 2024. All rights reserved.</p>
+            <div className="max-w-[1600px] w-5/6 mx-auto block md:flex md:flex-row justify-between pb-2 lg:pb-6 mt-6">
+                <div className="flex flex-col mb-4 md:mb-0">
+                    <p className="flex items-center text-white text-base xl:text-lg">©2024. All rights reserved.</p>
+
+                    <div className="flex flex-row">
+                        <p className="hidden xs:flex items-center text-white text-base xl:text-lg mr-2 lg:mr-4">Designed by&nbsp;<span className="text-yellow">Mitchell Gruner</span></p>
+                        
+                        <div className="flex flex-row items-center mt-4 xs:mt-0">
+                            <SocialLinks
+                                link="https://www.linkedin.com/in/mitchell-gruner-12a4ab163/"
+                                image="/linkedin.logo.large.png"
+                                className="max-w-6 xl:max-w-6"
+                                alt="LinkedIn Logo"
+                            />
+                            <SocialLinks
+                                link="https://github.com/MitchellGruner"
+                                image="/github.logo.navy.png"
+                                className="max-w-6 xl:max-w-6"
+                                alt="GitHub Logo"
+                            />
+                        </div>
+                    </div>
                 </div>
 
-                <div className="flex flex-row mt-2 xs:mt-0">
+                <div className="flex flex-row mt-2 xs:mt-0 items-center">
                     <SocialLinks
                         link="https://www.linkedin.com/in/avery-geiger-2b0703198"
                         image="/linkedin.logo.large.png"
+                        className="max-w-6 lg:max-w-8 xl:max-w-full"
                         alt="LinkedIn Logo"
                     />
                     <SocialLinks
                         link="https://www.instagram.com/averyjeans12/"
                         image="/instagram.logo.large.png"
+                        className="max-w-6 lg:max-w-8 xl:max-w-full"
                         alt="Instagram Logo"
                     />
                 </div>
