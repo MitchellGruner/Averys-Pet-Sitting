@@ -1,4 +1,6 @@
-import Link from "next/link";
+"use client";
+
+import {Link} from "react-scroll";
 import Image from "next/image";
 
 import NavbarMenuItems from "./NavbarMenuItems";
@@ -9,7 +11,7 @@ const Navbar = () => {
         <nav className="w-full fixed border-b top-0 left-0 py-3 bg-navy z-10">
             <div className="max-w-[1600px] mx-auto px-6">
                 <div className="flex flex-row justify-between items-center">
-                    <Link href="/" className="md:min-w-44 flex flex-row justify-center">
+                    <Link to="home" spy={true} smooth={true} duration={500} offset={-200} className="md:min-w-44 flex flex-row justify-center cursor-pointer">
                         <Image
                             src="/averyspetsittinglogo1.png"
                             width={90}
@@ -20,7 +22,6 @@ const Navbar = () => {
                     </Link>
 
                     <NavbarMenuItems />
-
                     <ProfileMenu />
                 </div>
             </div>

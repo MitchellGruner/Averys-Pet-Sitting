@@ -34,6 +34,8 @@ const config: Config = {
         'navy': '#1c2e4a',
         'light-navy': '#2A456F',
         'yellow': '#EBB007',
+        'slate': '#2D2D32',
+        'off-white': '#E6E1D3',
       },
     },
   },

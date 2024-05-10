@@ -4,7 +4,7 @@ import MainText from "./MainText";
 
 const Main = () => {
     return (
-        <div className="min-h-max max-w-[1600px]">
+        <div id="home" className="min-h-max max-w-[1600px]">
             <div className="main-container">
                 <Image
                     id="mainBackground"
