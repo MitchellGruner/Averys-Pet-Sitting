@@ -42,7 +42,7 @@ function FooterLink({
                 </Link>
             )}
             {linkFourth && nameFourth && (
-                <Link to={linkFourth} spy={true} smooth={true} duration={500} className="text-off-white text-base xl:text-lg cursor-pointer pb-1 hover:text-white transition ease-in-out duration-500">
+                <Link to={linkFourth} spy={true} smooth={true} duration={500} offset={-75} className="text-off-white text-base xl:text-lg cursor-pointer pb-1 hover:text-white transition ease-in-out duration-500">
                     {nameFourth}
                 </Link>
             )}
