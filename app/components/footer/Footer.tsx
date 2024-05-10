@@ -5,6 +5,7 @@ import {Link} from "react-scroll";
 
 function FooterLink({
     title,
+    linkTitle,
     linkFirst,
     nameFirst,
     linkSecond,
@@ -15,6 +16,7 @@ function FooterLink({
     nameFourth,
 }: {
     title: string;
+    linkTitle: string;
     linkFirst: string;
     nameFirst: string;
     linkSecond?: string;
@@ -26,7 +28,7 @@ function FooterLink({
 }) {
     return (
         <div className="flex flex-col pt-2 lg:pt-4 xl:pt-6">
-            <h2 className="text-white text-lg sm:text-xl xl:text-2xl font-bold mb-2 md:mb-4">{title}</h2>
+            <Link to={linkTitle} spy={true} smooth={true} duration={500} offset={-250} className="text-white text-lg sm:text-xl xl:text-2xl font-bold mb-2 md:mb-4 cursor-pointer hover:text-yellow transition ease-in-out duration-500">{title}</Link>
 
             <Link to={linkFirst} spy={true} smooth={true} duration={500} offset={-130} className="text-off-white text-base xl:text-lg cursor-pointer pb-1 hover:text-white transition ease-in-out duration-500">
                 {nameFirst}
@@ -82,6 +84,7 @@ const Footer = () => {
                     <div className="hidden md:flex md:flex-row w-full justify-evenly">
                         <FooterLink
                             title="Home"
+                            linkTitle="home"
                             linkFirst="about"
                             nameFirst="About Me"
                             linkSecond="services"
@@ -93,11 +96,13 @@ const Footer = () => {
                         />
                         <FooterLink
                             title="Dog Services"
+                            linkTitle="dogHome"
                             linkFirst="dog"
                             nameFirst="About"
                         />
                         <FooterLink
                             title="Cat Services"
+                            linkTitle="catHome"
                             linkFirst="cat"
                             nameFirst="About"
                         />
@@ -105,6 +110,7 @@ const Footer = () => {
                     <div className="flex flex-col md:hidden">
                         <FooterLink
                             title="Home"
+                            linkTitle="home"
                             linkFirst="about"
                             nameFirst="About Me"
                             linkSecond="services"
@@ -116,6 +122,7 @@ const Footer = () => {
                         />
                         <FooterLink
                             title="Dog Services"
+                            linkTitle="dogHome"
                             linkFirst="dog"
                             nameFirst="About"
                         />
@@ -123,6 +130,7 @@ const Footer = () => {
                     <div className="flex flex-col md:hidden">
                         <FooterLink
                             title="Cat Services"
+                            linkTitle="catHome"
                             linkFirst="cat"
                             nameFirst="About"
                         />
