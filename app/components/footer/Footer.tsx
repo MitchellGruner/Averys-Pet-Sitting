@@ -76,7 +76,7 @@ function SocialLinks({
 
 const Footer = () => {
     return (
-        <div className="bg-slate w-full py-4 border-t border-white z-10">
+        <div id="footer" className="bg-slate w-full py-4 border-t border-white z-10">
             <div className="max-w-[1600px] mx-auto flex flex-row justify-between">
                 <div className="flex flex-row justify-evenly basis-full md:basis-2/3">
                     <div className="hidden md:flex md:flex-row w-full justify-evenly">
@@ -152,9 +152,9 @@ const Footer = () => {
                 </div>
             </div>
 
-            <hr className="max-w-[1600px] border-white mt-4 sm:mt-6 lg:mt-8 lg:mb-2 w-11/12 lg:w-5/6 mx-auto" />
+            <hr className="max-w-[1300px] border-white mt-4 sm:mt-6 lg:mt-8 lg:mb-2 w-11/12 lg:w-5/6 mx-auto" />
 
-            <div className="max-w-[1600px] w-5/6 mx-auto block md:flex md:flex-row justify-between pb-2 lg:pb-6 mt-6">
+            <div className="max-w-[1300px] w-5/6 mx-auto block md:flex md:flex-row justify-between pb-2 lg:pb-6 mt-6">
                 <div className="flex flex-col mb-4 md:mb-0">
                     <p className="flex items-center text-white text-base xl:text-lg">©2024. All rights reserved.</p>
 
@@ -162,6 +162,7 @@ const Footer = () => {
                         <p className="hidden xs:flex items-center text-white text-base xl:text-lg mr-2 lg:mr-4">Designed by&nbsp;<span className="text-yellow">Mitchell Gruner</span></p>
                         
                         <div className="flex flex-row items-center mt-4 xs:mt-0">
+                            <p className="xs:hidden socials-link items-center text-white text-sm xl:text-lg mr-2 lg:mr-4"><span>Mitchell's Socials:</span></p>
                             <SocialLinks
                                 link="https://www.linkedin.com/in/mitchell-gruner-12a4ab163/"
                                 image="/linkedin.logo.large.png"
@@ -179,6 +180,7 @@ const Footer = () => {
                 </div>
 
                 <div className="flex flex-row mt-2 xs:mt-0 items-center">
+                    <p className="md:hidden socials-link xs:flex items-center text-white text-sm xl:text-lg mr-2 lg:mr-4"><span>Avery's Socials:</span></p>
                     <SocialLinks
                         link="https://www.linkedin.com/in/avery-geiger-2b0703198"
                         image="/linkedin.logo.large.png"
