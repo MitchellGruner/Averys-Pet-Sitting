@@ -98,7 +98,7 @@ const HamburgerMenu = () => {
             </MotionConfig>
 
             {active && (
-                <OpenHamburgerMenu />
+                <OpenHamburgerMenu closeState={setActive} />
             )}
         </div>
     )
