@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Link } from "react-scroll";
 
-const OpenHamburgerMenu = () => {
+const OpenHamburgerMenu = ({closeState}: {closeState: any}) => {
     return (
         <div id="openHamburgerMenu" className="test-class absolute top-[5.5em] right-0 bg-white rounded-md 2xs:w-60 xs:w-72 border border-slate-600">
             <div className="p-2">
@@ -23,7 +23,7 @@ const OpenHamburgerMenu = () => {
                     <a href="/profile" className="inline-block text-left text-lg text-navy hover:text-black transition ease-in-out duration-500">View Profile</a>
 
                     <Link to="contactForm" spy={true} smooth={true} duration={500} className="flex flex-row items-center text-left text-md font-medium hover:text-navy transition ease-in-out duration-500">
-                        <span className="pr-4 cursor-pointer text-lg text-navy hover:text-black transition ease-in-out duration-500">Contact Avery</span>
+                        <span className="pr-4 cursor-pointer text-lg text-navy hover:text-black transition ease-in-out duration-500" onClick={() => closeState(false)}>Contact Avery</span>
 
                         <Image
                             src="/averysprofessionalphoto.jpg"
