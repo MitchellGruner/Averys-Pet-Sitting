@@ -9,6 +9,7 @@ import "./styles/about/About.scss";
 import "./styles/testimonials/Testimonials.scss";
 import "./styles/services/Services.scss";
 import "./styles/contact/Contact.scss";
+import "./styles/footer/Footer.scss";
 import "./styles/Header.scss";
 
 import Navbar from "./components/navbar/Navbar";
