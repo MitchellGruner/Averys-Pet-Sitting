@@ -22,7 +22,7 @@ const OpenHamburgerMenu = ({closeState}: {closeState: any}) => {
                 <div className="px-4 mt-4 space-y-0">
                     <a href="/profile" className="inline-block text-left text-lg text-navy hover:text-black transition ease-in-out duration-500">View Profile</a>
 
-                    <Link to="contactForm" spy={true} smooth={true} duration={500} className="flex flex-row items-center text-left text-md font-medium hover:text-navy transition ease-in-out duration-500">
+                    <Link to="contactForm" spy={true} smooth={true} duration={500} offset={-80} className="flex flex-row items-center text-left text-md font-medium hover:text-navy transition ease-in-out duration-500">
                         <span className="pr-4 cursor-pointer text-lg text-navy hover:text-black transition ease-in-out duration-500" onClick={() => closeState(false)}>Contact Avery</span>
 
                         <Image
