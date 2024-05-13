@@ -5,6 +5,7 @@ import {Link} from "react-scroll";
 
 function NavbarMenuItemsLink({
     href,
+    offset,
     linkClassName,
     divClassName,
     firstImageSrc,
@@ -14,6 +15,7 @@ function NavbarMenuItemsLink({
     title,
 }: {
     href: string;
+    offset: number;
     linkClassName: string;
     divClassName?: string;
     firstImageSrc: string;
@@ -23,7 +25,7 @@ function NavbarMenuItemsLink({
     title: string;
 }) {
     return (
-        <Link to={href} spy={true} smooth={true} duration={500} className={`${linkClassName} outline inline-block transition ease-in-out duration-500 icon-container`}>
+        <Link to={href} spy={true} smooth={true} duration={500} offset={offset} className={`${linkClassName} outline inline-block transition ease-in-out duration-500 icon-container`}>
             <div className={`flex flex-row items-center justify-center relative py-1 cursor-pointer ${divClassName}`}>
                 <Image
                     src={firstImageSrc}
@@ -52,6 +54,7 @@ const NavbarMenuItems = () => {
         <div className="hidden md:flex md:flex-row mx-auto">
             <NavbarMenuItemsLink
                 href="/dog"
+                offset={-250}
                 linkClassName="dog"
                 divClassName="hover:text-navy"
                 firstImageSrc="/dogiconwhite2.png"
@@ -63,6 +66,7 @@ const NavbarMenuItems = () => {
             &nbsp;
             <NavbarMenuItemsLink
                 href="contactForm"
+                offset={-50}
                 linkClassName="contact"
                 firstImageSrc="/mailiconnavy.png"
                 firstImageAlt="Navy Mail Icon"
@@ -70,6 +74,7 @@ const NavbarMenuItems = () => {
             />&nbsp;
             <NavbarMenuItemsLink
                 href="/cat"
+                offset={-250}
                 linkClassName="cat"
                 divClassName="hover:text-navy"
                 firstImageSrc="/caticonwhite.png"

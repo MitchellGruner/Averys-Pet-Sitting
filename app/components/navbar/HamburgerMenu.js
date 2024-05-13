@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, MotionConfig } from "framer-motion";
 
 import OpenHamburgerMenu from "./OpenHamburgerMenu";
@@ -8,8 +8,24 @@ import OpenHamburgerMenu from "./OpenHamburgerMenu";
 const HamburgerMenu = () => {
     const [active, setActive] = useState(false);
 
+    let menuRef = useRef();
+
+    useEffect(() => {
+        let handler = (e) => {
+            if (!menuRef.current.contains(e.target)) {
+                setActive(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handler);
+
+        return() => {
+            document.removeEventListener("mousedown", handler);
+        }
+    });
+
     return (
-        <div className="relative">
+        <div className="relative" ref={menuRef}>
             <MotionConfig
                 transition={{
                     duration: 0.5,
@@ -82,7 +98,7 @@ const HamburgerMenu = () => {
             </MotionConfig>
 
             {active && (
-                <OpenHamburgerMenu />
+                <OpenHamburgerMenu closeState={setActive} />
             )}
         </div>
     )
