@@ -39,20 +39,46 @@ function HamburgerLink({
     )
 }
 
+function HamburgerExternalLink({
+    href,
+    title,
+    imageSrc,
+    alt,
+}: {
+    href: string;
+    title: string;
+    imageSrc: string;
+    alt?: string;
+}) {
+    return (
+        <a href={href} target="_blank" className="flex flex-row cursor-pointer justify-normal items-center pl-4">
+            <Image
+                src={imageSrc}
+                width={37}
+                height={37}
+                className="p-2"
+                alt={alt || ""}
+            />
+
+            <span className="pl-2 cursor-pointer text-navy text-base xs:text-lg hover:text-yellow transition ease-in-out duration-500">{title}</span>
+        </a>
+    )
+}
+
 const OpenHamburgerMenu = ({closeState}: {closeState: any}) => {
     return (
-        <div id="openHamburgerMenu" className="test-class absolute top-[5.5em] right-0 bg-white rounded-md 2xs:w-60 xs:w-72 border border-slate-600">
+        <div id="openHamburgerMenu" className="absolute top-[5.5em] right-0 bg-white rounded-md p-1 2xs:w-60 xs:w-[19em] shadow-2xl border border-slate-600">
             <div className="p-2">
                 <HamburgerLink
                     href="home"
                     closeState={closeState}
                     offset={-250}
                     title="Avery's Pet Sitting"
-                    titleSize="text-xl"
-                    imageSrc="/defaultprofilepicture.jpg"
+                    titleSize="hidden xs:block xs:text-xl"
+                    imageSrc="/averysprofessionalphoto.jpg"
                     width={65}
                     height={0}
-                    alt="Profile Icon"
+                    alt="Avery's Headshot"
                 />
 
                 <hr className="w-[95%] mx-auto mt-1" />
@@ -61,64 +87,55 @@ const OpenHamburgerMenu = ({closeState}: {closeState: any}) => {
                     <HamburgerLink
                         href="about"
                         closeState={closeState}
-                        offset={-80}
+                        offset={-150}
                         title="About Me"
-                        titleSize="text-lg"
+                        titleSize="text-base xs:text-lg"
                     />
                     <HamburgerLink
                         href="testimonials"
                         closeState={closeState}
-                        offset={-80}
+                        offset={-25}
                         title="Testimonials"
-                        titleSize="text-lg"
+                        titleSize="text-base xs:text-lg"
                     />
                     <HamburgerLink
                         href="services"
                         closeState={closeState}
-                        offset={-80}
+                        offset={-100}
                         title="Services"
-                        titleSize="text-lg"
+                        titleSize="text-base xs:text-lg"
                     />
                     <HamburgerLink
                         href="contact"
                         closeState={closeState}
-                        offset={-80}
+                        offset={-100}
                         title="Contact"
-                        titleSize="text-lg"
-                        imageSrc="/averysprofessionalphoto.jpg"
-                        width={50}
-                        height={50}
-                        alt="Avery's Headshot"
+                        titleSize="text-base xs:text-lg"
                     />
                     <HamburgerLink
                         href="contactForm"
                         closeState={closeState}
                         offset={-80}
                         title="Get Connected"
-                        titleSize="text-lg"
+                        titleSize="text-base xs:text-lg"
                     />
-                    <HamburgerLink
-                        href="dog"
-                        closeState={closeState}
-                        offset={-80}
-                        title="Dog Sitting"
-                        titleSize="text-lg"
-                        imageSrc="/dogiconnavy.png"
-                        width={40}
-                        height={40}
-                        alt="Dog Icon"
-                    />
-                    <HamburgerLink
-                        href="cat"
-                        closeState={closeState}
-                        offset={-80}
-                        title="Cat Sitting"
-                        titleSize="text-lg"
-                        imageSrc="/caticonnavy.png"
-                        width={40}
-                        height={40}
-                        alt="Cat Icon"
-                    />
+
+                    <hr className="block w-full mx-auto" />
+
+                    <div className="block pb-1">
+                        <HamburgerExternalLink
+                            href="/dog"
+                            title="Dog Sitting"
+                            imageSrc="/dogiconnavy.png"
+                            alt="Dog Icon"
+                        />
+                        <HamburgerExternalLink
+                            href="/cat"
+                            title="Cat Sitting"
+                            imageSrc="/caticonnavy.png"
+                            alt="Cat Icon"
+                        />
+                    </div>
                 </div>
             </div>
         </div>
