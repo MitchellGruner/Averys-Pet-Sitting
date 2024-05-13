@@ -56,11 +56,11 @@ function HamburgerExternalLink({
                 src={imageSrc}
                 width={37}
                 height={37}
-                className="p-2"
+                className="p-2 mr-2"
                 alt={alt || ""}
             />
 
-            <span className="pl-2 cursor-pointer text-navy text-base xs:text-lg hover:text-yellow transition ease-in-out duration-500">{title}</span>
+            <span className="cursor-pointer text-navy text-base xs:text-lg hover:text-yellow transition ease-in-out duration-500">{title}</span>
         </a>
     )
 }
