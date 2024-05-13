@@ -67,7 +67,7 @@ function HamburgerExternalLink({
 
 const OpenHamburgerMenu = ({closeState}: {closeState: any}) => {
     return (
-        <div id="openHamburgerMenu" className="absolute top-[5.5em] right-0 bg-white rounded-md p-1 2xs:w-60 xs:w-[19em] shadow-2xl border border-slate-600">
+        <div id="openHamburgerMenu" className="absolute top-[4.5em] lg:top-[5.5em] right-0 bg-white rounded-md p-1 2xs:w-60 xs:w-[19em] shadow-2xl border border-slate-600">
             <div className="p-2">
                 <HamburgerLink
                     href="home"
