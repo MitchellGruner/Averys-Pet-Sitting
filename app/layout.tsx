@@ -13,6 +13,7 @@ import "./styles/footer/Footer.scss";
 import "./styles/Header.scss";
 
 import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/footer/Footer";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -44,6 +45,8 @@ export default function RootLayout({
         <div className="pt-24 bg-light-navy">
           {children}
         </div>
+
+        <Footer />
       </body>
     </html>
   );
