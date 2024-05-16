@@ -172,7 +172,7 @@ const Footer = () => {
                         <div className="flex flex-row items-center mt-4 xs:mt-0">
                             <p className="xs:hidden socials-link items-center text-white text-sm xl:text-lg mr-2 lg:mr-4"><span>Mitchell's Socials:</span></p>
                             <SocialLinks
-                                link="https://www.linkedin.com/in/mitchell-gruner-12a4ab163/"
+                                link="https://www.linkedin.com/in/mitchell-gruner/"
                                 image="/linkedin.logo.large.png"
                                 className="max-w-6 xl:max-w-6"
                                 alt="LinkedIn Logo"

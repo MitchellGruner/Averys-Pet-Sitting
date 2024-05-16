@@ -1,61 +1,34 @@
-"use client";
-
-import React, { useState, useEffect } from 'react';
-import $ from 'jquery';
-
 import Image from "next/image";
 import Header from '../Header';
 
+function TestimonialCard({
+    imageSrc,
+    imageAlt,
+    text,
+    name,
+}: {
+    imageSrc: string;
+    imageAlt: string;
+    text: string;
+    name: string;
+}) {
+    return (
+        <div className="sm:basis-[100%] md:basis-[47%] lg:basis-[32%] xl:basis-[30%] bg-navy rounded-2xl shadow-xl hover:shadow-2xl transition ease-in-out duration-500 p-6 mx-1 md:mx-2 xl:mx-3 2xl:mx-4 3xl:mx-5">
+            <Image
+                src={imageSrc}
+                width={148}
+                height={148}
+                alt={imageAlt}
+                className="rounded-full mt-2 xl:mt-3 2xl:mt-4 mb-6 xl:mb-8 2xl:mb-10 mx-auto"
+            />
+            <hr className="text-white" />
+            <p className="testimonial-paragraph block text-white pt-2 2xl:pt-3 lg:px-2 2xl:px-3">"{text}"</p>
+            <span className="text-white italic text-sm text-right block pt-2 md:pt-2 pr-1 xl:pr-2 2xl:pr-4 sm:mt-2 xl:mt-4 2xl:mt-6 mb-1 xl:mb-2 2xl:mb-4">- {name}</span>
+        </div>
+    )
+};
+
 const Testimonials = () => {
-    const [scrollPosition, setScrollPosition] = useState(0);
-    const handleScroll = () => {
-        const position = window.pageYOffset;
-        setScrollPosition(position);
-
-        if (position > 330) {
-            $("#mainBackground").css("position", "absolute");
-            $("#mainBackground").css("top", "540px");
-        } else {
-            $("#mainBackground").css("position", "fixed");
-            $("#mainBackground").css("top", "208px");
-        }
-    };
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll, { passive: true });
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
-    function TestimonialCard({
-        imageSrc,
-        imageAlt,
-        text,
-        name,
-    }: {
-        imageSrc: string;
-        imageAlt: string;
-        text: string;
-        name: string;
-    }) {
-        return (
-            <div className="sm:basis-[100%] md:basis-[47%] lg:basis-[32%] xl:basis-[30%] bg-navy rounded-2xl shadow-xl hover:shadow-2xl transition ease-in-out duration-500 p-6 mx-1 md:mx-2 xl:mx-3 2xl:mx-4 3xl:mx-5">
-                <Image
-                    src={imageSrc}
-                    width={148}
-                    height={148}
-                    alt={imageAlt}
-                    className="rounded-full mt-2 xl:mt-3 2xl:mt-4 mb-6 xl:mb-8 2xl:mb-10 mx-auto"
-                />
-                <hr className="text-white" />
-                <p className="testimonial-paragraph block text-white pt-2 2xl:pt-3 lg:px-2 2xl:px-3">"{text}"</p>
-                <span className="text-white italic text-sm text-right block pt-2 md:pt-2 pr-1 xl:pr-2 2xl:pr-4 sm:mt-2 xl:mt-4 2xl:mt-6 mb-1 xl:mb-2 2xl:mb-4">- {name}</span>
-            </div>
-        )
-    };
-
     return (
         <div id="testimonials" className="relative bg-white block w-full mx-auto">
             <div className="max-w-[1600px] testimonials-container mx-auto pt-20 sm:pt-36 md:pt-24 lg:pt-28 pb-28 sm:pb-40 md:pb-32">
