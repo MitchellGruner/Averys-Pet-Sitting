@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import {Link} from "react-scroll";
+import Logo from "../Logo";
 
 function FooterLink({
     title,
@@ -134,28 +135,12 @@ const Footer = () => {
                             linkFirst="cat"
                             nameFirst="About"
                         />
-                        <Link to="home" spy={true} smooth={true} duration={500} offset={-200} className="flex flex-row justify-center mt-2 cursor-pointer">
-                            <Image
-                                src="/averyspetsittinglogo1.png"
-                                width={150}
-                                height={150}
-                                alt="Avery's Pet Sitting Logo"
-                                className="max-w-20 xs:max-w-28 mt-14"
-                            />
-                        </Link>
+                        <Logo className="max-w-20 xs:max-w-28 mt-14" width={150} height={150} />
                     </div>
                 </div>
-                <div className="flex flex-row justify-evenly md:basis-1/3 md:pt-2 lg:pt-6">
+                <div className="hidden md:flex flex-row justify-evenly md:basis-1/3 md:pt-2 lg:pt-6">
                     <div className="flex flex-col">
-                        <Link to="home" spy={true} smooth={true} duration={500} offset={-200} className="md:min-w-44 hidden md:flex flex-row justify-center mt-2 cursor-pointer">
-                            <Image
-                                src="/averyspetsittinglogo1.png"
-                                width={150}
-                                height={150}
-                                alt="Avery's Pet Sitting Logo"
-                                className="max-w-16 md:max-w-full"
-                            />
-                        </Link>
+                        <Logo className="max-w-16 md:max-w-full" width={150} height={150} />
                     </div>
                 </div>
             </div>
