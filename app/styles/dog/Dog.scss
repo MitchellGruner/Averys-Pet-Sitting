@@ -1,0 +1,23 @@
+#dogPage {
+    img {
+        outline: 0.2vw solid #fff;
+        outline-offset: 15px;
+    }
+
+    .main-header {
+        transform: rotate(-16deg);
+        margin-left: 0.2em;
+        font-size: 2.2em;
+    }
+
+    .main-header-secondary {
+        transform: rotate(-20deg);
+    }
+
+    @media (min-width: 1400px) {
+        .main-header {
+            margin-left: 3.8em;
+            font-size: 4.3em;
+        }
+    }
+}
