@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ContactButton from "../components/ContactButton";
 
 const Dog = () => {
     return (
@@ -17,6 +18,8 @@ const Dog = () => {
                     <p className="mt-8 2xs:text-sm sm:text-md xl:text-lg leading-6 text-white italic">
                         That's why I've made it my mission to provide a safe, loving, and fun-filled environment where your pup can thrive while you're away.
                     </p>
+
+                    <ContactButton text={"Get Started"} />
                 </div>
                 <div className="flex justify-start basis-full md:basis-1/2 md:pr-4 md:pl-8 lg:pl-12 px-2 xs:px-4 pb-6 xs:pb-8 md:pb-0 border-b-4 md:border-b-0 md:border-l-4 border-white">
                     <Image
