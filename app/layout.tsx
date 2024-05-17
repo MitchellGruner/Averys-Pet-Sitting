@@ -11,6 +11,7 @@ import "./styles/services/Services.scss";
 import "./styles/contact/Contact.scss";
 import "./styles/footer/Footer.scss";
 import "./styles/Header.scss";
+import "./styles/dog/Dog.scss";
 
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
