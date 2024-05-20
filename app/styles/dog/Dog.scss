@@ -14,9 +14,44 @@
         transform: rotate(-20deg);
     }
 
+    @media (min-width: 400px) {
+        .main-header {
+            margin-left: 1em;
+            font-size: 2.6em;
+        }
+    }
+
+    @media (min-width: 576px) {
+        .main-header {
+            margin-left: 1.1em;
+            font-size: 2.8em;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .main-header {
+            margin-left: 1.1em;
+            font-size: 3.1em;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .main-header {
+            margin-left: 1.2em;
+            font-size: 3.4em;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .main-header {
+            margin-left: 0.72em;
+            font-size: 3.9em;
+        }
+    }
+
     @media (min-width: 1400px) {
         .main-header {
-            margin-left: 3.8em;
+            margin-left: 0.8em;
             font-size: 4.3em;
         }
     }
