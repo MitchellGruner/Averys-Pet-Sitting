@@ -53,6 +53,28 @@ function FooterLink({
     );
 }
 
+function FooterLinkPet({
+    href,
+    title,
+    linkFirst,
+    nameFirst,
+}: {
+    href: string;
+    title: string;
+    linkFirst: string;
+    nameFirst: string;
+}) {
+    return (
+        <div className="flex flex-col pt-2 lg:pt-4 xl:pt-6">
+            <a href={href} className="text-white text-lg sm:text-xl xl:text-2xl font-bold mb-2 md:mb-4 cursor-pointer hover:text-yellow transition ease-in-out duration-500">{title}</a>
+
+            <a href={linkFirst} className="text-off-white text-base xl:text-lg cursor-pointer pb-1 hover:text-white transition ease-in-out duration-500">
+                {nameFirst}
+            </a>
+        </div>
+    )
+}
+
 function SocialLinks({
     link,
     image,
@@ -95,15 +117,15 @@ const Footer = () => {
                             linkFourth="contactForm"
                             nameFourth="Get Connected"
                         />
-                        <FooterLink
+                        <FooterLinkPet
+                            href="/dog"
                             title="Dog Services"
-                            linkTitle="dogHome"
                             linkFirst="dog"
                             nameFirst="About"
                         />
-                        <FooterLink
+                        <FooterLinkPet
+                            href="/cat"
                             title="Cat Services"
-                            linkTitle="catHome"
                             linkFirst="cat"
                             nameFirst="About"
                         />
@@ -129,9 +151,9 @@ const Footer = () => {
                         />
                     </div>
                     <div className="flex flex-col md:hidden">
-                        <FooterLink
+                        <FooterLinkPet
+                            href="/cat"
                             title="Cat Services"
-                            linkTitle="catHome"
                             linkFirst="cat"
                             nameFirst="About"
                         />
