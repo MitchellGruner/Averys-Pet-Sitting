@@ -51,7 +51,7 @@ function HamburgerExternalLink({
     alt?: string;
 }) {
     return (
-        <a href={href} target="_blank" className="flex flex-row cursor-pointer justify-normal items-center pl-4">
+        <a href={href} className="flex flex-row cursor-pointer justify-normal items-center pl-4">
             <Image
                 src={imageSrc}
                 width={37}

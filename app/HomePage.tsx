@@ -16,7 +16,7 @@ const HomePage = () => {
             <Services />
             <ChakraProvider>
                 <AppContainer>
-                <Contact />
+                    <Contact />
                 </AppContainer>
             </ChakraProvider>
             <CalendlyForm />

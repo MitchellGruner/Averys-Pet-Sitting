@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import {Link} from "react-scroll";
+import Logo from "../Logo";
 
 function FooterLink({
     title,
@@ -52,6 +53,28 @@ function FooterLink({
     );
 }
 
+function FooterLinkPet({
+    href,
+    title,
+    linkFirst,
+    nameFirst,
+}: {
+    href: string;
+    title: string;
+    linkFirst: string;
+    nameFirst: string;
+}) {
+    return (
+        <div className="flex flex-col pt-2 lg:pt-4 xl:pt-6">
+            <a href={href} className="text-white text-lg sm:text-xl xl:text-2xl font-bold mb-2 md:mb-4 cursor-pointer hover:text-yellow transition ease-in-out duration-500">{title}</a>
+
+            <a href={linkFirst} className="text-off-white text-base xl:text-lg cursor-pointer pb-1 hover:text-white transition ease-in-out duration-500">
+                {nameFirst}
+            </a>
+        </div>
+    )
+}
+
 function SocialLinks({
     link,
     image,
@@ -94,15 +117,15 @@ const Footer = () => {
                             linkFourth="contactForm"
                             nameFourth="Get Connected"
                         />
-                        <FooterLink
+                        <FooterLinkPet
+                            href="/dog"
                             title="Dog Services"
-                            linkTitle="dogHome"
                             linkFirst="dog"
                             nameFirst="About"
                         />
-                        <FooterLink
+                        <FooterLinkPet
+                            href="/cat"
                             title="Cat Services"
-                            linkTitle="catHome"
                             linkFirst="cat"
                             nameFirst="About"
                         />
@@ -128,34 +151,18 @@ const Footer = () => {
                         />
                     </div>
                     <div className="flex flex-col md:hidden">
-                        <FooterLink
+                        <FooterLinkPet
+                            href="/cat"
                             title="Cat Services"
-                            linkTitle="catHome"
                             linkFirst="cat"
                             nameFirst="About"
                         />
-                        <Link to="home" spy={true} smooth={true} duration={500} offset={-200} className="flex flex-row justify-center mt-2 cursor-pointer">
-                            <Image
-                                src="/averyspetsittinglogo1.png"
-                                width={150}
-                                height={150}
-                                alt="Avery's Pet Sitting Logo"
-                                className="max-w-20 xs:max-w-28 mt-14"
-                            />
-                        </Link>
+                        <Logo className="max-w-20 xs:max-w-28 mt-14" width={150} height={150} />
                     </div>
                 </div>
-                <div className="flex flex-row justify-evenly md:basis-1/3 md:pt-2 lg:pt-6">
+                <div className="hidden md:flex flex-row justify-evenly md:basis-1/3 md:pt-2 lg:pt-6">
                     <div className="flex flex-col">
-                        <Link to="home" spy={true} smooth={true} duration={500} offset={-200} className="md:min-w-44 hidden md:flex flex-row justify-center mt-2 cursor-pointer">
-                            <Image
-                                src="/averyspetsittinglogo1.png"
-                                width={150}
-                                height={150}
-                                alt="Avery's Pet Sitting Logo"
-                                className="max-w-16 md:max-w-full"
-                            />
-                        </Link>
+                        <Logo className="max-w-16 md:max-w-full" width={150} height={150} />
                     </div>
                 </div>
             </div>
