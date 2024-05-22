@@ -1,98 +1,24 @@
 #photoCallout {
-    #top10 * {
-        box-sizing: border-box;
-    }
-    
-     .top10-header-text {
-        color: #cadb2e;
-        font-size: 2.8em;
-        text-align: center;
-        display: block;
-        margin: 0 auto;
-    }
-    
-     #top10 .top10-container {
-        margin: 2em auto 6em;
-    }
-    
-     #top10 body {
-        font-family: "Muli", sans-serif;
-        overflow: hidden;
-        margin: 0;
-        background: rgb(18, 13, 29);
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-     #top10 .container {
-        width: 100%;
-        display: flex;
-    }
-    
-     #top10 .slide {
-        height: 50vh;
+    .slide {
         border-radius: 1.2em;
-        margin: 0.2em;
-        cursor: pointer;
-        color: #fff;
         flex: 1;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        position: relative;
         transition: all 500ms ease-in-out;
+
+        div {
+            margin: auto;
+        }
+    }
+
+    .slide.active,
+    .slide.active .absolute {
+        opacity: 1;
     }
     
-     #top10 .slide.active {
+    .slide.active {
         flex: 10;
     }
     
-     #top10 .slide.active .top10-text {
-        opacity: 1;
+    .slide.active .absolute {
         transition: opacity 0.3s ease-in 0.4s;
-    }
-    
-     #top10 .slide.active .top10-1-text {
-        opacity: 1;
-        transition: opacity 0.3s ease-in 0.4s;
-    }
-    
-     #top10 .top10-text {
-        color: #fff;
-        font-size: 1.2em;
-        bottom: 0.6em;
-        left: 0.6em;
-        margin: 0;
-        opacity: 0;
-    }
-    
-     #top10 .top10-1-text {
-        color: #000;
-        font-size: 1.2em;
-        bottom: 0.6em;
-        left: 0.6em;
-        margin: 0;
-        opacity: 0;
-    }
-    
-    @media (max-width: 575px) {
-         .entire-top10 {
-            display: none;
-        }
-    }
-    
-    @media (max-width: 767px) {
-         #top10 .slide h3 {
-            display: none;
-        }
-    }
-    
-    @media (min-width: 992px) {
-         #top10 .top10-text,
-         #top10 .top10-1-text {
-            font-size: 2.2em;
-        }
     }
 }
