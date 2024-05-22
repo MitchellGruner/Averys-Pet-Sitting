@@ -58,17 +58,17 @@ const PhotoCallout = () => {
 				<div className="box-border">
 					<div className="flex w-[50%] mt-36 mx-auto">
                         <PhotoSlide
-                            backgroundImage="/parkbackground.jpg"
+                            backgroundImage="/avery.contact.image.png"
                             header="Caring, Fun, Approachable"
                             paragraph="No pressure on deadline, easy to contact, blah blah blah"
                         />
 						<PhotoSlide
-                            backgroundImage="/parkbackground.jpg"
+                            backgroundImage="/avery.with.white.dog1.png"
                             header="Caring, Fun, Approachable"
                             paragraph="No pressure on deadline, easy to contact, blah blah blah"
                         />
                         <PhotoSlide
-                            backgroundImage="/parkbackground.jpg"
+                            backgroundImage="/avery.with.cora.png"
                             header="Caring, Fun, Approachable"
                             paragraph="No pressure on deadline, easy to contact, blah blah blah"
                         />
