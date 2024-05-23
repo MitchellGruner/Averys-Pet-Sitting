@@ -1,7 +1,7 @@
 #photoCallout {
     .slide {
         border-radius: 1.2em;
-        flex: 1;
+        flex: 2;
         transition: all 500ms ease-in-out;
 
         div {
@@ -16,6 +16,7 @@
     
     .slide.active {
         flex: 10;
+        margin-top: 1em;
     }
     
     .slide.active .absolute {
