@@ -13,7 +13,7 @@ function PhotoSlide({
 }) {
     return (
         <div
-            className="slide relative h-[32em] m-1 cursor-pointer bg-cover bg-center bg-no-repeat opacity-50"
+            className="slide relative md:h-[28em] xl:h-[32em] m-1 cursor-pointer bg-cover bg-center bg-no-repeat opacity-50 shadow-2xl"
             style={{
                 backgroundImage: `url(${backgroundImage})`
             }}
@@ -56,7 +56,7 @@ const PhotoCallout = () => {
         <div id="photoCallout">
             <div className="photo-callout-container">
 				<div className="box-border">
-					<div className="flex w-[50%] mt-36 mx-auto">
+					<div className="flex md:w-[85%] lg:w-[75%] xl:w-[65%] 2xl:w-[60%] md:mt-20 lg:mt-24 xl:mt-28 2xl:mt-36 mx-auto">
                         <PhotoSlide
                             backgroundImage="/avery.contact.image.png"
                             header="Caring, Fun, Approachable"
