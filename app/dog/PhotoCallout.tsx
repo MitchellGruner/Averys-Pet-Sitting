@@ -107,19 +107,19 @@ const PhotoCallout = () => {
                     <div className="flex flex-col sm:hidden m-auto xs:mx-6">
                         <PhotoContent
                             imageSrc="/avery.with.cora.png"
-                            alt="Avery with Cora"
+                            alt="Avery with Squid"
                             header="Passionate about happy pups."
                             paragraph="I am deeply passionate about the well-being of the dogs I care for, striving to ensure they are not only happy but also physically and emotionally healthy during their time with me."
                         />
                         <PhotoContent
                             imageSrc="/avery.contact.image.png"
-                            alt="Avery Contact Image"
+                            alt="Avery with Coraline"
                             header="Always there, always caring"
                             paragraph="I take the time to understand each dog's individual needs and preferences, ensuring they receive the tailored care and attention they deserve."
                         />
                         <PhotoContent
                             imageSrc="/avery.with.white.dog1.png"
-                            alt="Avery with White Dog"
+                            alt="Avery with Summer"
                             header="Safety is my top priority."
                             paragraph="I maintain a vigilant watch over the dogs in my care, creating a secure environment where they can play and relax without worry."
                         />
