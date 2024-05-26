@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ContactButton from "../components/ContactButton";
+import PhotoCallout from "./PhotoCallout";
 
 const Dog = () => {
     return (
@@ -11,11 +12,11 @@ const Dog = () => {
                         Haven
                     </span>
 
-                    <p className="sm:mt-32 md:mt-36 lg:mt-40 xl:mt-52 2xs:text-sm sm:text-base xl:text-lg leading-6 text-white italic">
+                    <p className="sm:mt-32 md:mt-36 lg:mt-40 xl:mt-52 text-base xl:text-lg leading-6 text-white italic">
                         Hey there! I'm Avery Geiger, and let me tell you, dog sitting isn't just a job for me — <span className="text-yellow font-bold">it's a passion</span>. Whether it's a weekend getaway or an extended trip, I understand how tough it can be to leave your four-legged family member behind.
                     </p>
 
-                    <p className="mt-4 lg:mt-8 2xs:text-sm sm:text-base xl:text-lg leading-6 text-white italic">
+                    <p className="mt-4 lg:mt-8 text-base xl:text-lg leading-6 text-white italic">
                         That's why I've made it my mission to provide a <span className="text-yellow font-bold">safe, loving, and fun-filled environment</span> where your pup can thrive while you're away.
                     </p>
 
@@ -31,6 +32,8 @@ const Dog = () => {
                     />
                 </div>
             </div>
+
+            <PhotoCallout />
         </div>
     )
 }

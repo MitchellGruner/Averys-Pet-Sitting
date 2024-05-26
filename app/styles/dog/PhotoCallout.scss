@@ -1,0 +1,41 @@
+#photoCallout {
+    .slide {
+        border-radius: 1.2em;
+        flex: 2;
+        transition: all 500ms ease-in-out;
+
+        div {
+            margin: auto;
+        }
+    }
+
+    h1 {
+        text-align: center;
+
+        span {
+            background-size: 100% 15%;
+            background-repeat: repeat-x;
+            background-position: left 0% bottom 10%;
+            background-image: linear-gradient(179deg,#EBB007 0%, #EBB007 50%, transparent 54%, transparent 100%);
+        }
+    }
+
+    .border-gradient {
+        background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(18,28,59,1) 27%, rgba(28,46,74,1) 61%);
+    }
+
+    .slide.active,
+    .slide.active .absolute {
+        opacity: 1;
+    }
+    
+    .slide.active {
+        flex: 10;
+        margin-top: 1em;
+    }
+    
+    .slide.active .absolute {
+        transition: opacity 0.3s ease-in 0.4s;
+    }
+}
