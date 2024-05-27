@@ -10,14 +10,16 @@ type Props = {
 };
 
 function handleClick() {
-    setTimeout(() => {
-        window.location.reload();
-    }, 100);
+    if ((window.location.href).includes("/dog") || (window.location.href).includes("/cat")) {
+        setTimeout(() => {
+            window.location.reload();
+        }, 500);
+    }
 }
 
 const Logo = (props: Props) => {
     return (
-        <Link href="/" onClick={handleClick} className="md:min-w-44 flex flex-row justify-center cursor-pointer">
+        <Link href="/#home" onClick={handleClick} className="md:min-w-44 flex flex-row justify-center cursor-pointer">
             <Image
                 src="/averyspetsittinglogo1.png"
                 width={props.width}

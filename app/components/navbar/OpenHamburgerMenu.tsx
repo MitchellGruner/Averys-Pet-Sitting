@@ -1,6 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 
+function handleClick(closeState: any) {
+    closeState(false);
+
+    if ((window.location.href).includes("/dog") || (window.location.href).includes("/cat")) {
+        setTimeout(() => {
+            window.location.reload();
+        }, 500);
+    }
+}
+
 function HamburgerLink({
     href,
     closeState,
@@ -21,7 +31,7 @@ function HamburgerLink({
     alt?: string;
 }) {
     return (
-        <Link href={href} onClick={() => {`${closeState(false)}`}} className={`flex flex-row cursor-pointer ${imageSrc ? 'justify-between items-center' : ''}`}>
+        <Link href={href} onClick={() => {`${handleClick(closeState)}`}} className={`flex flex-row cursor-pointer ${imageSrc ? 'justify-between items-center' : ''}`}>
             <span className={`pr-4 cursor-pointer text-navy ${titleSize} hover:text-yellow transition ease-in-out duration-500`}>{title}</span>
             
             {imageSrc && (
