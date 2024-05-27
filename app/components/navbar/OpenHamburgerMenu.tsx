@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Link } from "react-scroll";
+import Link from "next/link";
 
 function HamburgerLink({
     href,
@@ -23,7 +23,7 @@ function HamburgerLink({
     alt?: string;
 }) {
     return (
-        <Link to={href} spy={true} smooth={true} duration={500} offset={offset} onClick={() => {`${closeState(false)}`}} className={`flex flex-row cursor-pointer ${imageSrc ? 'justify-between items-center' : ''}`}>
+        <Link href={href} onClick={() => {`${closeState(false)}`}} className={`flex flex-row cursor-pointer ${imageSrc ? 'justify-between items-center' : ''}`}>
             <span className={`pr-4 cursor-pointer text-navy ${titleSize} hover:text-yellow transition ease-in-out duration-500`}>{title}</span>
             
             {imageSrc && (
@@ -70,7 +70,7 @@ const OpenHamburgerMenu = ({closeState}: {closeState: any}) => {
         <div id="openHamburgerMenu" className="absolute top-[4.5em] lg:top-[5.5em] right-0 bg-white rounded-md p-1 2xs:w-60 xs:w-[19em] shadow-2xl border border-slate-600">
             <div className="p-2">
                 <HamburgerLink
-                    href="home"
+                    href="/#home"
                     closeState={closeState}
                     offset={-250}
                     title="Avery's Pet Sitting"
@@ -85,35 +85,35 @@ const OpenHamburgerMenu = ({closeState}: {closeState: any}) => {
 
                 <div className="px-4 mt-4 space-y-0">
                     <HamburgerLink
-                        href="about"
+                        href="/#about"
                         closeState={closeState}
                         offset={-150}
                         title="About Me"
                         titleSize="text-base xs:text-lg"
                     />
                     <HamburgerLink
-                        href="testimonials"
+                        href="/#testimonials"
                         closeState={closeState}
                         offset={-25}
                         title="Testimonials"
                         titleSize="text-base xs:text-lg"
                     />
                     <HamburgerLink
-                        href="services"
+                        href="/#services"
                         closeState={closeState}
                         offset={-100}
                         title="Services"
                         titleSize="text-base xs:text-lg"
                     />
                     <HamburgerLink
-                        href="contact"
+                        href="/#parentContact"
                         closeState={closeState}
                         offset={-100}
                         title="Contact"
                         titleSize="text-base xs:text-lg"
                     />
                     <HamburgerLink
-                        href="contactForm"
+                        href="/#contactForm"
                         closeState={closeState}
                         offset={-80}
                         title="Get Connected"
