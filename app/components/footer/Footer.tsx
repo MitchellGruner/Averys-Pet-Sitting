@@ -1,8 +1,16 @@
 "use client";
 
 import Image from "next/image";
-import {Link} from "react-scroll";
+import Link from "next/link";
 import Logo from "../Logo";
+
+function handleClick() {
+    if ((window.location.href).includes("/dog") || (window.location.href).includes("/cat")) {
+        setTimeout(() => {
+            window.location.reload();
+        }, 500);
+    }
+}
 
 function FooterLink({
     title,
@@ -29,23 +37,23 @@ function FooterLink({
 }) {
     return (
         <div className="flex flex-col pt-2 lg:pt-4 xl:pt-6">
-            <Link to={linkTitle} spy={true} smooth={true} duration={500} offset={-250} className="text-white text-lg sm:text-xl xl:text-2xl font-bold mb-2 md:mb-4 cursor-pointer hover:text-yellow transition ease-in-out duration-500">{title}</Link>
+            <Link href={linkTitle} onClick={handleClick} className="text-white text-lg sm:text-xl xl:text-2xl font-bold mb-2 md:mb-4 cursor-pointer hover:text-yellow transition ease-in-out duration-500">{title}</Link>
 
-            <Link to={linkFirst} spy={true} smooth={true} duration={500} offset={-130} className="text-off-white text-base xl:text-lg cursor-pointer pb-1 hover:text-white transition ease-in-out duration-500">
+            <Link href={linkFirst} onClick={handleClick} className="text-off-white text-base xl:text-lg cursor-pointer pb-1 hover:text-white transition ease-in-out duration-500">
                 {nameFirst}
             </Link>
             {linkSecond && nameSecond && (
-                <Link to={linkSecond} spy={true} smooth={true} duration={500} offset={-100} className="text-off-white text-base xl:text-lg cursor-pointer pb-1 hover:text-white transition ease-in-out duration-500">
+                <Link href={linkSecond} onClick={handleClick} className="text-off-white text-base xl:text-lg cursor-pointer pb-1 hover:text-white transition ease-in-out duration-500">
                     {nameSecond}
                 </Link>
             )}
             {linkThird && nameThird && (
-                <Link to={linkThird} spy={true} smooth={true} duration={500} offset={-100} className="text-off-white text-base xl:text-lg cursor-pointer pb-1 hover:text-white transition ease-in-out duration-500">
+                <Link href={linkThird} onClick={handleClick} className="text-off-white text-base xl:text-lg cursor-pointer pb-1 hover:text-white transition ease-in-out duration-500">
                     {nameThird}
                 </Link>
             )}
             {linkFourth && nameFourth && (
-                <Link to={linkFourth} spy={true} smooth={true} duration={500} offset={-75} className="text-off-white text-base xl:text-lg cursor-pointer pb-1 hover:text-white transition ease-in-out duration-500">
+                <Link href={linkFourth} onClick={handleClick} className="text-off-white text-base xl:text-lg cursor-pointer pb-1 hover:text-white transition ease-in-out duration-500">
                     {nameFourth}
                 </Link>
             )}
@@ -107,14 +115,14 @@ const Footer = () => {
                     <div className="hidden md:flex md:flex-row w-full justify-evenly">
                         <FooterLink
                             title="Home"
-                            linkTitle="home"
-                            linkFirst="about"
+                            linkTitle="/#home"
+                            linkFirst="/#about"
                             nameFirst="About Me"
-                            linkSecond="services"
+                            linkSecond="/#services"
                             nameSecond="Services"
-                            linkThird="contact"
+                            linkThird="/#parentContact"
                             nameThird="Contact"
-                            linkFourth="contactForm"
+                            linkFourth="/#contactForm"
                             nameFourth="Get Connected"
                         />
                         <FooterLinkPet
@@ -133,20 +141,20 @@ const Footer = () => {
                     <div className="flex flex-col md:hidden">
                         <FooterLink
                             title="Home"
-                            linkTitle="home"
-                            linkFirst="about"
+                            linkTitle="/#home"
+                            linkFirst="/#about"
                             nameFirst="About Me"
-                            linkSecond="services"
+                            linkSecond="/#services"
                             nameSecond="Services"
-                            linkThird="contact"
+                            linkThird="/#parentContact"
                             nameThird="Contact"
-                            linkFourth="contactForm"
+                            linkFourth="/#contactForm"
                             nameFourth="Get Connected"
                         />
                         <FooterLink
                             title="Dog Services"
-                            linkTitle="dogHome"
-                            linkFirst="dog"
+                            linkTitle="/dog"
+                            linkFirst="/dog"
                             nameFirst="About"
                         />
                     </div>
@@ -154,7 +162,7 @@ const Footer = () => {
                         <FooterLinkPet
                             href="/cat"
                             title="Cat Services"
-                            linkFirst="cat"
+                            linkFirst="/cat"
                             nameFirst="About"
                         />
                         <Logo className="max-w-20 xs:max-w-28 mt-14" width={150} height={150} />

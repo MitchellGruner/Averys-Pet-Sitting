@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -7,9 +9,17 @@ type Props = {
     height: number;
 };
 
+function handleClick() {
+    if ((window.location.href).includes("/dog") || (window.location.href).includes("/cat")) {
+        setTimeout(() => {
+            window.location.reload();
+        }, 500);
+    }
+}
+
 const Logo = (props: Props) => {
     return (
-        <Link href="/" className="md:min-w-44 flex flex-row justify-center cursor-pointer">
+        <Link href="/#home" onClick={handleClick} className="md:min-w-44 flex flex-row justify-center cursor-pointer">
             <Image
                 src="/averyspetsittinglogo1.png"
                 width={props.width}
