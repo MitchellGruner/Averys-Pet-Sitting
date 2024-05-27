@@ -4,7 +4,6 @@ import Link from "next/link";
 function HamburgerLink({
     href,
     closeState,
-    offset,
     title,
     titleSize,
     imageSrc,
@@ -14,7 +13,6 @@ function HamburgerLink({
 }: {
     href: string;
     closeState: any;
-    offset: number;
     title: string;
     titleSize: string;
     imageSrc?: string;
@@ -48,7 +46,7 @@ function HamburgerExternalLink({
     href: string;
     title: string;
     imageSrc: string;
-    alt?: string;
+    alt: string;
 }) {
     return (
         <a href={href} className="flex flex-row cursor-pointer justify-normal items-center pl-4">
@@ -57,7 +55,7 @@ function HamburgerExternalLink({
                 width={37}
                 height={37}
                 className="p-2 mr-2"
-                alt={alt || ""}
+                alt={alt}
             />
 
             <span className="cursor-pointer text-navy text-base xs:text-lg hover:text-yellow transition ease-in-out duration-500">{title}</span>
@@ -72,7 +70,6 @@ const OpenHamburgerMenu = ({closeState}: {closeState: any}) => {
                 <HamburgerLink
                     href="/#home"
                     closeState={closeState}
-                    offset={-250}
                     title="Avery's Pet Sitting"
                     titleSize="hidden xs:block xs:text-xl"
                     imageSrc="/averysprofessionalphoto.jpg"
@@ -87,35 +84,30 @@ const OpenHamburgerMenu = ({closeState}: {closeState: any}) => {
                     <HamburgerLink
                         href="/#about"
                         closeState={closeState}
-                        offset={-150}
                         title="About Me"
                         titleSize="text-base xs:text-lg"
                     />
                     <HamburgerLink
                         href="/#testimonials"
                         closeState={closeState}
-                        offset={-25}
                         title="Testimonials"
                         titleSize="text-base xs:text-lg"
                     />
                     <HamburgerLink
                         href="/#services"
                         closeState={closeState}
-                        offset={-100}
                         title="Services"
                         titleSize="text-base xs:text-lg"
                     />
                     <HamburgerLink
                         href="/#parentContact"
                         closeState={closeState}
-                        offset={-100}
                         title="Contact"
                         titleSize="text-base xs:text-lg"
                     />
                     <HamburgerLink
                         href="/#contactForm"
                         closeState={closeState}
-                        offset={-80}
                         title="Get Connected"
                         titleSize="text-base xs:text-lg"
                     />
