@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ContactButton from "../components/ContactButton";
 import PhotoCallout from "./PhotoCallout";
+import ScheduleAppointment from "../components/contact/ScheduleAppointment";
 
 const Dog = () => {
     return (
@@ -34,6 +35,7 @@ const Dog = () => {
             </div>
 
             <PhotoCallout />
+            <ScheduleAppointment />
         </div>
     )
 }
