@@ -13,7 +13,7 @@ function handleClick() {
     if ((window.location.href).includes("/dog") || (window.location.href).includes("/cat")) {
         setTimeout(() => {
             window.location.reload();
-        }, 500);
+        }, 1000);
     }
 }
 
