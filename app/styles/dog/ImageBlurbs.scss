@@ -10,9 +10,38 @@
     }
 
     .relative {
-        .absolute {
-            top: 7.2em;
-            padding: 6em 24.6em;
+        @media (min-width: 768px) {
+            .absolute {
+                top: 6.1em;
+                padding: 7.7em 17.7em;
+            }
+            .mr-14.absolute {
+                top: 4.6em;
+            }
+        }
+        @media (min-width: 992px) {
+            .absolute {
+                top: 6.1em;
+                padding: 8em 13.5em;
+            }
+            .mr-14.absolute {
+                top: 4.6em;
+            }
+        }
+        @media (min-width: 1200px) {
+            .absolute {
+                top: 6.6em;
+                padding: 8em 19.6em;
+            }
+            .mr-14.absolute {
+                top: 6.6em;
+            }
+        }
+        @media (min-width: 1400px) {
+            .absolute {
+                top: 7.2em;
+                padding: 6em 24.6em;
+            }
         }
 
         .ml-14.absolute {
@@ -24,11 +53,12 @@
         }
     }
 
-    .relative div:nth-child(2) {
-        text-align: right;
-    }
-
-    .flex:nth-child(2) {
-        flex-direction: row-reverse;
+    @media (min-width: 992px) {
+        .relative div:nth-child(2) {
+            text-align: right;
+        }
+        .flex:nth-child(2) {
+            flex-direction: row-reverse;
+        }
     }
 }
