@@ -6,7 +6,7 @@ import ImageBlurbs from "./ImageBlurbs";
 
 const Dog = () => {
     return (
-        <div id="dogPage" className="relative block w-full mx-auto mt-2 sm:mt-4 lg:mt-6 2xl:mt-8 pb-16 md:pb-40 lg:pb-48 xl:pb-52 max-w-[1600px]">
+        <div id="dogPage" className="relative block w-full mx-auto mt-2 sm:mt-4 lg:mt-6 2xl:mt-8 pb-2 xs:pb-8 sm:pb-12 md:pb-16 lg:pb-28 xl:pb-36 max-w-[1600px]">
             <div className="flex flex-col md:flex-row items-center justify-center mt-6 xs:mt-8 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-28 mx-6 xs:mx-8 sm:mx-12 md:mx-20 lg:mx-28 xl:mx-40 2xl:mx-72">
                 <div className="basis-full order-2 md:order-1 md:basis-1/2 pt-4 xs:pt-6 md:pt-0 md:pr-6">
                     <span className="hidden sm:block absolute main-header text-white 2xs:top-1 xs:top-[12em] sm:top-[13.2em] md:top-0 md:left-0 lg:left-[1.2em] xl:left-[2em] 2xl:left-[4em]">Paws and Play</span>
