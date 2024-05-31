@@ -66,11 +66,15 @@ function FooterLinkPet({
     title,
     linkFirst,
     nameFirst,
+    linkSecond,
+    nameSecond,
 }: {
     href: string;
     title: string;
     linkFirst: string;
     nameFirst: string;
+    linkSecond?: string;
+    nameSecond?: string;
 }) {
     return (
         <div className="flex flex-col pt-2 lg:pt-4 xl:pt-6">
@@ -79,6 +83,12 @@ function FooterLinkPet({
             <a href={linkFirst} className="text-off-white text-base xl:text-lg cursor-pointer pb-1 hover:text-white transition ease-in-out duration-500">
                 {nameFirst}
             </a>
+
+            {linkSecond && nameSecond && (
+                <Link href={linkSecond} onClick={handleClick} className="text-off-white text-base xl:text-lg cursor-pointer pb-1 hover:text-white transition ease-in-out duration-500">
+                    {nameSecond}
+                </Link>
+            )}
         </div>
     )
 }
@@ -128,8 +138,10 @@ const Footer = () => {
                         <FooterLinkPet
                             href="/dog"
                             title="Dog Services"
-                            linkFirst="dog"
-                            nameFirst="About"
+                            linkFirst="/dog#photoCallout"
+                            nameFirst="Slideshow"
+                            linkSecond="/dog#imageBlurbs"
+                            nameSecond="Image Callouts"
                         />
                         <FooterLinkPet
                             href="/cat"
@@ -151,11 +163,13 @@ const Footer = () => {
                             linkFourth="/#contactForm"
                             nameFourth="Get Connected"
                         />
-                        <FooterLink
+                        <FooterLinkPet
+                            href="/dog"
                             title="Dog Services"
-                            linkTitle="/dog"
-                            linkFirst="/dog"
-                            nameFirst="About"
+                            linkFirst="/dog#photoCallout"
+                            nameFirst="Slideshow"
+                            linkSecond="/dog#imageBlurbs"
+                            nameSecond="Image Callouts"
                         />
                     </div>
                     <div className="flex flex-col md:hidden">
