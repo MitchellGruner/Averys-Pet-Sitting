@@ -59,7 +59,7 @@ function handleClick() {
                 $(".contact-hover-image").removeClass("opacity-zero");
             }
         }
-    }, 250);
+    }, 500);
 }
 
 function NavbarMenuItemsLink({
