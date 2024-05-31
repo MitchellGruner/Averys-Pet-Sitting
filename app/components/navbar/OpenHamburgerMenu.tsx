@@ -1,14 +1,64 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import $ from 'jquery';
+
 function handleClick(closeState: any) {
     closeState(false);
 
-    if ((window.location.href).includes("/dog") || (window.location.href).includes("/cat")) {
-        setTimeout(() => {
-            window.location.reload();
-        }, 500);
-    }
+    const dog = document.querySelector(".dog");
+    const contact = document.querySelector(".contact");
+    const cat = document.querySelector(".cat");
+
+    $(".outline").each(function() {
+        $(this).removeClass("bg-white");
+    });
+
+    $(".initial-image").each(function() {
+        $(this).addClass("opacity-full");
+        $(this).removeClass("opacity-zero");
+    });
+
+    $(".hover-image").each(function() {
+        $(this).addClass("opacity-zero");
+        $(this).removeClass("opacity-full");
+    });
+
+    setTimeout(() => {
+        if ((window.location.href).includes("/dog") || (window.location.href).includes("/cat")) {
+            if ((window.location.href).includes("/dog")) {
+                if (dog) {
+                    dog.classList.add("bg-white");
+
+                    $(".dog-initial-image").addClass("opacity-zero");
+                    $(".dog-initial-image").removeClass("opacity-full");
+
+                    $(".dog-hover-image").addClass("opacity-full");
+                    $(".dog-hover-image").removeClass("opacity-zero");
+                }
+            } else {
+                if (cat) {
+                    cat.classList.add("bg-white");
+                    
+                    $(".cat-initial-image").addClass("opacity-zero");
+                    $(".cat-initial-image").removeClass("opacity-full");
+
+                    $(".cat-hover-image").addClass("opacity-full");
+                    $(".cat-hover-image").removeClass("opacity-zero");
+                }
+            }
+        } else {
+            if (contact) {
+                contact.classList.add("bg-white");
+                
+                $(".contact-initial-image").addClass("opacity-zero");
+                $(".contact-initial-image").removeClass("opacity-full");
+
+                $(".contact-hover-image").addClass("opacity-full");
+                $(".contact-hover-image").removeClass("opacity-zero");
+            }
+        }
+    }, 500);
 }
 
 function HamburgerLink({
@@ -49,17 +99,19 @@ function HamburgerLink({
 
 function HamburgerExternalLink({
     href,
+    closeState,
     title,
     imageSrc,
     alt,
 }: {
     href: string;
+    closeState: any;
     title: string;
     imageSrc: string;
     alt: string;
 }) {
     return (
-        <a href={href} className="flex flex-row cursor-pointer justify-normal items-center pl-4">
+        <Link href={href} onClick={() => {`${handleClick(closeState)}`}} className="flex flex-row cursor-pointer justify-normal items-center pl-4">
             <Image
                 src={imageSrc}
                 width={37}
@@ -69,7 +121,7 @@ function HamburgerExternalLink({
             />
 
             <span className="cursor-pointer text-navy text-base xs:text-lg hover:text-yellow transition ease-in-out duration-500">{title}</span>
-        </a>
+        </Link>
     )
 }
 
@@ -127,12 +179,14 @@ const OpenHamburgerMenu = ({closeState}: {closeState: any}) => {
                     <div className="block pb-1">
                         <HamburgerExternalLink
                             href="/dog"
+                            closeState={closeState}
                             title="Dog Sitting"
                             imageSrc="/dogiconnavy.png"
                             alt="Dog Icon"
                         />
                         <HamburgerExternalLink
                             href="/cat"
+                            closeState={closeState}
                             title="Cat Sitting"
                             imageSrc="/caticonnavy.png"
                             alt="Cat Icon"
