@@ -19,7 +19,7 @@ function PhotoText({
     buttonClassName: string;
 }) {
     return (
-        <div className={`block md:flex md:flex-col lg:flex-row mt-16 sm:mt-20 md:mt-28 lg:mt-32 xl:mt-40 2xl:mt-52 ${textOrientation}`}>
+        <div className={`block md:flex md:flex-col lg:flex-row mt-16 sm:mt-20 md:mt-28 lg:mt-32 xl:mt-40 ${textOrientation}`}>
             <Image
                 src={imageSrc}
                 width={330}
