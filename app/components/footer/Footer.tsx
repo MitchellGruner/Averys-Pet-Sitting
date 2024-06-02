@@ -4,12 +4,62 @@ import Image from "next/image";
 import Link from "next/link";
 import Logo from "../Logo";
 
+import $ from 'jquery';
+
 function handleClick() {
-    if ((window.location.href).includes("/dog") || (window.location.href).includes("/cat")) {
-        setTimeout(() => {
-            window.location.reload();
-        }, 500);
-    }
+    const dog = document.querySelector(".dog");
+    const contact = document.querySelector(".contact");
+    const cat = document.querySelector(".cat");
+
+    $(".outline").each(function() {
+        $(this).removeClass("bg-white");
+    });
+
+    $(".initial-image").each(function() {
+        $(this).addClass("opacity-full");
+        $(this).removeClass("opacity-zero");
+    });
+
+    $(".hover-image").each(function() {
+        $(this).addClass("opacity-zero");
+        $(this).removeClass("opacity-full");
+    });
+
+    setTimeout(() => {
+        if ((window.location.href).includes("/dog") || (window.location.href).includes("/cat")) {
+            if ((window.location.href).includes("/dog")) {
+                if (dog) {
+                    dog.classList.add("bg-white");
+
+                    $(".dog-initial-image").addClass("opacity-zero");
+                    $(".dog-initial-image").removeClass("opacity-full");
+
+                    $(".dog-hover-image").addClass("opacity-full");
+                    $(".dog-hover-image").removeClass("opacity-zero");
+                }
+            } else {
+                if (cat) {
+                    cat.classList.add("bg-white");
+                    
+                    $(".cat-initial-image").addClass("opacity-zero");
+                    $(".cat-initial-image").removeClass("opacity-full");
+
+                    $(".cat-hover-image").addClass("opacity-full");
+                    $(".cat-hover-image").removeClass("opacity-zero");
+                }
+            }
+        } else {
+            if (contact) {
+                contact.classList.add("bg-white");
+                
+                $(".contact-initial-image").addClass("opacity-zero");
+                $(".contact-initial-image").removeClass("opacity-full");
+
+                $(".contact-hover-image").addClass("opacity-full");
+                $(".contact-hover-image").removeClass("opacity-zero");
+            }
+        }
+    }, 500);
 }
 
 function FooterLink({
@@ -66,19 +116,29 @@ function FooterLinkPet({
     title,
     linkFirst,
     nameFirst,
+    linkSecond,
+    nameSecond,
 }: {
     href: string;
     title: string;
     linkFirst: string;
     nameFirst: string;
+    linkSecond?: string;
+    nameSecond?: string;
 }) {
     return (
         <div className="flex flex-col pt-2 lg:pt-4 xl:pt-6">
-            <a href={href} className="text-white text-lg sm:text-xl xl:text-2xl font-bold mb-2 md:mb-4 cursor-pointer hover:text-yellow transition ease-in-out duration-500">{title}</a>
+            <Link href={href} onClick={handleClick} className="text-white text-lg sm:text-xl xl:text-2xl font-bold mb-2 md:mb-4 cursor-pointer hover:text-yellow transition ease-in-out duration-500">{title}</Link>
 
-            <a href={linkFirst} className="text-off-white text-base xl:text-lg cursor-pointer pb-1 hover:text-white transition ease-in-out duration-500">
+            <Link href={linkFirst} onClick={handleClick} className="text-off-white text-base xl:text-lg cursor-pointer pb-1 hover:text-white transition ease-in-out duration-500">
                 {nameFirst}
-            </a>
+            </Link>
+
+            {linkSecond && nameSecond && (
+                <Link href={linkSecond} onClick={handleClick} className="text-off-white text-base xl:text-lg cursor-pointer pb-1 hover:text-white transition ease-in-out duration-500">
+                    {nameSecond}
+                </Link>
+            )}
         </div>
     )
 }
@@ -128,8 +188,10 @@ const Footer = () => {
                         <FooterLinkPet
                             href="/dog"
                             title="Dog Services"
-                            linkFirst="dog"
-                            nameFirst="About"
+                            linkFirst="/dog#photoCallout"
+                            nameFirst="Slideshow"
+                            linkSecond="/dog#imageBlurbs"
+                            nameSecond="Image Callouts"
                         />
                         <FooterLinkPet
                             href="/cat"
@@ -151,11 +213,13 @@ const Footer = () => {
                             linkFourth="/#contactForm"
                             nameFourth="Get Connected"
                         />
-                        <FooterLink
+                        <FooterLinkPet
+                            href="/dog"
                             title="Dog Services"
-                            linkTitle="/dog"
-                            linkFirst="/dog"
-                            nameFirst="About"
+                            linkFirst="/dog#photoCallout"
+                            nameFirst="Slideshow"
+                            linkSecond="/dog#imageBlurbs"
+                            nameSecond="Image Callouts"
                         />
                     </div>
                     <div className="flex flex-col md:hidden">

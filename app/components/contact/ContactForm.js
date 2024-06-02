@@ -122,17 +122,17 @@ const ContactForm = () => {
                 <div className="flex flex-col xs:flex-row items-baseline xs:items-center justify-between py-2 mt-4">
                     <div className="flex py-1">
                         <input type="radio" id="dog" name="user_radio" value="Dog" />
-                        <label for="huey" className="text-white text-base xs:text-lg lg:text-xl pl-3 pr-8">Dog</label>
+                        <label htmlFor="huey" className="text-white text-base xs:text-lg lg:text-xl pl-3 pr-8">Dog</label>
                     </div>
 
                     <div className="flex py-1">
                         <input type="radio" id="cat" name="user_radio" value="Cat" />
-                        <label for="huey" className="text-white text-base xs:text-lg lg:text-xl pl-3 pr-8">Cat</label>
+                        <label htmlFor="huey" className="text-white text-base xs:text-lg lg:text-xl pl-3 pr-8">Cat</label>
                     </div>
 
                     <div className="flex py-1">
                         <input type="radio" id="both" name="user_radio" value="Dog and Cat" />
-                        <label for="huey" className="text-white text-base xs:text-lg lg:text-xl pl-3 pr-8">Both</label>
+                        <label htmlFor="huey" className="text-white text-base xs:text-lg lg:text-xl pl-3 pr-8">Both</label>
                     </div>
                 </div>
 

@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 
-const CalendlyForm = dynamic(() => import("../contact/CalendlyForm"), {
+const CalendlyForm = dynamic(() => import("./CalendlyForm"), {
     ssr: false
 });
 
