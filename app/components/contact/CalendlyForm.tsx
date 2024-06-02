@@ -13,7 +13,7 @@ const CalendlyForm = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-5 right-5 bg-light-brown rounded-full z-[2]">
+    <div className="fixed bottom-5 right-5 bg-brown rounded-full z-[2]">
       <div className="sticky button-div">
         <PopupButton
           className="py-2 px-6 xl:py-3 xl:px-8 font-semibold rounded-full italic text-md xl:text-lg shadow-2xl text-white ease-in-out duration-500 hover:bg-black"
