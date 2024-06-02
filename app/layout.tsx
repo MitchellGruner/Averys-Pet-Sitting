@@ -14,6 +14,7 @@ import "./styles/Header.scss";
 import "./styles/dog/Dog.scss";
 import "./styles/dog/PhotoCallout.scss";
 import "./styles/dog/ImageBlurbs.scss";
+import "./styles/cat/Cat.scss";
 
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
