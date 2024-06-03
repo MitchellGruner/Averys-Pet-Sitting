@@ -1,5 +1,5 @@
 #catPage {
-    img.absolute {
+    img.right-0 {
         outline: 0.2vw solid #fff;
         outline-offset: 15px;
     }
@@ -14,13 +14,20 @@
         transform: rotate(-20deg);
     }
 
-    .p-28 {
+    .p-8 {
         z-index: 2;
     }
 
     .bg-cream {
-        box-shadow: 0px 0px 0px 50px rgba(152, 100, 96, 0.9);
         z-index: 1;
+        box-shadow: 0px 0px 0px 30px rgba(152, 100, 96);
+    }
+
+    @media (max-width: 400px) {
+        a.inline-block {
+            margin-top: 1.6em;
+            margin-left: 8.2em;
+        }
     }
 
     @media (min-width: 400px) {
@@ -41,6 +48,10 @@
         .main-header {
             margin-left: 1.1em;
             font-size: 3.1em;
+        }
+
+        .bg-cream {
+            box-shadow: 0px 0px 0px 50px rgba(152, 100, 96, 0.9);
         }
     }
 
