@@ -8,10 +8,10 @@ const Cat = () => {
             <div className="flex flex-col md:flex-row">
                 <div className="relative basis-full md:basis-[45%] md:h-[47em] p-8 sm:p-12 md:p-28 m-auto">
                     <Image
-                        src="/servicescatimage.png"
+                        src="/avery.cat.page.header.image.png"
                         width={400}
                         height={400}
-                        alt="Two Dogs Walking"
+                        alt="Two Cats on Counter"
                         className="md:absolute md:left-[4em] lg:left-[10em] xl:left-[15em] 2xl:left-[18em] 3xl:left-[23em] 4xl:left-[29em] 5xl:left-[35em] 6xl:left-[43em] 7xl:left-[48em] 8xl:left-[52em] 9xl:left-[60em] right-0 shadow-2xl"
                     />
                 </div>
