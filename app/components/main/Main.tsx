@@ -34,10 +34,10 @@ const Main = () => {
             <div className="main-container">
                 <Image
                     id="mainBackground"
-                    src="/parkbackground.jpg"
+                    src="/avery.banner.image.png"
                     width={1000}
                     height={1000}
-                    alt="Dog Park Background"
+                    alt="Avery with Raisin in Green Hills, TN"
                     className="rounded-l-2xl shadow-2xl max-w-full"
                 />
 
