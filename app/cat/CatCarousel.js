@@ -6,7 +6,6 @@ import "slick-carousel/slick/slick-theme.css";
 
 import Image from "next/image";
 
-import Video from "./Video";
 
 const CatCarousel = () => {
     const settings = {
@@ -14,55 +13,18 @@ const CatCarousel = () => {
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 5000,
+        autoplaySpeed: 3000,
     };
 
     return (
-        <div></div>
+        <div className="w-3/4 m-auto">
+            <div className="mt-20">
+                <Slider {...settings}>
+                    <video src={"/cat.video.mp4"} style={{ width: "400px", height: "400px" }} autoPlay loop muted />
+                </Slider>
+            </div>
+        </div>
     )
 }
-
-const data = [
-    {
-        name: `John Morgan`,
-        img: `https://randomuser.me/api/port`,
-        paragraph: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`
-    },
-    {
-        name: `John Morgan`,
-        img: `https://randomuser.me/api/port`,
-        paragraph: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`
-    },
-    {
-        name: `John Morgan`,
-        img: `https://randomuser.me/api/port`,
-        paragraph: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`
-    },
-    {
-        name: `John Morgan`,
-        img: `https://randomuser.me/api/port`,
-        paragraph: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`
-    },
-    {
-        name: `John Morgan`,
-        img: `https://randomuser.me/api/port`,
-        paragraph: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`
-    },
-    {
-        name: `John Morgan`,
-        img: `https://randomuser.me/api/port`,
-        paragraph: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`
-    },
-    {
-        name: `John Morgan`,
-        img: `https://randomuser.me/api/port`,
-        paragraph: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`
-    },
-    {
-        name: `John Morgan`,
-        img: `https://randomuser.me/api/port`,
-        paragraph: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`
-    }
-]
 
 export default CatCarousel;
