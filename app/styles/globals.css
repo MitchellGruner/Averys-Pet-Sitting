@@ -22,6 +22,8 @@ img {
 #testimonials h1 span,
 #about h1 span,
 #services h1 span,
-#contact h1 span {
+#contact h1 span,
+#catCarousel h1,
+#catCarousel h1 span {
     font-family: var(--font-mr-dafoe);
 }
