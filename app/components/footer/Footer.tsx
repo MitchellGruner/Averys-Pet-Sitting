@@ -196,8 +196,8 @@ const Footer = () => {
                         <FooterLinkPet
                             href="/cat"
                             title="Cat Services"
-                            linkFirst="cat"
-                            nameFirst="About"
+                            linkFirst="/cat#catCarousel"
+                            nameFirst="Highlights"
                         />
                     </div>
                     <div className="flex flex-col md:hidden">
@@ -226,8 +226,8 @@ const Footer = () => {
                         <FooterLinkPet
                             href="/cat"
                             title="Cat Services"
-                            linkFirst="/cat"
-                            nameFirst="About"
+                            linkFirst="/cat#catCarousel"
+                            nameFirst="Highlights"
                         />
                         <Logo className="max-w-20 xs:max-w-28 mt-14" width={150} height={150} />
                     </div>
