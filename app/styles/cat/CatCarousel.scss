@@ -5,6 +5,7 @@
 
    h1 {
       transform: rotate(-8deg);
+      font-size: 2.5em;
 
       span {
          background-size: 100% 15%;
@@ -13,6 +14,18 @@
          background-image: linear-gradient(179deg,#EBB007 0%, #EBB007 50%, transparent 54%, transparent 100%);
      }
 
+     @media (min-width: 400px) {
+         font-size: 2.8em;
+     }
+     @media (min-width: 576px) {
+         font-size: 3em;
+     }
+     @media (min-width: 992px) {
+         font-size: 3.5em;
+     }
+     @media (min-width: 1200px) {
+         font-size: 3.8em;
+     }
      @media (min-width: 1400px) {
          font-size: 4.2em;
      }
