@@ -3,6 +3,18 @@
         display: none !important;
    }
 
+   margin-top: -3.6em;
+   padding-top: 3.6em;
+
+   @media (min-width: 400px) {
+      margin-top: -2.2em;
+      padding-top: 2.2em;
+   }
+   @media (min-width: 992px) {
+      margin-top: -1.4em;
+      padding-top: 1.4em;
+   }
+
    h1 {
       transform: rotate(-8deg);
       font-size: 2.5em;
