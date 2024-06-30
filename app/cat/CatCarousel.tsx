@@ -9,7 +9,7 @@ import Image from "next/image";
 function CarouselItem({
     videoSrc,
     imageSrc,
-    alt,
+    alt = "",
 }: {
     videoSrc?: string;
     imageSrc?: string;
@@ -17,9 +17,11 @@ function CarouselItem({
 }) {
     return (
         <div className="m-4 border-2 border-white shadow-2xl">
-            {videoSrc ? (
+            {videoSrc && (
                 <video src={videoSrc} autoPlay loop muted />
-            ) : (
+            )}
+
+            {imageSrc && (
                 <Image src={imageSrc} width={400} height={800} alt={alt} />
             )}
         </div>
