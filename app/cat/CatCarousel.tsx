@@ -5,7 +5,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
 
 function CarouselItem({
     videoSrc,
@@ -19,7 +18,7 @@ function CarouselItem({
     return (
         <div className="m-4 border-2 border-white shadow-2xl">
             {videoSrc && (
-                <video src={videoSrc} autoPlay loop muted />
+                <video src={videoSrc} autoPlay loop muted playsInline />
             )}
 
             {imageSrc && (
@@ -30,25 +29,27 @@ function CarouselItem({
 }
 
 const CatCarousel = () => {
-    const [slidesToShow, setSlidesToShow] = useState(3);
-
-    useEffect(() => {
-        if (window.matchMedia ("(min-width: 400px) and (max-width: 767px)").matches) {
-            setSlidesToShow(2);
-        } else if (window.matchMedia("(min-width: 768px)").matches) {
-            setSlidesToShow(3);
-        } else {
-            setSlidesToShow(1);
-        }
-    }, []);
-
     const settings = {
         infinite: true,
-        slidesToShow: slidesToShow,
+        slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
-        autoplayHoverPause: false,
+        swipeToSlide: true,
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 399,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+        ]
     };
 
     return (
@@ -56,7 +57,7 @@ const CatCarousel = () => {
             <div className="mt-16 xs:mt-20 sm:mt-24 md:mt-28 lg:mt-32 xl:mt-36 w-[80%] sm:w-[90%] xl:w-[85%] 2xl:w-[75%] 3xl:w-[70%] 4xl:w-[60%] 6xl:w-[50%] 9xl:w-[40%] mx-auto">
                 <h1 className="text-center text-white leading-[0.9em]">Here are some<br /><span className="text-yellow">highlights</span></h1>
                 <div className="mx-auto pt-6 xs:pt-8 sm:pt-10 md:pt-12 lg:pt-14 xl:pt-16 pb-6 xs:pb-8 sm:pb-12 md:pb-14 lg:pb-16 xl:pb-20">
-                    <Slider {...settings} className="pointer-events-none">
+                    <Slider {...settings} className="cursor-grab">
                         <CarouselItem
                             videoSrc={"/cat.video.mp4"}
                         />
