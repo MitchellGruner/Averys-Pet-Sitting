@@ -15,11 +15,11 @@ const Header = () => {
             </div>
             <div className="cat-content-div basis-full md:basis-[55%] mt-[3em] xs:mt-[3.2em] sm:mt-[3.4em] md:mt-[-4px]">
                 <div className="max-w-[1400px]">
-                    <span className="hidden sm:block absolute main-header text-brown sm:top-[18.6em] md:top-[3.5em] lg:top-[3.2em] xl:top-[2.4em] 2xl:top-[2.6em] left-[0.81em] xs:left-[1em] sm:left-[1.4em] md:left-[9em] lg:left-[11em] xl:left-[11em] 2xl:left-[12em] 3xl:left-[14em] 4xl:left-[16em] 5xl:left-[18em] 7xl:left-[22em] 8xl:left-[25em]">Meow We Are</span>
-                    <span className="hidden sm:block absolute main-header main-header-secondary text-brown sm:top-[19.6em] md:top-[4.5em] lg:top-[4.2em] xl:top-[3.4em] left-[1.2em] xs:left-[1.7em] sm:left-[2em] md:left-[9.5em] lg:left-[11.7em] xl:left-[11.7em] 2xl:left-[12.8em] 3xl:left-[15em] 4xl:left-[17em] 5xl:left-[19em] 7xl:left-[23em] 8xl:left-[26em]">
+                    <span className="hidden sm:block absolute main-header text-white sm:top-[18.6em] md:top-[3.5em] lg:top-[3.2em] xl:top-[2.4em] 2xl:top-[2.6em] left-[0.81em] xs:left-[1em] sm:left-[1.4em] md:left-[9em] lg:left-[11em] xl:left-[11em] 2xl:left-[12em] 3xl:left-[14em] 4xl:left-[16em] 5xl:left-[18em] 7xl:left-[22em] 8xl:left-[25em]">Meow We Are</span>
+                    <span className="hidden sm:block absolute main-header main-header-secondary text-white sm:top-[19.6em] md:top-[4.5em] lg:top-[4.2em] xl:top-[3.4em] left-[1.2em] xs:left-[1.7em] sm:left-[2em] md:left-[9.5em] lg:left-[11.7em] xl:left-[11.7em] 2xl:left-[12.8em] 3xl:left-[15em] 4xl:left-[17em] 5xl:left-[19em] 7xl:left-[23em] 8xl:left-[26em]">
                         Talking
                         <Image
-                            src="/catfishicon2.png"
+                            src="/catfishicon3.png"
                             width={60}
                             height={60}
                             alt="Cat Fish Icon"
