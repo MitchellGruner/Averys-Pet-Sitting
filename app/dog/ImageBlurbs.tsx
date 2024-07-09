@@ -28,11 +28,11 @@ function PhotoText({
                 className="shadow-2xl"
             />
             <div className="relative">
-                <div className={`relative bg-navy mt-12 xs:ml-14 sm:mt-12 md:mt-16 mb-2 md:mb-4 lg:mt-0 lg:mb-0 w-[13.3em] xs:w-[20em] sm:w-[26em] md:w-[36.3em] lg:w-[28em] xl:w-[40em] 2xl:w-[50em] ${divClassName} py-4 xl:py-6 px-6 xl:px-8 rounded-xl h-fit z-[1] shadow-2xl`}>
+                <div className={`relative bg-navy mt-12 xs:ml-14 sm:mt-12 md:mt-16 mb-2 md:mb-4 lg:mt-0 lg:mb-0 xs:w-[20em] sm:w-[26em] md:w-[36.3em] lg:w-[28em] xl:w-[40em] 2xl:w-[50em] ${divClassName} py-4 xl:py-6 px-6 xl:px-8 rounded-xl h-fit z-[1] shadow-2xl`}>
                     <h1 className="text-yellow text-xl md:text-2xl xl:text-3xl font-bold italic mb-4"><span>{header}</span></h1>
                     <p className="text-white text-base xl:text-xl">{paragraph}</p>
                 </div>
-                <div className={`absolute bg-white rounded-xl z-0 shadow-2xl ${divClassName}`}></div>
+                <div className={`hidden xs:block absolute bg-white rounded-xl z-0 shadow-2xl ${divClassName}`}></div>
 
                 <ContactButton text={"Contact Me"} class={`${buttonClassName} mt-[3em] lg:mt-0`} />
             </div>
