@@ -18,7 +18,7 @@ function CarouselItem({
     return (
         <div className="m-4 border-2 border-white shadow-2xl">
             {videoSrc && (
-                <video src={videoSrc} autoPlay loop muted />
+                <video src={videoSrc} autoPlay loop muted playsInline />
             )}
 
             {imageSrc && (
