@@ -5,7 +5,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
 
 function CarouselItem({
     videoSrc,
@@ -30,25 +29,27 @@ function CarouselItem({
 }
 
 const CatCarousel = () => {
-    const [slidesToShow, setSlidesToShow] = useState(3);
-
-    useEffect(() => {
-        if (window.matchMedia ("(min-width: 400px) and (max-width: 767px)").matches) {
-            setSlidesToShow(2);
-        } else if (window.matchMedia("(min-width: 768px)").matches) {
-            setSlidesToShow(3);
-        } else {
-            setSlidesToShow(1);
-        }
-    }, []);
-
     const settings = {
         infinite: true,
-        slidesToShow: slidesToShow,
+        slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
         autoplayHoverPause: false,
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 399,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+        ]
     };
 
     return (
