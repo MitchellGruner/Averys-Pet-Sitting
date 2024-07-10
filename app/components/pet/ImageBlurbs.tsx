@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ContactButton from "../components/ContactButton";
+import ContactButton from "../ContactButton";
 
 function PhotoText({
     imageSrc,
