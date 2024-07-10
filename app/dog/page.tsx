@@ -1,6 +1,6 @@
 import PhotoCallout from "./PhotoCallout";
 import ScheduleAppointment from "../components/contact/ScheduleAppointment";
-import ImageBlurbs from "./ImageBlurbs";
+import ImageBlurbs from "../components/pet/ImageBlurbs";
 import DogHeader from "./DogHeader";
 
 const Dog = () => {

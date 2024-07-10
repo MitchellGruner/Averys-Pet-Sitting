@@ -11,9 +11,9 @@ import "./styles/services/Services.scss";
 import "./styles/contact/Contact.scss";
 import "./styles/footer/Footer.scss";
 import "./styles/Header.scss";
+import "./styles/pet/ImageBlurbs.scss";
 import "./styles/dog/Dog.scss";
 import "./styles/dog/PhotoCallout.scss";
-import "./styles/dog/ImageBlurbs.scss";
 import "./styles/cat/Cat.scss";
 import "./styles/cat/CatCarousel.scss";
 
