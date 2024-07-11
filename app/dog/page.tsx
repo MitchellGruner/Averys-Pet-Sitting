@@ -21,7 +21,7 @@ const Dog = () => {
                 imageSrc="/avery.with.summer.png"
                 alt="Avery with Summer"
                 textOrientation="text-left lg:text-right"
-                parentClassName="mt-16 sm:mt-20 md:mt-28 lg:mt-32 xl:mt-40"
+                parentClassName="lg:flex-row-reverse mt-16 sm:mt-20 md:mt-28 lg:mt-32 xl:mt-40"
                 divClassName="md:mr-14 second-div"
                 header="Tail-Wagging Care Guaranteed"
                 paragraph="Picture this: a lifelong dog lover with a heart as big as their enthusiasm for canine companionship. That's me in a nutshell! Growing up surrounded by wagging tails and wet noses, I learned the language of dogs – from playful barks to soulful gazes. I pride myself on being a keen observer of their needs and quirks, ensuring every tail gets the wag it deserves. With me, your pup isn't just a job; they're family. So, let's embark on this adventure together, where every pawprint leads to cherished memories and endless tail wags."
