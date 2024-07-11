@@ -15,7 +15,7 @@ type Props = {
 const ImageBlurbs = (props: Props) => {
     return (
         <div id="imageBlurbs" className="mx-8 sm:mx-0 md:mx-16 2xl:mx-24">
-            <div className={`block md:flex md:flex-col lg:flex-row ${props.parentClassName} ${props.textOrientation}`}>
+            <div className={`block md:flex md:flex-col lg:flex-row justify-center ${props.parentClassName} ${props.textOrientation}`}>
                 <Image
                     src={props.imageSrc}
                     width={330}
