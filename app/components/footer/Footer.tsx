@@ -198,6 +198,8 @@ const Footer = () => {
                             title="Cat Services"
                             linkFirst="/cat#catCarousel"
                             nameFirst="Highlights"
+                            linkSecond="/cat#imageBlurbs"
+                            nameSecond="Image Callouts"
                         />
                     </div>
                     <div className="flex flex-col md:hidden">
@@ -228,6 +230,8 @@ const Footer = () => {
                             title="Cat Services"
                             linkFirst="/cat#catCarousel"
                             nameFirst="Highlights"
+                            linkSecond="/cat#imageBlurbs"
+                            nameSecond="Image Callouts"
                         />
                         <Logo className="max-w-20 xs:max-w-28 mt-14" width={150} height={150} />
                     </div>
