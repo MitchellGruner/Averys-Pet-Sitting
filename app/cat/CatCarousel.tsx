@@ -16,7 +16,7 @@ function CarouselItem({
     alt?: string;
 }) {
     return (
-        <div className="m-4 border-2 border-white shadow-2xl">
+        <div className="m-4 border-2 border-white">
             {videoSrc && (
                 <video src={videoSrc} autoPlay loop muted playsInline />
             )}
