@@ -10,8 +10,8 @@ const Cat = () => {
             <CatCarousel />
             <ScheduleAppointment />
             <ImageBlurbs
-                imageSrc="/two.dogs.looking.at.camera.png"
-                alt="Two Dogs Looking at the Camera"
+                imageSrc="/cat-page-callout-image.png"
+                alt="Cat Laying Down and Looking at the Camera"
                 textOrientation="text-left"
                 header="Purrr-fect Cat Care"
                 paragraph="As a cat sitter, I bring a fun-loving and caring approach that cats adore. I make it a point to connect with each furry friend on a playful level, whether it's through feather toys, gentle belly rubs, or simply chatting with them in their own language of purrs and meows. My knack for understanding their individual quirks means I can create a comfortable and enjoyable experience tailored to their preferences. Being a cat sitter isn't just a job for me—it's a passion rooted in making sure every kitty feels cherished and content under my watch."
