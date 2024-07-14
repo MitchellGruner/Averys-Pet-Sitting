@@ -1,53 +1,148 @@
 #dogPage {
+    .w-full {
+        top: 20%;
+        transform: translateY(50%);
+        clip-path: polygon(100% 0, 100% 75%, 0 100%, 0 25%);
+    }
+    img.border-image,
+    img.rounded-md,
+    .mt-16 img {
+        outline: 0.2vw solid #fff;
+    }
+    img.rounded-md,
+    .mt-16 img {
+        outline-offset: 15px;
+    }
     .main-header {
         transform: rotate(-16deg);
         margin-left: 0.2em;
         font-size: 2.2em;
     }
-
     .main-header-secondary {
         transform: rotate(-20deg);
     }
 
+    @media (max-width: 575px) {
+        .border-image {
+            width: 75%;
+        }
+        .absolute.z-10 {
+            right: 0.2rem;
+            width: 45%;
+        }
+    }
     @media (min-width: 400px) {
         .main-header {
             margin-left: 1em;
             font-size: 2.6em;
         }
     }
-
     @media (min-width: 576px) {
+        .w-full {
+            top: 35%;
+        }
         .main-header {
             margin-left: 1.1em;
             font-size: 2.8em;
         }
     }
-
+    @media (min-width: 576px) and (max-width: 767px) {
+        .absolute.z-10 {
+            right: 0.2rem;
+            width: 45%;
+        }
+    }
     @media (min-width: 768px) {
         .main-header {
             margin-left: 1.1em;
             font-size: 3.1em;
         }
+        .absolute.z-10 {
+            right: 3rem;
+        }
     }
-
+    @media (min-width: 900px) {
+        .absolute.z-10 {
+            right: 7rem;
+        }
+    }
     @media (min-width: 992px) {
         .main-header {
             margin-left: 1.2em;
             font-size: 3.4em;
         }
+        .absolute.z-10 {
+            right: 10rem;
+        }
     }
-
     @media (min-width: 1200px) {
         .main-header {
             margin-left: 0.72em;
             font-size: 3.9em;
         }
+        .absolute.z-10 {
+            right: 12rem;
+        }
     }
-
+    @media (min-width: 1260px) {
+        .absolute.z-10 {
+            right: 15rem;
+        }
+    }
+    @media (min-width: 1340px) {
+        .absolute.z-10 {
+            right: 18rem;
+        }
+    }
     @media (min-width: 1400px) {
         .main-header {
             margin-left: 0.8em;
             font-size: 4.3em;
+        }
+    }
+    @media (min-width: 1480px) {
+        .absolute.z-10 {
+            right: 22rem;
+        }
+    }
+    @media (min-width: 1610px) {
+        .absolute.z-10 {
+            right: 25rem;
+        }
+    }
+    @media (min-width: 1700px) {
+        .absolute.z-10 {
+            right: 28rem;
+        }
+    }
+    @media (min-width: 1830px) {
+        .absolute.z-10 {
+            right: 31rem;
+        }
+    }
+    @media (min-width: 1900px) {
+        .absolute.z-10 {
+            right: 34rem;
+        }
+    }
+    @media (min-width: 2030px) {
+        .absolute.z-10 {
+            right: 37rem;
+        }
+    }
+    @media (min-width: 2180px) {
+        .absolute.z-10 {
+            right: 43rem;
+        }
+    }
+    @media (min-width: 2400px) {
+        .absolute.z-10 {
+            right: 50rem;
+        }
+    }
+    @media (min-width: 2700px) {
+        .absolute.z-10 {
+            right: 55rem;
         }
     }
 }
