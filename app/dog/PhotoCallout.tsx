@@ -14,7 +14,7 @@ function PhotoSlide({
 }) {
     return (
         <div
-            className="slide relative xs:h-[20em] sm:h-[24em] md:h-[28em] xl:h-[32em] m-1 cursor-pointer bg-cover bg-center bg-no-repeat opacity-50 shadow-2xl"
+            className="slide relative xs:h-[20em] sm:h-[24em] md:h-[28em] xl:h-[32em] m-1 cursor-pointer bg-cover bg-center bg-no-repeat opacity-50 shadow-2xl max-w-[1600px]"
             style={{
                 backgroundImage: `url(${backgroundImage})`,
             }}
