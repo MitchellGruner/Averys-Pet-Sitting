@@ -86,22 +86,22 @@ const PhotoCallout = () => {
             backgroundImage: "/avery.with.cora.png",
             imageSrc: "/avery.with.cora.png",
             alt: "Avery with Squid",
-            header: "Passionate about happy pups.",
-            paragraph: "I am deeply passionate about the well-being of the dogs I care for, striving to ensure they are not only happy but also physically and emotionally healthy during their time with me."
+            header: "Happy Pups Guaranteed:",
+            paragraph: "I’m deeply passionate about the well-being of the dogs I care for, striving to ensure they are not physically healthy and taken care of--but also emotionally healthy and incredibly happy."
         },
         {
             backgroundImage: "/avery.contact.image.png",
             imageSrc: "/avery.contact.image.png",
             alt: "Avery with Coraline",
-            header: "Always there, always caring",
+            header: "Tail-ored Care:",
             paragraph: "I take the time to understand each dog's individual needs and preferences, ensuring they receive the tailored care and attention they deserve."
         },
         {
             backgroundImage: "/avery.with.white.dog1.png",
             imageSrc: "/avery.with.white.dog1.png",
             alt: "Avery with Summer",
-            header: "Safety is my top priority.",
-            paragraph: "I maintain a vigilant watch over the dogs in my care, creating a secure environment where they can play and relax without worry."
+            header: "Weekends Away Without Worry:",
+            paragraph: "Safety is my top priority; I maintain a vigilant watch over the dogs in my care, creating a secure environment where they can play and relax without worry."
         }
     ];
 

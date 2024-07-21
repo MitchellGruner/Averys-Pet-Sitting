@@ -14,7 +14,7 @@ const Cat = () => {
                 alt="Cat Laying Down and Looking at the Camera"
                 textOrientation="text-left"
                 header="Purrr-fect Cat Care"
-                paragraph="As a cat sitter, I bring a fun-loving and caring approach that cats adore. I make it a point to connect with each furry friend on a playful level, whether it's through feather toys, gentle belly rubs, or simply chatting with them in their own language of purrs and meows. My knack for understanding their individual quirks means I can create a comfortable and enjoyable experience tailored to their preferences. Being a cat sitter isn't just a job for me—it's a passion rooted in making sure every kitty feels cherished and content under my watch."
+                paragraph="I bring a fun-loving and caring approach that cats adore. Whether it’s through chasing toy mice, gentle belly rubs, or simply laying in my lap purring, I make it a point to connect with each furry friend on a personal level tailored to their own preferences. My understanding of their individual needs means I can create a comfortable and enjoyable experience for each kitty while you’re away. Being a cat sitter isn't just a job for me—it's a passion rooted in making sure every cat feels cherished and content under my watch."
                 buttonClassName="ml-[1em] xs:ml-[5em] sm:ml-[15em] md:ml-[20em] lg:ml-[12em] xl:ml-[23em] 2xl:ml-[30em]"
             />
         </section>
