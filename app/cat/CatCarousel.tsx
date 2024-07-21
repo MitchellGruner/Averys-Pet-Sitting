@@ -52,38 +52,34 @@ const CatCarousel = () => {
         ]
     };
 
+    const carouselItems = [
+        { videoSrc: "/cat.video.mp4" },
+        { imageSrc: "/cat-page-carousel-image-first2.png", alt: "Cat with Paw in Air" },
+        { imageSrc: "/cat-page-carousel-image-second1.jpg", alt: "Avery with Cat on Couch" },
+        { videoSrc: "/cat.video.couch.mp4" },
+        { imageSrc: "/cat-page-carousel-image-third1.jpg", alt: "Cat with Yellow Eyes in Kennel" },
+        { imageSrc: "/cat-page-carousel-image-fourth7.png", alt: "Cat Perched by Bookshelf" },
+    ];
+
     return (
-        <div id="catCarousel">
+        <section id="catCarousel">
             <div className="mt-16 xs:mt-20 xs:mb-8 sm:mt-24 md:mt-28 lg:mt-32 xl:mt-36 w-[80%] sm:w-[90%] xl:w-[85%] 2xl:w-[75%] 3xl:w-[70%] 4xl:w-[60%] 6xl:w-[50%] 9xl:w-[40%] mx-auto">
                 <h1 className="text-center text-white leading-[0.9em]">Here are some<br /><span className="text-yellow">highlights</span></h1>
                 <div className="mx-auto pt-6 xs:pt-8 sm:pt-10 md:pt-12 lg:pt-14 xl:pt-16 pb-6 xs:pb-8 sm:pb-12 md:pb-14 lg:pb-16 xl:pb-20">
                     <Slider {...settings} className="cursor-grab">
-                        <CarouselItem
-                            videoSrc={"/cat.video.mp4"}
-                        />
-                        <CarouselItem
-                            imageSrc={"/cat-page-carousel-image-first2.png"}
-                            alt="Cat with Paw in Air"
-                        />
-                        <CarouselItem
-                            imageSrc={"/cat-page-carousel-image-second1.jpg"}
-                            alt="Avery with Cat on Couch"
-                        />
-                        <CarouselItem
-                            videoSrc={"/cat.video.couch.mp4"}
-                        />
-                        <CarouselItem
-                            imageSrc={"/cat-page-carousel-image-third1.jpg"}
-                            alt="Cat with Yellow Eyes in Kennel"
-                        />
-                        <CarouselItem
-                            imageSrc={"/cat-page-carousel-image-fourth7.png"}
-                            alt="Cat Perched by Bookshelf"
-                        />
+                        {carouselItems.map((item, index) => (
+                            <figure key={index}>
+                                <CarouselItem
+                                    videoSrc={item.videoSrc}
+                                    imageSrc={item.imageSrc}
+                                    alt={item.alt}
+                                />
+                            </figure>
+                        ))}
                     </Slider>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

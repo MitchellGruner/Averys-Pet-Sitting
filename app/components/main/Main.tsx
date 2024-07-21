@@ -30,8 +30,8 @@ const Main = () => {
     }, []);
     
     return (
-        <div id="home" className="min-h-max max-w-[1600px]">
-            <div className="main-container">
+        <section id="home" className="min-h-max max-w-[1600px]">
+            <figure className="main-container">
                 <Image
                     id="mainBackground"
                     src="/avery.banner.image.png"
@@ -42,8 +42,8 @@ const Main = () => {
                 />
 
                 <MainText />
-            </div>
-        </div>
+            </figure>
+        </section>
     )
 }
 

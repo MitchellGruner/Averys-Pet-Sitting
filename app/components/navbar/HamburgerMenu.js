@@ -25,7 +25,7 @@ const HamburgerMenu = () => {
     });
 
     return (
-        <div className="relative" ref={menuRef}>
+        <section className="relative" ref={menuRef}>
             <MotionConfig
                 transition={{
                     duration: 0.5,
@@ -100,7 +100,7 @@ const HamburgerMenu = () => {
             {active && (
                 <OpenHamburgerMenu closeState={setActive} />
             )}
-        </div>
+        </section>
     )
 }
 

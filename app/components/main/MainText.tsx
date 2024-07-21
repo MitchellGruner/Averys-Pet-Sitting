@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const MainText = () => {
     return (
-        <div id="mainText" className="relative">
+        <section id="mainText" className="relative">
             <span className="absolute main-header block text-white 2xs:top-1 xs:top-6 sm:top-6 md:top-10 lg:top-0 md:left-0 lg:left-4">Avery's Pet</span>
             <span className="absolute main-header main-header-secondary block text-white 2xs:top-6 xs:top-14 sm:top-16 md:top-20 lg:top-12 2xl:top-16 2xs:left-6 xs:left-6 sm:left-10 lg:left-16">
                 Sitting
@@ -17,7 +17,7 @@ const MainText = () => {
                 />
             </span>
 
-            <div className="main-text-container bg-navy absolute rounded-2xl shadow-2xl">
+            <aside className="main-text-container bg-navy absolute rounded-2xl shadow-2xl">
                 <h1 className="2xs:text-lg xs:text-xl sm:text-2xl xl:text-3xl font-semibold pb-2 text-white"><span className="italic text-yellow pr-1">Pawsitively</span> the best care for your pet!</h1>
 
                 <hr className="py-3 text-white" />
@@ -31,10 +31,10 @@ const MainText = () => {
                 </p>
 
                 <ContactButton text={"Contact Now"} />
-            </div>
+            </aside>
 
             <div className="main-text-container-secondary bg-white absolute rounded-2xl shadow-2xl"></div>
-        </div>
+        </section>
     )
 }
 
