@@ -126,53 +126,62 @@ function HamburgerExternalLink({
 }
 
 const OpenHamburgerMenu = ({closeState}: {closeState: any}) => {
+    const hamburgerLinks = [
+        {
+            href: "/#about",
+            title: "About Me",
+            titleSize: "text-base xs:text-lg"
+        },
+        {
+            href: "/#testimonials",
+            title: "Testimonials",
+            titleSize: "text-base xs:text-lg"
+        },
+        {
+            href: "/#services",
+            title: "Services",
+            titleSize: "text-base xs:text-lg"
+        },
+        {
+            href: "/#parentContact",
+            title: "Contact",
+            titleSize: "text-base xs:text-lg"
+        },
+        {
+            href: "/#contactForm",
+            title: "Get Connected",
+            titleSize: "text-base xs:text-lg"
+        }
+    ];
+
     return (
-        <div id="openHamburgerMenu" className="absolute top-[4.5em] lg:top-[5.5em] right-0 bg-white rounded-md p-1 2xs:w-60 xs:w-[19em] shadow-2xl border border-slate-600">
+        <section id="openHamburgerMenu" className="absolute top-[4.5em] lg:top-[5.5em] right-0 bg-white rounded-md p-1 2xs:w-60 xs:w-[19em] shadow-2xl border border-slate-600">
             <div className="p-2">
-                <HamburgerLink
-                    href="/#home"
-                    closeState={closeState}
-                    title="Avery's Pet Sitting"
-                    titleSize="hidden xs:block xs:text-xl"
-                    imageSrc="/averysprofessionalphoto.jpg"
-                    width={65}
-                    height={0}
-                    alt="Avery's Headshot"
-                />
+                <header>
+                    <HamburgerLink
+                        href="/#home"
+                        closeState={closeState}
+                        title="Avery's Pet Sitting"
+                        titleSize="hidden xs:block xs:text-xl"
+                        imageSrc="/averysprofessionalphoto.jpg"
+                        width={65}
+                        height={0}
+                        alt="Avery's Headshot"
+                    />
+                </header>
 
                 <hr className="w-[95%] mx-auto mt-1" />
 
-                <div className="px-4 mt-4 space-y-0">
-                    <HamburgerLink
-                        href="/#about"
-                        closeState={closeState}
-                        title="About Me"
-                        titleSize="text-base xs:text-lg"
-                    />
-                    <HamburgerLink
-                        href="/#testimonials"
-                        closeState={closeState}
-                        title="Testimonials"
-                        titleSize="text-base xs:text-lg"
-                    />
-                    <HamburgerLink
-                        href="/#services"
-                        closeState={closeState}
-                        title="Services"
-                        titleSize="text-base xs:text-lg"
-                    />
-                    <HamburgerLink
-                        href="/#parentContact"
-                        closeState={closeState}
-                        title="Contact"
-                        titleSize="text-base xs:text-lg"
-                    />
-                    <HamburgerLink
-                        href="/#contactForm"
-                        closeState={closeState}
-                        title="Get Connected"
-                        titleSize="text-base xs:text-lg"
-                    />
+                <nav className="px-4 mt-4 space-y-0">
+                    {hamburgerLinks.map((link, index) => (
+                        <HamburgerLink
+                            key={index}
+                            href={link.href}
+                            closeState={closeState}
+                            title={link.title}
+                            titleSize={link.titleSize}
+                        />
+                    ))}
 
                     <hr className="block w-full mx-auto" />
 
@@ -192,9 +201,9 @@ const OpenHamburgerMenu = ({closeState}: {closeState: any}) => {
                             alt="Cat Icon"
                         />
                     </div>
-                </div>
+                </nav>
             </div>
-        </div>
+        </section>
     )
 }
 

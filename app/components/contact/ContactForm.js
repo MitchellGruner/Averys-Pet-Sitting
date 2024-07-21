@@ -56,6 +56,7 @@ const ContactForm = () => {
                     setTimeout(() => {
                         setSendButton("Submit");
                         setSendButtonColor("bg-navy");
+                        document.querySelector('input[name="user_radio"]:checked').checked = false;
                     }, 3000);
                 },
                 (error) => {
@@ -88,6 +89,12 @@ const ContactForm = () => {
         }
     };
 
+    const radioOptions = [
+        { id: 'dog', value: 'Dog', label: 'Dog' },
+        { id: 'cat', value: 'Cat', label: 'Cat' },
+        { id: 'both', value: 'Dog and Cat', label: 'Both' },
+    ];
+
     return (
         <>
             <div className="wrapper absolute w-full rounded">
@@ -119,22 +126,14 @@ const ContactForm = () => {
                     className="w-full outline-none text-white bg-transparent py-4 px-4 mb-2 shadow-2xl"
                 />
 
-                <div className="flex flex-col xs:flex-row items-baseline xs:items-center justify-between py-2 mt-4">
-                    <div className="flex py-1">
-                        <input type="radio" id="dog" name="user_radio" value="Dog" />
-                        <label htmlFor="huey" className="text-white text-base xs:text-lg lg:text-xl pl-3 pr-8">Dog</label>
-                    </div>
-
-                    <div className="flex py-1">
-                        <input type="radio" id="cat" name="user_radio" value="Cat" />
-                        <label htmlFor="huey" className="text-white text-base xs:text-lg lg:text-xl pl-3 pr-8">Cat</label>
-                    </div>
-
-                    <div className="flex py-1">
-                        <input type="radio" id="both" name="user_radio" value="Dog and Cat" />
-                        <label htmlFor="huey" className="text-white text-base xs:text-lg lg:text-xl pl-3 pr-8">Both</label>
-                    </div>
-                </div>
+                <fieldset className="flex flex-col xs:flex-row items-baseline xs:items-center justify-between py-2 mt-4">
+                    {radioOptions.map((option) => (
+                        <div className="flex py-1" key={option.id}>
+                            <input type="radio" id={option.id} name="user_radio" value={option.value} />
+                            <label htmlFor={option.id} className="text-white text-base xs:text-lg lg:text-xl pl-3 pr-8">{option.label}</label>
+                        </div>
+                    ))}
+                </fieldset>
 
                 <label className="text-white text-lg xs:text-xl lg:text-2xl mb-2">Message</label>
                 <textarea

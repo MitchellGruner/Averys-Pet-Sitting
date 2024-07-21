@@ -5,9 +5,9 @@ type Props = {
 
 const Header = (props: Props) => {
     return (
-        <div id="header">
+        <article id="header">
             <h1 className={`block ${props.color} text-center`}><span>{props.title}</span></h1>
-        </div>
+        </article>
     )
 }
 

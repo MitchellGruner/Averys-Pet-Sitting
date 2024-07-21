@@ -13,7 +13,7 @@ function PhotoSlide({
     paragraph: string;
 }) {
     return (
-        <div
+        <section
             className="slide relative xs:h-[20em] sm:h-[24em] md:h-[28em] xl:h-[32em] m-1 cursor-pointer bg-cover bg-center bg-no-repeat opacity-50 shadow-2xl max-w-[1600px]"
             style={{
                 backgroundImage: `url(${backgroundImage})`,
@@ -23,7 +23,7 @@ function PhotoSlide({
                 <h1 className="text-yellow font-bold italic text-lg md:text-xl xl:text-2xl mb-2"><span>{header}</span></h1>
                 <p className="text-white text-sm md:text-base xl:text-lg">{paragraph}</p>
             </div>
-        </div>
+        </section>
     )
 }
 
@@ -39,7 +39,7 @@ function PhotoContent({
     paragraph: string;
 }) {
     return (
-        <div className="mt-16 mx-8">
+        <section className="mt-16 mx-8">
             <Image
                 src={imageSrc}
                 width={300}
@@ -51,7 +51,7 @@ function PhotoContent({
                 <h1 className="text-yellow leading-4 font-bold italic text-lg md:text-xl xl:text-2xl mb-4"><span>{header}</span></h1>
                 <p className="text-white text-base">{paragraph}</p>
             </div>
-        </div>
+        </section>
     )
 }
 
@@ -81,52 +81,59 @@ const PhotoCallout = () => {
         sliderPluggin(0);
     }, []);
 
+    const photoContentData = [
+        {
+            backgroundImage: "/avery.with.cora.png",
+            imageSrc: "/avery.with.cora.png",
+            alt: "Avery with Squid",
+            header: "Passionate about happy pups.",
+            paragraph: "I am deeply passionate about the well-being of the dogs I care for, striving to ensure they are not only happy but also physically and emotionally healthy during their time with me."
+        },
+        {
+            backgroundImage: "/avery.contact.image.png",
+            imageSrc: "/avery.contact.image.png",
+            alt: "Avery with Coraline",
+            header: "Always there, always caring",
+            paragraph: "I take the time to understand each dog's individual needs and preferences, ensuring they receive the tailored care and attention they deserve."
+        },
+        {
+            backgroundImage: "/avery.with.white.dog1.png",
+            imageSrc: "/avery.with.white.dog1.png",
+            alt: "Avery with Summer",
+            header: "Safety is my top priority.",
+            paragraph: "I maintain a vigilant watch over the dogs in my care, creating a secure environment where they can play and relax without worry."
+        }
+    ];
+
     return (
-        <div id="photoCallout">
+        <section id="photoCallout">
             <div className="photo-callout-container">
 				<div className="box-border">
-					<div className="hidden sm:flex sm:w-[83%] md:w-[85%] lg:w-[75%] xl:w-[65%] 2xl:w-[60%] sm:mt-12 md:mt-20 lg:mt-24 xl:mt-28 2xl:mt-36 mx-auto">
-                        <PhotoSlide
-                            backgroundImage="/avery.with.cora.png"
-                            header="Passionate about happy pups."
-                            paragraph="I am deeply passionate about the well-being of the dogs I care for, striving to ensure they are not only happy but also physically and emotionally healthy during their time with me."
-                        />
-                        <PhotoSlide
-                            backgroundImage="/avery.contact.image.png"
-                            header="Always there, always caring"
-                            paragraph="I take the time to understand each dog's individual needs and preferences, ensuring they receive the tailored care and attention they deserve.
-                            "
-                        />
-						<PhotoSlide
-                            backgroundImage="/avery.with.white.dog1.png"
-                            header="Safety is my top priority."
-                            paragraph="I maintain a vigilant watch over the dogs in my care, creating a secure environment where they can play and relax without worry."
-                        />
-					</div>
+					<nav className="hidden sm:flex sm:w-[83%] md:w-[85%] lg:w-[75%] xl:w-[65%] 2xl:w-[60%] sm:mt-12 md:mt-20 lg:mt-24 xl:mt-28 2xl:mt-36 mx-auto">
+                        {photoContentData.map((slide, index) => (
+                            <PhotoSlide
+                                key={index}
+                                backgroundImage={slide.backgroundImage}
+                                header={slide.header}
+                                paragraph={slide.paragraph}
+                            />
+                        ))}
+					</nav>
 
-                    <div className="flex flex-col sm:hidden m-auto xs:mx-6">
-                        <PhotoContent
-                            imageSrc="/avery.with.cora.png"
-                            alt="Avery with Squid"
-                            header="Passionate about happy pups."
-                            paragraph="I am deeply passionate about the well-being of the dogs I care for, striving to ensure they are not only happy but also physically and emotionally healthy during their time with me."
-                        />
-                        <PhotoContent
-                            imageSrc="/avery.contact.image.png"
-                            alt="Avery with Coraline"
-                            header="Always there, always caring"
-                            paragraph="I take the time to understand each dog's individual needs and preferences, ensuring they receive the tailored care and attention they deserve."
-                        />
-                        <PhotoContent
-                            imageSrc="/avery.with.white.dog1.png"
-                            alt="Avery with Summer"
-                            header="Safety is my top priority."
-                            paragraph="I maintain a vigilant watch over the dogs in my care, creating a secure environment where they can play and relax without worry."
-                        />
-                    </div>
+                    <nav className="flex flex-col sm:hidden m-auto xs:mx-6">
+                        {photoContentData.map((content, index) => (
+                            <PhotoContent
+                                key={index}
+                                imageSrc={content.imageSrc}
+                                alt={content.alt}
+                                header={content.header}
+                                paragraph={content.paragraph}
+                            />
+                        ))}
+                    </nav>
 				</div>
 			</div>
-        </div>
+        </section>
     )
 }
 

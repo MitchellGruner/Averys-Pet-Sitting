@@ -7,7 +7,7 @@
 
     .testimonials-container {
         .testimonials-flex {
-            div {
+            section {
                 margin-top: 1.4em;
             }
 
@@ -16,7 +16,7 @@
             }
 
             @media (min-width: 576px) {
-                div {
+                section {
                     margin-top: 1.5em;
                 }
                 .testimonial-paragraph {
@@ -24,10 +24,10 @@
                 }
             }
             @media (min-width: 768px) {
-                div {
+                section {
                     margin-top: 0em;
                 }
-                div:last-of-type {
+                section:last-of-type {
                     margin-top: 1.6em;
                 }
                 .testimonial-paragraph {
@@ -35,8 +35,8 @@
                 }
             }
             @media (min-width: 1200px) {
-                div:first-of-type,
-                div:last-of-type {
+                section:first-of-type,
+                section:last-of-type {
                     margin-top: 3em;
                 }
                 .testimonial-paragraph {

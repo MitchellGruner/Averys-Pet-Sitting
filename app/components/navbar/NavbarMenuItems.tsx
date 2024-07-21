@@ -108,7 +108,7 @@ const NavbarMenuItems = () => {
     }, []);
 
     return (
-        <div className="hidden md:flex md:flex-row mx-auto">
+        <nav className="hidden md:flex md:flex-row mx-auto">
             <NavbarMenuItemsLink
                 href="/dog"
                 linkClassName="dog"
@@ -137,7 +137,7 @@ const NavbarMenuItems = () => {
                 secondImageAlt="Navy Cat Icon"
                 title="Cat"
             />
-        </div>
+        </nav>
     )
 }
 

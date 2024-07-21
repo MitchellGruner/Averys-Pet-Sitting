@@ -6,7 +6,7 @@ import AveryVertis from "./AveryVertis";
 
 const Dog = () => {
     return (
-        <div id="dogPage" className="relative block w-full mx-auto mt-2 sm:mt-4 lg:mt-6 2xl:mt-8 pb-2 xs:pb-8 sm:pb-12 md:pb-16 lg:pb-28 xl:pb-36">
+        <section id="dogPage" className="relative block w-full mx-auto mt-2 sm:mt-4 lg:mt-6 2xl:mt-8 pb-2 xs:pb-8 sm:pb-12 md:pb-16 lg:pb-28 xl:pb-36">
             <DogHeader />
             <PhotoCallout />
             <AveryVertis />
@@ -30,7 +30,7 @@ const Dog = () => {
                 buttonClassName="ml-[5em] sm:ml-[15em] md:ml-[20em] lg:ml-[0em] lg:mr-[12em] xl:ml-[2em] xl:mr-[22em] 2xl:mr-[30em]"
             />
             <ScheduleAppointment />
-        </div>
+        </section>
     )
 }
 

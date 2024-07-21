@@ -16,7 +16,7 @@ export const MuiAccordion = () => {
     }
 
     return (
-        <div id="muiAccordion" className="px-4 xs:px-6 sm:px-10">
+        <section id="muiAccordion" className="px-4 xs:px-6 sm:px-10">
             <Accordion
                 expanded={expanded === "panel1"}
                 onChange={(event, isExpanded) => handleChange(isExpanded, "panel1")}
@@ -157,7 +157,7 @@ export const MuiAccordion = () => {
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-        </div>
+        </section>
     )
 }
 

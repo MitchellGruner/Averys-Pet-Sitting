@@ -4,9 +4,9 @@ import Image from "next/image";
 
 const About = () => {
     return (
-        <div id="about" className="block max-w-[1600px]">
+        <section id="about" className="block max-w-[1600px]">
             <div className="flex flex-row flex-wrap justify-center items-center">
-                <div className="flex flex-row justify-center basis-full md:basis-1/2">
+                <figure className="flex flex-row justify-center basis-full md:basis-1/2">
                     <Image
                         src="/averysaboutme.png"
                         width={330}
@@ -14,7 +14,7 @@ const About = () => {
                         alt="Avery's About Me Picture"
                         className="shadow-2xl"
                     />
-                </div>
+                </figure>
                 <div className="flex flex-col justify-center basis-full md:basis-1/2 text-center mx-auto 2xs:mt-6 xs:mt-8 md:mt-0 2xs:mx-4 xs:mx-10 sm:mx-12 md:mx-0">
                     <h1 className="text-white"><span>Hey there!</span></h1>
                     <h3 className="text-black font-bold">I'm <span className="text-yellow italic">Avery Geiger</span></h3>
@@ -32,7 +32,7 @@ const About = () => {
                     <ContactButton text={"Contact Me"} />
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 
