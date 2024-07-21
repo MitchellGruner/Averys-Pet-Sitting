@@ -85,62 +85,29 @@ function FooterLink({
     linkFourth?: string;
     nameFourth?: string;
 }) {
+    const links = [
+        { href: linkFirst, name: nameFirst },
+        { href: linkSecond, name: nameSecond },
+        { href: linkThird, name: nameThird },
+        { href: linkFourth, name: nameFourth },
+    ];
+
     return (
         <div className="flex flex-col pt-2 lg:pt-4 xl:pt-6">
             <Link href={linkTitle} onClick={handleClick} className="text-white text-lg sm:text-xl xl:text-2xl font-bold mb-2 md:mb-4 cursor-pointer hover:text-yellow transition ease-in-out duration-500">{title}</Link>
 
-            <Link href={linkFirst} onClick={handleClick} className="text-off-white text-base xl:text-lg cursor-pointer pb-1 hover:text-white transition ease-in-out duration-500">
-                {nameFirst}
-            </Link>
-            {linkSecond && nameSecond && (
-                <Link href={linkSecond} onClick={handleClick} className="text-off-white text-base xl:text-lg cursor-pointer pb-1 hover:text-white transition ease-in-out duration-500">
-                    {nameSecond}
+            {links.map((link, index) => link.href && link.name && (
+                <Link 
+                    key={index}
+                    href={link.href} 
+                    onClick={handleClick} 
+                    className="text-off-white text-base xl:text-lg cursor-pointer pb-1 hover:text-white transition ease-in-out duration-500"
+                >
+                    {link.name}
                 </Link>
-            )}
-            {linkThird && nameThird && (
-                <Link href={linkThird} onClick={handleClick} className="text-off-white text-base xl:text-lg cursor-pointer pb-1 hover:text-white transition ease-in-out duration-500">
-                    {nameThird}
-                </Link>
-            )}
-            {linkFourth && nameFourth && (
-                <Link href={linkFourth} onClick={handleClick} className="text-off-white text-base xl:text-lg cursor-pointer pb-1 hover:text-white transition ease-in-out duration-500">
-                    {nameFourth}
-                </Link>
-            )}
+            ))}
         </div>
     );
-}
-
-function FooterLinkPet({
-    href,
-    title,
-    linkFirst,
-    nameFirst,
-    linkSecond,
-    nameSecond,
-}: {
-    href: string;
-    title: string;
-    linkFirst: string;
-    nameFirst: string;
-    linkSecond?: string;
-    nameSecond?: string;
-}) {
-    return (
-        <div className="flex flex-col pt-2 lg:pt-4 xl:pt-6">
-            <Link href={href} onClick={handleClick} className="text-white text-lg sm:text-xl xl:text-2xl font-bold mb-2 md:mb-4 cursor-pointer hover:text-yellow transition ease-in-out duration-500">{title}</Link>
-
-            <Link href={linkFirst} onClick={handleClick} className="text-off-white text-base xl:text-lg cursor-pointer pb-1 hover:text-white transition ease-in-out duration-500">
-                {nameFirst}
-            </Link>
-
-            {linkSecond && nameSecond && (
-                <Link href={linkSecond} onClick={handleClick} className="text-off-white text-base xl:text-lg cursor-pointer pb-1 hover:text-white transition ease-in-out duration-500">
-                    {nameSecond}
-                </Link>
-            )}
-        </div>
-    )
 }
 
 function SocialLinks({
@@ -186,17 +153,17 @@ const Footer = () => {
                                 linkFourth="/#contactForm"
                                 nameFourth="Get Connected"
                             />
-                            <FooterLinkPet
-                                href="/dog"
+                            <FooterLink
                                 title="Dog Services"
+                                linkTitle="/dog"
                                 linkFirst="/dog#photoCallout"
                                 nameFirst="Slideshow"
                                 linkSecond="/dog#imageBlurbs"
                                 nameSecond="Image Callouts"
                             />
-                            <FooterLinkPet
-                                href="/cat"
+                            <FooterLink
                                 title="Cat Services"
+                                linkTitle="/cat"
                                 linkFirst="/cat#catCarousel"
                                 nameFirst="Highlights"
                                 linkSecond="/cat#imageBlurbs"
@@ -216,9 +183,9 @@ const Footer = () => {
                                 linkFourth="/#contactForm"
                                 nameFourth="Get Connected"
                             />
-                            <FooterLinkPet
-                                href="/dog"
+                            <FooterLink
                                 title="Dog Services"
+                                linkTitle="/dog"
                                 linkFirst="/dog#photoCallout"
                                 nameFirst="Slideshow"
                                 linkSecond="/dog#imageBlurbs"
@@ -226,9 +193,9 @@ const Footer = () => {
                             />
                         </section>
                         <section className="flex flex-col md:hidden">
-                            <FooterLinkPet
-                                href="/cat"
+                            <FooterLink
                                 title="Cat Services"
+                                linkTitle="/cat"
                                 linkFirst="/cat#catCarousel"
                                 nameFirst="Highlights"
                                 linkSecond="/cat#imageBlurbs"
