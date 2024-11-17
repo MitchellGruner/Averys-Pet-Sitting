@@ -2,7 +2,7 @@
 
 This is a website I built for my girlfriend for her dog and cat sitting side-hustle. This application utilizes the T3 Stack (Next.js, TypeScript, and Tailwind CSS), as well as Bootstrap and Sass for styling. This project utilizes a contact form so end-users can easily reach Avery via her email, as well as access her Calendly account to set up initial appointments. This website was built using mobile-first design, and will feature a back-end system in the near future.
 
-### Link to project: https://www.averyspetsitting.com
+### Link to project: [Avery's Pet Sitting](https://www.averyspetsitting.com)
 
 ## How It's Made
 
@@ -23,3 +23,4 @@ This project definitely tested my creative UI/UX design skills, and I am incredi
 7. Make sure you are in the root directory of the folder (the /app, /public etc folders should be here).
 8. Type 'npm install'.
 9. Type 'npm run dev'.
+10. Additionally, the project can be viewed here (without running this project on your local machine): https://www.averyspetsitting.com
